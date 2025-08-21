@@ -1,0 +1,15 @@
+import './styles/fonts.css';
+import './styles/variables.css';
+import './styles/global.css';
+import './styles/text.css';
+import './styles/buttons.css';
+import './styles/header.css';
+import './styles/footer.css';
+import './styles/article.css';
+import './styles/map.css';
+import './styles/form.css';
+
+import './scripts/map.js';
+import './scripts/form.js';
+import './scripts/slider.js';
+import './scripts/scripts.js';

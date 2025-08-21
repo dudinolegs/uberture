@@ -1,0 +1,130 @@
+.text p {
+    margin: 0 0 10px 0;
+}
+
+.text small {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.text h2 {
+    font-family: var(--second-family);
+    font-size: 32px;
+    font-weight: 800;
+    margin: 15px 0 40px 0;
+}
+
+.text h3 {
+    font-family: var(--second-family);
+    font-size: 28px;
+    font-weight: 800;
+    margin: 10px 0 30px 0;
+}
+
+.text h4 {
+    font-family: var(--second-family);
+    font-size: 25px;
+    font-weight: 500;
+    margin: 5px 0 15px 0;
+}
+
+.text h5 {
+    font-family: var(--second-family);
+    font-size: 22px;
+    font-weight: 800;
+    margin: 5px 0 15px 0;
+}
+
+.text h6 {
+    font-family: var(--second-family);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 5px 0 10px 0;
+}
+
+.text hr,
+.text hr {
+    width: 100%;
+    display: block;
+    border: none;
+    background-color: var(--dark-color);
+    margin: 15px 0;
+    height: 1px;
+}
+
+.text b {
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.text strong {
+    font-weight: 700;
+}
+
+.text a:not(.btn) {
+    text-decoration: underline;
+    font-weight: inherit;
+    color: var(--main-color);
+}
+
+.text u {
+    text-decoration: underline;
+    text-decoration-color: var(--main-color);
+}
+
+.text ul {
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.text ul li {
+    padding: 0 0 0 18px;
+    position: relative;
+}
+
+.text ul li:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    left: 0;
+    top: 7px;
+}
+
+.text ol {
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0 0 0 18px;
+}
+
+.text ol li {
+    position: relative;
+    list-style-type: decimal;
+}
+
+.text code {
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: monospace, sans-serif;
+    background-color: var(--background-color-1);
+    border: 1px solid var(--dark-color);
+    font-weight: 300;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, .05);
+}
+
+.text *:first-child {
+    margin-top: 0;
+}
+
+.text *:last-child {
+    margin-bottom: 0;
+}

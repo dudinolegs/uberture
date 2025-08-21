@@ -1,0 +1,815 @@
+[
+    {
+        "id": 1,
+        "name": "Россия",
+        "active": true,
+        "city": [
+            {
+                "id": 11,
+                "name": "Новосибирск",
+                "latitude": "55.030204",
+                "longitude": "82.920430",
+                "active": true,
+                "store": [
+                    {
+                        "name": "Uberture mall #1",
+                        "address": "Торговый центр, улица Щетинкина, 64",
+                        "description": "<ul><li>Пн-Пт с 8:00 - 17:00</li><li>Двери, плинтуса, стеновые панели</li></ul>",
+                        "latitude": "55.028460",
+                        "longitude": "82.926727"
+                    },
+                    {
+                        "name": "Uberture mall #2",
+                        "address": "Бердское шоссе, 2/6",
+                        "description": "<ul><li>Пн-Пт с 8:00 - 17:00</li><li>Двери, плинтуса, стеновые панели</li></ul>",
+                        "latitude": "54.967331",
+                        "longitude": "83.041891"
+                    },
+                    {
+                        "name": "Uberture mall #3",
+                        "address": "Гусинобродское шоссе, 64",
+                        "description": "<ul><li>Пн-Пт с 8:00 - 17:00</li><li>Двери, плинтуса, стеновые панели</li></ul>",
+                        "latitude": "55.037314",
+                        "longitude": "83.016046"
+                    }
+                ]
+            },
+            {
+                "id": 12,
+                "name": "Казань",
+                "latitude": "55.796289",
+                "longitude": "49.108795",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Kazan #1",
+                        "address": "Проспект Победы, 91",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Мебель, двери, панели</li></ul>",
+                        "latitude": "55.827057",
+                        "longitude": "49.135381"
+                    },
+                    {
+                        "name": "Uberture mall Kazan #2",
+                        "address": "Улица Баумана, 36",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Двери и фурнитура</li></ul>",
+                        "latitude": "55.796528",
+                        "longitude": "49.108209"
+                    },
+                    {
+                        "name": "Uberture mall Kazan #3",
+                        "address": "Аметьевская магистраль, 12",
+                        "description": "<ul><li>Ежедневно 9:00 - 21:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "55.770409",
+                        "longitude": "49.174449"
+                    }
+                ]
+            },
+            {
+                "id": 13,
+                "name": "Москва",
+                "latitude": "55.755826",
+                "longitude": "37.6172999",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Moscow #1",
+                        "address": "Тверская улица, 7",
+                        "description": "<ul><li>Пн-Вс 10:00 - 21:00</li><li>Интерьерные решения</li></ul>",
+                        "latitude": "55.757713",
+                        "longitude": "37.613938"
+                    },
+                    {
+                        "name": "Uberture mall Moscow #2",
+                        "address": "Кутузовский проспект, 57",
+                        "description": "<ul><li>Пн-Сб 9:00 - 20:00</li><li>Отделочные материалы</li></ul>",
+                        "latitude": "55.738821",
+                        "longitude": "37.518128"
+                    },
+                    {
+                        "name": "Uberture mall Moscow #3",
+                        "address": "Пресненская наб., 12",
+                        "description": "<ul><li>Ежедневно 10:00 - 22:00</li><li>Панели и двери</li></ul>",
+                        "latitude": "55.749473",
+                        "longitude": "37.539377"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Казахстан",
+        "active": false,
+        "city": [
+            {
+                "id": 21,
+                "name": "Алматы",
+                "latitude": "43.238949",
+                "longitude": "76.889709",
+                "active": true,
+                "store": [
+                    {
+                        "name": "Uberture mall Almaty #1",
+                        "address": "Проспект Абая, 109",
+                        "description": "<ul><li>Ежедневно 10:00 - 22:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "43.236360",
+                        "longitude": "76.909335"
+                    },
+                    {
+                        "name": "Uberture mall Almaty #2",
+                        "address": "Улица Панфилова, 78",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Двери и аксессуары</li></ul>",
+                        "latitude": "43.255067",
+                        "longitude": "76.945648"
+                    },
+                    {
+                        "name": "Uberture mall Almaty #3",
+                        "address": "Достык проспект, 124",
+                        "description": "<ul><li>Пн-Вс 10:00 - 21:00</li><li>Интерьерные товары</li></ul>",
+                        "latitude": "43.225863",
+                        "longitude": "76.951817"
+                    }
+                ]
+            },
+            {
+                "id": 22,
+                "name": "Астана",
+                "latitude": "51.169392",
+                "longitude": "71.449074",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Astana #1",
+                        "address": "Проспект Кабанбай батыра, 62",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Стройматериалы и двери</li></ul>",
+                        "latitude": "51.128168",
+                        "longitude": "71.430411"
+                    },
+                    {
+                        "name": "Uberture mall Astana #2",
+                        "address": "Улица Достык, 12",
+                        "description": "<ul><li>Ежедневно 10:00 - 22:00</li><li>Панели и напольные покрытия</li></ul>",
+                        "latitude": "51.128926",
+                        "longitude": "71.468566"
+                    },
+                    {
+                        "name": "Uberture mall Astana #3",
+                        "address": "Абылай хана, 35",
+                        "description": "<ul><li>Пн-Пт 9:00 - 18:00</li><li>Интерьер и мебель</li></ul>",
+                        "latitude": "51.160522",
+                        "longitude": "71.435240"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Беларусь",
+        "active": false,
+        "city": [
+            {
+                "id": 31,
+                "name": "Минск",
+                "latitude": "53.900601",
+                "longitude": "27.559026",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Minsk #1",
+                        "address": "Проспект Независимости, 100",
+                        "description": "<ul><li>Ежедневно 10:00 - 20:00</li><li>Стройматериалы</li></ul>",
+                        "latitude": "53.927259",
+                        "longitude": "27.591622"
+                    },
+                    {
+                        "name": "Uberture mall Minsk #2",
+                        "address": "Улица Немига, 12",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "53.905841",
+                        "longitude": "27.554913"
+                    },
+                    {
+                        "name": "Uberture mall Minsk #3",
+                        "address": "Партизанский проспект, 50",
+                        "description": "<ul><li>Пн-Пт 9:00 - 18:00</li><li>Двери и панели</li></ul>",
+                        "latitude": "53.870269",
+                        "longitude": "27.640382"
+                    }
+                ]
+            },
+            {
+                "id": 32,
+                "name": "Гомель",
+                "latitude": "52.434548",
+                "longitude": "30.975397",
+                "active": true,
+                "store": [
+                    {
+                        "name": "Uberture mall Gomel #1",
+                        "address": "Проспект Ленина, 10",
+                        "description": "<ul><li>Пн-Вс 10:00 - 21:00</li><li>Интерьерные решения</li></ul>",
+                        "latitude": "52.431401",
+                        "longitude": "30.993051"
+                    },
+                    {
+                        "name": "Uberture mall Gomel #2",
+                        "address": "Советская улица, 20",
+                        "description": "<ul><li>Пн-Сб 9:00 - 20:00</li><li>Стройматериалы</li></ul>",
+                        "latitude": "52.429788",
+                        "longitude": "30.992649"
+                    },
+                    {
+                        "name": "Uberture mall Gomel #3",
+                        "address": "Иркутская улица, 15",
+                        "description": "<ul><li>Пн-Пт 9:00 - 18:00</li><li>Панели и двери</li></ul>",
+                        "latitude": "52.439195",
+                        "longitude": "30.961084"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Киргизия",
+        "active": false,
+        "city": [
+            {
+                "id": 41,
+                "name": "Бишкек",
+                "latitude": "42.874621",
+                "longitude": "74.569756",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Bishkek #1",
+                        "address": "Проспект Чуй, 45",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Строительные материалы и двери</li></ul>",
+                        "latitude": "42.873500",
+                        "longitude": "74.585000"
+                    },
+                    {
+                        "name": "Uberture mall Bishkek #2",
+                        "address": "Улица Токомбаева, 12",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "42.870000",
+                        "longitude": "74.590000"
+                    },
+                    {
+                        "name": "Uberture mall Bishkek #3",
+                        "address": "Бульвар Эркиндик, 8",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Панели и аксессуары</li></ul>",
+                        "latitude": "42.876000",
+                        "longitude": "74.578000"
+                    }
+                ]
+            },
+            {
+                "id": 42,
+                "name": "Ош",
+                "latitude": "40.513627",
+                "longitude": "72.816162",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Osh #1",
+                        "address": "Проспект Манаса, 23",
+                        "description": "<ul><li>Пн-Вс 10:00 - 21:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "40.514000",
+                        "longitude": "72.820000"
+                    },
+                    {
+                        "name": "Uberture mall Osh #2",
+                        "address": "Улица Ленина, 50",
+                        "description": "<ul><li>Пн-Пт 9:00 - 19:00</li><li>Двери и панели</li></ul>",
+                        "latitude": "40.512000",
+                        "longitude": "72.815000"
+                    },
+                    {
+                        "name": "Uberture mall Osh #3",
+                        "address": "Базарная улица, 11",
+                        "description": "<ul><li>Пн-Сб 9:00 - 20:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "40.510000",
+                        "longitude": "72.818000"
+                    }
+                ]
+            },
+            {
+                "id": 43,
+                "name": "Каракол",
+                "latitude": "42.490000",
+                "longitude": "78.392000",
+                "active": true,
+                "store": [
+                    {
+                        "name": "Uberture mall Karakol #1",
+                        "address": "Улица Горького, 15",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Интерьерные решения</li></ul>",
+                        "latitude": "42.491000",
+                        "longitude": "78.395000"
+                    },
+                    {
+                        "name": "Uberture mall Karakol #2",
+                        "address": "Проспект А.Чокморова, 7",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "42.488000",
+                        "longitude": "78.390000"
+                    },
+                    {
+                        "name": "Uberture mall Karakol #3",
+                        "address": "Улица Панфилова, 3",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Двери и аксессуары</li></ul>",
+                        "latitude": "42.492000",
+                        "longitude": "78.393000"
+                    }
+                ]
+            }
+        ]
+    }, 
+    {
+        "id": 5,
+        "name": "Таджикистан",
+        "active": false,
+        "city": [
+            {
+                "id": 51,
+                "name": "Душанбе",
+                "latitude": "38.559772",
+                "longitude": "68.787038",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Dushanbe #1",
+                        "address": "Проспект Рудаки, 101",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Строительные материалы и двери</li></ul>",
+                        "latitude": "38.560500",
+                        "longitude": "68.790000"
+                    },
+                    {
+                        "name": "Uberture mall Dushanbe #2",
+                        "address": "Улица Шамсиддина Шохина, 12",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "38.558000",
+                        "longitude": "68.785000"
+                    },
+                    {
+                        "name": "Uberture mall Dushanbe #3",
+                        "address": "Бульвар Искандера, 5",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Панели и аксессуары</li></ul>",
+                        "latitude": "38.561000",
+                        "longitude": "68.788000"
+                    }
+                ]
+            },
+            {
+                "id": 52,
+                "name": "Худжанд",
+                "latitude": "40.282753",
+                "longitude": "69.629540",
+                "active": true,
+                "store": [
+                    {
+                        "name": "Uberture mall Khujand #1",
+                        "address": "Проспект Исмоили Сомони, 20",
+                        "description": "<ul><li>Пн-Вс 10:00 - 21:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "40.283500",
+                        "longitude": "69.632000"
+                    },
+                    {
+                        "name": "Uberture mall Khujand #2",
+                        "address": "Улица Ленина, 45",
+                        "description": "<ul><li>Пн-Пт 9:00 - 19:00</li><li>Двери и панели</li></ul>",
+                        "latitude": "40.281000",
+                        "longitude": "69.630000"
+                    },
+                    {
+                        "name": "Uberture mall Khujand #3",
+                        "address": "Улица Айнуллаева, 10",
+                        "description": "<ul><li>Пн-Сб 9:00 - 20:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "40.284000",
+                        "longitude": "69.628000"
+                    }
+                ]
+            },
+            {
+                "id": 53,
+                "name": "Куляб",
+                "latitude": "37.841667",
+                "longitude": "69.786667",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Kulyab #1",
+                        "address": "Проспект Рудаки, 7",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Интерьерные решения</li></ul>",
+                        "latitude": "37.842500",
+                        "longitude": "69.788000"
+                    },
+                    {
+                        "name": "Uberture mall Kulyab #2",
+                        "address": "Улица Ленина, 15",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "37.840000",
+                        "longitude": "69.785000"
+                    },
+                    {
+                        "name": "Uberture mall Kulyab #3",
+                        "address": "Бульвар Аловудинова, 3",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Двери и аксессуары</li></ul>",
+                        "latitude": "37.843000",
+                        "longitude": "69.786500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Армения",
+        "active": false,
+        "city": [
+            {
+                "id": 61,
+                "name": "Ереван",
+                "latitude": "40.1792",
+                "longitude": "44.4991",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Yerevan #1",
+                        "address": "Проспект Баграмяна, 50",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Строительные материалы и двери</li></ul>",
+                        "latitude": "40.180000",
+                        "longitude": "44.500000"
+                    },
+                    {
+                        "name": "Uberture mall Yerevan #2",
+                        "address": "Улица Абовяна, 12",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "40.178500",
+                        "longitude": "44.498000"
+                    },
+                    {
+                        "name": "Uberture mall Yerevan #3",
+                        "address": "Бульвар Комитаса, 7",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Панели и аксессуары</li></ul>",
+                        "latitude": "40.179500",
+                        "longitude": "44.497500"
+                    }
+                ]
+            },
+            {
+                "id": 62,
+                "name": "Гюмри",
+                "latitude": "40.7940",
+                "longitude": "43.8478",
+                "active": true,
+                "store": [
+                    {
+                        "name": "Uberture mall Gyumri #1",
+                        "address": "Проспект Маркса, 15",
+                        "description": "<ul><li>Пн-Вс 10:00 - 21:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "40.795000",
+                        "longitude": "43.848500"
+                    },
+                    {
+                        "name": "Uberture mall Gyumri #2",
+                        "address": "Улица Севака, 23",
+                        "description": "<ul><li>Пн-Пт 9:00 - 19:00</li><li>Двери и панели</li></ul>",
+                        "latitude": "40.793000",
+                        "longitude": "43.846500"
+                    },
+                    {
+                        "name": "Uberture mall Gyumri #3",
+                        "address": "Бульвар Мецамор, 5",
+                        "description": "<ul><li>Пн-Сб 9:00 - 20:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "40.794500",
+                        "longitude": "43.847000"
+                    }
+                ]
+            },
+            {
+                "id": 63,
+                "name": "Ванадзор",
+                "latitude": "40.8120",
+                "longitude": "44.4883",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Vanadzor #1",
+                        "address": "Проспект Ленина, 10",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Интерьерные решения</li></ul>",
+                        "latitude": "40.812500",
+                        "longitude": "44.489000"
+                    },
+                    {
+                        "name": "Uberture mall Vanadzor #2",
+                        "address": "Улица Абовяна, 18",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "40.811000",
+                        "longitude": "44.487500"
+                    },
+                    {
+                        "name": "Uberture mall Vanadzor #3",
+                        "address": "Бульвар Ширака, 7",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Двери и аксессуары</li></ul>",
+                        "latitude": "40.812800",
+                        "longitude": "44.488500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Азербайджан",
+        "active": false,
+        "city": [
+            {
+                "id": 71,
+                "name": "Баку",
+                "latitude": "40.4093",
+                "longitude": "49.8671",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Baku #1",
+                        "address": "Проспект Нефтяников, 15",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Строительные материалы и двери</li></ul>",
+                        "latitude": "40.410000",
+                        "longitude": "49.868000"
+                    },
+                    {
+                        "name": "Uberture mall Baku #2",
+                        "address": "Улица Физули, 20",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "40.409500",
+                        "longitude": "49.866500"
+                    },
+                    {
+                        "name": "Uberture mall Baku #3",
+                        "address": "Бульвар Низами, 7",
+                        "description": "<ul><li>Пн-Сб 9:00 - 21:00</li><li>Панели и аксессуары</li></ul>",
+                        "latitude": "40.408800",
+                        "longitude": "49.867500"
+                    }
+                ]
+            },
+            {
+                "id": 72,
+                "name": "Гянджа",
+                "latitude": "40.6828",
+                "longitude": "46.3606",
+                "active": true,
+                "store": [
+                    {
+                        "name": "Uberture mall Ganja #1",
+                        "address": "Проспект Нариманова, 12",
+                        "description": "<ul><li>Пн-Вс 10:00 - 21:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "40.683500",
+                        "longitude": "46.361000"
+                    },
+                    {
+                        "name": "Uberture mall Ganja #2",
+                        "address": "Улица Садыгова, 8",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Двери и панели</li></ul>",
+                        "latitude": "40.682200",
+                        "longitude": "46.360200"
+                    },
+                    {
+                        "name": "Uberture mall Ganja #3",
+                        "address": "Бульвар Микаила, 5",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "40.683000",
+                        "longitude": "46.359500"
+                    }
+                ]
+            },
+            {
+                "id": 73,
+                "name": "Сумгаит",
+                "latitude": "40.5897",
+                "longitude": "49.6686",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Sumqayit #1",
+                        "address": "Проспект Металлургов, 22",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Интерьерные решения</li></ul>",
+                        "latitude": "40.590500",
+                        "longitude": "49.669000"
+                    },
+                    {
+                        "name": "Uberture mall Sumqayit #2",
+                        "address": "Улица Низами, 18",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "40.589200",
+                        "longitude": "49.668000"
+                    },
+                    {
+                        "name": "Uberture mall Sumqayit #3",
+                        "address": "Бульвар Севиндж, 9",
+                        "description": "<ul><li>Пн-Сб 9:00 - 21:00</li><li>Двери и аксессуары</li></ul>",
+                        "latitude": "40.589800",
+                        "longitude": "49.668500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Узбекистан",
+        "active": false,
+        "city": [
+            {
+                "id": 81,
+                "name": "Ташкент",
+                "latitude": "41.2995",
+                "longitude": "69.2401",
+                "active": true,
+                "store": [
+                    {
+                        "name": "Uberture mall Tashkent #1",
+                        "address": "Проспект Амир Темур, 10",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Строительные материалы и двери</li></ul>",
+                        "latitude": "41.300000",
+                        "longitude": "69.241000"
+                    },
+                    {
+                        "name": "Uberture mall Tashkent #2",
+                        "address": "Улица Бунедкор, 5",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "41.299200",
+                        "longitude": "69.239500"
+                    },
+                    {
+                        "name": "Uberture mall Tashkent #3",
+                        "address": "Бульвар Навои, 12",
+                        "description": "<ul><li>Пн-Сб 9:00 - 21:00</li><li>Панели и аксессуары</li></ul>",
+                        "latitude": "41.298800",
+                        "longitude": "69.240500"
+                    }
+                ]
+            },
+            {
+                "id": 82,
+                "name": "Самарканд",
+                "latitude": "39.6542",
+                "longitude": "66.9597",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Samarkand #1",
+                        "address": "Проспект Регистан, 18",
+                        "description": "<ul><li>Пн-Вс 10:00 - 21:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "39.654800",
+                        "longitude": "66.960200"
+                    },
+                    {
+                        "name": "Uberture mall Samarkand #2",
+                        "address": "Улица Амира Темура, 7",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Двери и панели</li></ul>",
+                        "latitude": "39.653500",
+                        "longitude": "66.959000"
+                    },
+                    {
+                        "name": "Uberture mall Samarkand #3",
+                        "address": "Бульвар Шахрисабз, 3",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "39.654000",
+                        "longitude": "66.958500"
+                    }
+                ]
+            },
+            {
+                "id": 83,
+                "name": "Бухара",
+                "latitude": "39.7747",
+                "longitude": "64.4286",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Bukhara #1",
+                        "address": "Проспект Ленина, 22",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Интерьерные решения</li></ul>",
+                        "latitude": "39.775500",
+                        "longitude": "64.429000"
+                    },
+                    {
+                        "name": "Uberture mall Bukhara #2",
+                        "address": "Улица Ташкентская, 10",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "39.774200",
+                        "longitude": "64.427500"
+                    },
+                    {
+                        "name": "Uberture mall Bukhara #3",
+                        "address": "Бульвар Саманидов, 5",
+                        "description": "<ul><li>Пн-Сб 9:00 - 21:00</li><li>Двери и аксессуары</li></ul>",
+                        "latitude": "39.774800",
+                        "longitude": "64.428000"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Монголия",
+        "active": false,
+        "city": [
+            {
+                "id": 91,
+                "name": "Улан-Батор",
+                "latitude": "47.8864",
+                "longitude": "106.9057",
+                "active": true,
+                "store": [
+                    {
+                        "name": "Uberture mall Ulaanbaatar #1",
+                        "address": "Проспект Энхтайван, 15",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Строительные материалы и двери</li></ul>",
+                        "latitude": "47.887000",
+                        "longitude": "106.906500"
+                    },
+                    {
+                        "name": "Uberture mall Ulaanbaatar #2",
+                        "address": "Улица Сухбаатар, 8",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "47.886000",
+                        "longitude": "106.905000"
+                    },
+                    {
+                        "name": "Uberture mall Ulaanbaatar #3",
+                        "address": "Бульвар Чойбалсан, 12",
+                        "description": "<ul><li>Пн-Сб 9:00 - 21:00</li><li>Панели и аксессуары</li></ul>",
+                        "latitude": "47.885500",
+                        "longitude": "106.907000"
+                    }
+                ]
+            },
+            {
+                "id": 92,
+                "name": "Эрдэнэт",
+                "latitude": "49.0328",
+                "longitude": "104.0975",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Erdenet #1",
+                        "address": "Проспект МНР, 21",
+                        "description": "<ul><li>Пн-Вс 10:00 - 21:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "49.033500",
+                        "longitude": "104.098000"
+                    },
+                    {
+                        "name": "Uberture mall Erdenet #2",
+                        "address": "Улица Шинэ, 7",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Двери и панели</li></ul>",
+                        "latitude": "49.032000",
+                        "longitude": "104.096500"
+                    },
+                    {
+                        "name": "Uberture mall Erdenet #3",
+                        "address": "Бульвар Заводской, 5",
+                        "description": "<ul><li>Пн-Сб 9:00 - 19:00</li><li>Мебель и интерьер</li></ul>",
+                        "latitude": "49.032800",
+                        "longitude": "104.097800"
+                    }
+                ]
+            },
+            {
+                "id": 93,
+                "name": "Дархан",
+                "latitude": "49.4931",
+                "longitude": "105.9256",
+                "active": false,
+                "store": [
+                    {
+                        "name": "Uberture mall Darkhan #1",
+                        "address": "Проспект Заводской, 3",
+                        "description": "<ul><li>Пн-Вс 10:00 - 22:00</li><li>Интерьерные решения</li></ul>",
+                        "latitude": "49.493800",
+                        "longitude": "105.926200"
+                    },
+                    {
+                        "name": "Uberture mall Darkhan #2",
+                        "address": "Улица Центральная, 10",
+                        "description": "<ul><li>Пн-Пт 9:00 - 20:00</li><li>Строительные материалы</li></ul>",
+                        "latitude": "49.492500",
+                        "longitude": "105.925000"
+                    },
+                    {
+                        "name": "Uberture mall Darkhan #3",
+                        "address": "Бульвар Солнечный, 7",
+                        "description": "<ul><li>Пн-Сб 9:00 - 21:00</li><li>Двери и аксессуары</li></ul>",
+                        "latitude": "49.493200",
+                        "longitude": "105.926000"
+                    }
+                ]
+            }
+        ]
+    }    
+]

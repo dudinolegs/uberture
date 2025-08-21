@@ -1,0 +1,68 @@
+.map__country {
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.map__store-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.map__main {
+    width: 100%;
+    height: 620px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 0 35px 0;
+    position: relative;
+}
+
+.map__main-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 2;
+}
+
+.map__main-select .select {
+    width: 300px;
+}
+
+.map__main-select .select__current:hover {
+    box-shadow: var(--box-shadow);
+}
+
+.map__main-map {
+    width: 100%;
+    height: 100%;
+}
+
+.store {
+    border-radius: 15px;
+    background-color: white;
+    padding: 25px;
+}
+
+.store__icon {
+    margin: 0 0 3px 0;
+    width: 18px;
+}
+
+.store__name {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--dark-color);
+    margin: 0 0 10px 0;
+}
+
+.store__address {
+    color: var(--dark-color);
+    margin: 0 0 25px 0;
+}
