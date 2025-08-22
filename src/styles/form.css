@@ -60,6 +60,10 @@
     color: var(--grey-color);
 }
 
+.field.field_light .field__input {
+    --background-color-1: white;
+}
+
 .select {
     position: relative;
 }
@@ -216,6 +220,10 @@
 
 .select__option.select__option_active:before {
     background-color: white;
+}
+
+.select.select_light {
+    --background-color-1: white;
 }
 
 .checkbox {

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    <%= require('../templates/header_top_dark.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <%= require('../templates/hero_mainpage.html').default %>
+
+    <div class="section" id="next-block">
+        <div class="container">
+            <br>
+            <br>
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <div class="breadcrumbs__inner">
+                        <a href="#" class="breacrumbs__item">Главная</a>
+                        <span class="breacrumbs__item">Develop</span>
+                    </div>
+                </div>
+            </div>
+            <div class="page-title">
+                <div class="contianer">
+                    <h1>Заголовок страницы</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="section__header">
+                <div class="section__title-wrapper">
+                    <h2 class="section__title">Кнопки</h2>
+                </div>
+            </div>
+
+            <div class="text" style="display: flex; flex-wrap: wrap; gap: 30px;">
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.button</code></p>
+
+                    <button class="button">
+                        <span>Кнопка</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                            <path d="M15.5001 11.1901V13.4401C15.5009 13.6489 15.4581 13.8557 15.3745 14.0471C15.2908 14.2385 15.168 14.4103 15.0141 14.5515C14.8602 14.6927 14.6785 14.8002 14.4806 14.8671C14.2828 14.934 14.0731 14.9589 13.8651 14.9401C11.5572 14.6893 9.34032 13.9007 7.39257 12.6376C5.58044 11.4861 4.04407 9.9497 2.89257 8.13757C1.62506 6.18098 0.836254 3.95332 0.590072 1.63507C0.57133 1.42767 0.595978 1.21864 0.662447 1.02129C0.728916 0.823939 0.83575 0.64259 0.976146 0.488789C1.11654 0.334987 1.28743 0.212105 1.47792 0.127964C1.6684 0.0438236 1.87433 0.000268824 2.08257 7.27143e-05H4.33257C4.69655 -0.00350962 5.04942 0.125382 5.32539 0.362722C5.60137 0.600063 5.78163 0.929658 5.83257 1.29007C5.92754 2.01012 6.10366 2.71712 6.35757 3.39757C6.45848 3.66602 6.48032 3.95776 6.4205 4.23823C6.36069 4.51871 6.22172 4.77616 6.02007 4.98007L5.06757 5.93257C6.13524 7.81023 7.68991 9.36491 9.56757 10.4326L10.5201 9.48007C10.724 9.27843 10.9814 9.13946 11.2619 9.07964C11.5424 9.01983 11.8341 9.04167 12.1026 9.14257C12.783 9.39649 13.49 9.57261 14.2101 9.66757C14.5744 9.71897 14.9071 9.90248 15.145 10.1832C15.3828 10.4639 15.5092 10.8223 15.5001 11.1901Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.button.button_main-fill</code></p>
+
+                    <button class="button button_main-fill button_with-icon button_rounded button_a-active button_size-s">
+                        <span>Кнопка</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                            <path d="M15.5001 11.1901V13.4401C15.5009 13.6489 15.4581 13.8557 15.3745 14.0471C15.2908 14.2385 15.168 14.4103 15.0141 14.5515C14.8602 14.6927 14.6785 14.8002 14.4806 14.8671C14.2828 14.934 14.0731 14.9589 13.8651 14.9401C11.5572 14.6893 9.34032 13.9007 7.39257 12.6376C5.58044 11.4861 4.04407 9.9497 2.89257 8.13757C1.62506 6.18098 0.836254 3.95332 0.590072 1.63507C0.57133 1.42767 0.595978 1.21864 0.662447 1.02129C0.728916 0.823939 0.83575 0.64259 0.976146 0.488789C1.11654 0.334987 1.28743 0.212105 1.47792 0.127964C1.6684 0.0438236 1.87433 0.000268824 2.08257 7.27143e-05H4.33257C4.69655 -0.00350962 5.04942 0.125382 5.32539 0.362722C5.60137 0.600063 5.78163 0.929658 5.83257 1.29007C5.92754 2.01012 6.10366 2.71712 6.35757 3.39757C6.45848 3.66602 6.48032 3.95776 6.4205 4.23823C6.36069 4.51871 6.22172 4.77616 6.02007 4.98007L5.06757 5.93257C6.13524 7.81023 7.68991 9.36491 9.56757 10.4326L10.5201 9.48007C10.724 9.27843 10.9814 9.13946 11.2619 9.07964C11.5424 9.01983 11.8341 9.04167 12.1026 9.14257C12.783 9.39649 13.49 9.57261 14.2101 9.66757C14.5744 9.71897 14.9071 9.90248 15.145 10.1832C15.3828 10.4639 15.5092 10.8223 15.5001 11.1901Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.button.button_main-stroke</code></p>
+
+                    <button class="button button_main-stroke button_with-icon button_rounded button_a-active button_size-s">
+                        <span>Кнопка</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                            <path d="M15.5001 11.1901V13.4401C15.5009 13.6489 15.4581 13.8557 15.3745 14.0471C15.2908 14.2385 15.168 14.4103 15.0141 14.5515C14.8602 14.6927 14.6785 14.8002 14.4806 14.8671C14.2828 14.934 14.0731 14.9589 13.8651 14.9401C11.5572 14.6893 9.34032 13.9007 7.39257 12.6376C5.58044 11.4861 4.04407 9.9497 2.89257 8.13757C1.62506 6.18098 0.836254 3.95332 0.590072 1.63507C0.57133 1.42767 0.595978 1.21864 0.662447 1.02129C0.728916 0.823939 0.83575 0.64259 0.976146 0.488789C1.11654 0.334987 1.28743 0.212105 1.47792 0.127964C1.6684 0.0438236 1.87433 0.000268824 2.08257 7.27143e-05H4.33257C4.69655 -0.00350962 5.04942 0.125382 5.32539 0.362722C5.60137 0.600063 5.78163 0.929658 5.83257 1.29007C5.92754 2.01012 6.10366 2.71712 6.35757 3.39757C6.45848 3.66602 6.48032 3.95776 6.4205 4.23823C6.36069 4.51871 6.22172 4.77616 6.02007 4.98007L5.06757 5.93257C6.13524 7.81023 7.68991 9.36491 9.56757 10.4326L10.5201 9.48007C10.724 9.27843 10.9814 9.13946 11.2619 9.07964C11.5424 9.01983 11.8341 9.04167 12.1026 9.14257C12.783 9.39649 13.49 9.57261 14.2101 9.66757C14.5744 9.71897 14.9071 9.90248 15.145 10.1832C15.3828 10.4639 15.5092 10.8223 15.5001 11.1901Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div style="background-color: rgb(61, 61, 61); padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.button.button_white-stroke</code></p>
+
+                    <button class="button button_white-stroke button_with-icon button_rounded button_a-active button_size-s">
+                        <span>Кнопка</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                            <path d="M15.5001 11.1901V13.4401C15.5009 13.6489 15.4581 13.8557 15.3745 14.0471C15.2908 14.2385 15.168 14.4103 15.0141 14.5515C14.8602 14.6927 14.6785 14.8002 14.4806 14.8671C14.2828 14.934 14.0731 14.9589 13.8651 14.9401C11.5572 14.6893 9.34032 13.9007 7.39257 12.6376C5.58044 11.4861 4.04407 9.9497 2.89257 8.13757C1.62506 6.18098 0.836254 3.95332 0.590072 1.63507C0.57133 1.42767 0.595978 1.21864 0.662447 1.02129C0.728916 0.823939 0.83575 0.64259 0.976146 0.488789C1.11654 0.334987 1.28743 0.212105 1.47792 0.127964C1.6684 0.0438236 1.87433 0.000268824 2.08257 7.27143e-05H4.33257C4.69655 -0.00350962 5.04942 0.125382 5.32539 0.362722C5.60137 0.600063 5.78163 0.929658 5.83257 1.29007C5.92754 2.01012 6.10366 2.71712 6.35757 3.39757C6.45848 3.66602 6.48032 3.95776 6.4205 4.23823C6.36069 4.51871 6.22172 4.77616 6.02007 4.98007L5.06757 5.93257C6.13524 7.81023 7.68991 9.36491 9.56757 10.4326L10.5201 9.48007C10.724 9.27843 10.9814 9.13946 11.2619 9.07964C11.5424 9.01983 11.8341 9.04167 12.1026 9.14257C12.783 9.39649 13.49 9.57261 14.2101 9.66757C14.5744 9.71897 14.9071 9.90248 15.145 10.1832C15.3828 10.4639 15.5092 10.8223 15.5001 11.1901Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.button.button_dark-fill</code></p>
+
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s">
+                        <span>Кнопка</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                            <path d="M15.5001 11.1901V13.4401C15.5009 13.6489 15.4581 13.8557 15.3745 14.0471C15.2908 14.2385 15.168 14.4103 15.0141 14.5515C14.8602 14.6927 14.6785 14.8002 14.4806 14.8671C14.2828 14.934 14.0731 14.9589 13.8651 14.9401C11.5572 14.6893 9.34032 13.9007 7.39257 12.6376C5.58044 11.4861 4.04407 9.9497 2.89257 8.13757C1.62506 6.18098 0.836254 3.95332 0.590072 1.63507C0.57133 1.42767 0.595978 1.21864 0.662447 1.02129C0.728916 0.823939 0.83575 0.64259 0.976146 0.488789C1.11654 0.334987 1.28743 0.212105 1.47792 0.127964C1.6684 0.0438236 1.87433 0.000268824 2.08257 7.27143e-05H4.33257C4.69655 -0.00350962 5.04942 0.125382 5.32539 0.362722C5.60137 0.600063 5.78163 0.929658 5.83257 1.29007C5.92754 2.01012 6.10366 2.71712 6.35757 3.39757C6.45848 3.66602 6.48032 3.95776 6.4205 4.23823C6.36069 4.51871 6.22172 4.77616 6.02007 4.98007L5.06757 5.93257C6.13524 7.81023 7.68991 9.36491 9.56757 10.4326L10.5201 9.48007C10.724 9.27843 10.9814 9.13946 11.2619 9.07964C11.5424 9.01983 11.8341 9.04167 12.1026 9.14257C12.783 9.39649 13.49 9.57261 14.2101 9.66757C14.5744 9.71897 14.9071 9.90248 15.145 10.1832C15.3828 10.4639 15.5092 10.8223 15.5001 11.1901Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div style="background-color: rgb(61, 61, 61); padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.button.button_white-fill</code></p>
+
+                    <button class="button button_white-fill button_with-icon button_rounded button_a-active button_size-s">
+                        <span>Кнопка</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                            <path d="M15.5001 11.1901V13.4401C15.5009 13.6489 15.4581 13.8557 15.3745 14.0471C15.2908 14.2385 15.168 14.4103 15.0141 14.5515C14.8602 14.6927 14.6785 14.8002 14.4806 14.8671C14.2828 14.934 14.0731 14.9589 13.8651 14.9401C11.5572 14.6893 9.34032 13.9007 7.39257 12.6376C5.58044 11.4861 4.04407 9.9497 2.89257 8.13757C1.62506 6.18098 0.836254 3.95332 0.590072 1.63507C0.57133 1.42767 0.595978 1.21864 0.662447 1.02129C0.728916 0.823939 0.83575 0.64259 0.976146 0.488789C1.11654 0.334987 1.28743 0.212105 1.47792 0.127964C1.6684 0.0438236 1.87433 0.000268824 2.08257 7.27143e-05H4.33257C4.69655 -0.00350962 5.04942 0.125382 5.32539 0.362722C5.60137 0.600063 5.78163 0.929658 5.83257 1.29007C5.92754 2.01012 6.10366 2.71712 6.35757 3.39757C6.45848 3.66602 6.48032 3.95776 6.4205 4.23823C6.36069 4.51871 6.22172 4.77616 6.02007 4.98007L5.06757 5.93257C6.13524 7.81023 7.68991 9.36491 9.56757 10.4326L10.5201 9.48007C10.724 9.27843 10.9814 9.13946 11.2619 9.07964C11.5424 9.01983 11.8341 9.04167 12.1026 9.14257C12.783 9.39649 13.49 9.57261 14.2101 9.66757C14.5744 9.71897 14.9071 9.90248 15.145 10.1832C15.3828 10.4639 15.5092 10.8223 15.5001 11.1901Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.button.button_pale-stroke</code></p>
+
+                    <button class="button button_pale-stroke button_with-icon button_rounded button_a-active button_size-s">
+                        <span>Кнопка</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                            <path d="M15.5001 11.1901V13.4401C15.5009 13.6489 15.4581 13.8557 15.3745 14.0471C15.2908 14.2385 15.168 14.4103 15.0141 14.5515C14.8602 14.6927 14.6785 14.8002 14.4806 14.8671C14.2828 14.934 14.0731 14.9589 13.8651 14.9401C11.5572 14.6893 9.34032 13.9007 7.39257 12.6376C5.58044 11.4861 4.04407 9.9497 2.89257 8.13757C1.62506 6.18098 0.836254 3.95332 0.590072 1.63507C0.57133 1.42767 0.595978 1.21864 0.662447 1.02129C0.728916 0.823939 0.83575 0.64259 0.976146 0.488789C1.11654 0.334987 1.28743 0.212105 1.47792 0.127964C1.6684 0.0438236 1.87433 0.000268824 2.08257 7.27143e-05H4.33257C4.69655 -0.00350962 5.04942 0.125382 5.32539 0.362722C5.60137 0.600063 5.78163 0.929658 5.83257 1.29007C5.92754 2.01012 6.10366 2.71712 6.35757 3.39757C6.45848 3.66602 6.48032 3.95776 6.4205 4.23823C6.36069 4.51871 6.22172 4.77616 6.02007 4.98007L5.06757 5.93257C6.13524 7.81023 7.68991 9.36491 9.56757 10.4326L10.5201 9.48007C10.724 9.27843 10.9814 9.13946 11.2619 9.07964C11.5424 9.01983 11.8341 9.04167 12.1026 9.14257C12.783 9.39649 13.49 9.57261 14.2101 9.66757C14.5744 9.71897 14.9071 9.90248 15.145 10.1832C15.3828 10.4639 15.5092 10.8223 15.5001 11.1901Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.button.button_grey-stroke</code></p>
+
+                    <button class="button button_grey-stroke button_with-icon button_rounded button_a-active button_size-s">
+                        <span>Кнопка</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                            <path d="M15.5001 11.1901V13.4401C15.5009 13.6489 15.4581 13.8557 15.3745 14.0471C15.2908 14.2385 15.168 14.4103 15.0141 14.5515C14.8602 14.6927 14.6785 14.8002 14.4806 14.8671C14.2828 14.934 14.0731 14.9589 13.8651 14.9401C11.5572 14.6893 9.34032 13.9007 7.39257 12.6376C5.58044 11.4861 4.04407 9.9497 2.89257 8.13757C1.62506 6.18098 0.836254 3.95332 0.590072 1.63507C0.57133 1.42767 0.595978 1.21864 0.662447 1.02129C0.728916 0.823939 0.83575 0.64259 0.976146 0.488789C1.11654 0.334987 1.28743 0.212105 1.47792 0.127964C1.6684 0.0438236 1.87433 0.000268824 2.08257 7.27143e-05H4.33257C4.69655 -0.00350962 5.04942 0.125382 5.32539 0.362722C5.60137 0.600063 5.78163 0.929658 5.83257 1.29007C5.92754 2.01012 6.10366 2.71712 6.35757 3.39757C6.45848 3.66602 6.48032 3.95776 6.4205 4.23823C6.36069 4.51871 6.22172 4.77616 6.02007 4.98007L5.06757 5.93257C6.13524 7.81023 7.68991 9.36491 9.56757 10.4326L10.5201 9.48007C10.724 9.27843 10.9814 9.13946 11.2619 9.07964C11.5424 9.01983 11.8341 9.04167 12.1026 9.14257C12.783 9.39649 13.49 9.57261 14.2101 9.66757C14.5744 9.71897 14.9071 9.90248 15.145 10.1832C15.3828 10.4639 15.5092 10.8223 15.5001 11.1901Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>Модификаторы размера</code></p>
+
+                    <button class="button button_dark-fill button_size-s">
+                        <span>.button_size-s</span>
+                    </button>
+                    <button class="button button_dark-fill button_size-m">
+                        <span>.button_size-s</span>
+                    </button>
+                    <button class="button button_dark-fill button_size-l">
+                        <span>.button_size-s</span>
+                    </button>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>Модификатор скругления</code></p>
+
+                    <button class="button button_dark-fill button_size-m">
+                        <span>default</span>
+                    </button>
+                    <button class="button button_dark-fill button_size-m button_rounded">
+                        <span>+ .button_rounded</span>
+                    </button>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>Модификатор анимации нажатия</code></p>
+
+                    <button class="button button_dark-fill button_size-m">
+                        <span>default</span>
+                    </button>
+                    <button class="button button_dark-fill button_size-m button_a-active">
+                        <span>+ .button_a-active</span>
+                    </button>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>Неактивная кнопка</code></p>
+
+                    <button class="button button_dark-fill button_size-m">
+                        <span>default</span>
+                    </button>
+                    <button class="button button_dark-fill button_size-m button_a-active" disabled>
+                        <span>disabled</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="section__header">
+                <div class="section__title-wrapper">
+                    <h2 class="section__title">Уведомления</h2>
+                </div>
+            </div>
+
+            <div class="text" style="display: flex; flex-wrap: wrap; gap: 30px;">
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.message.message_warning</code></p>
+                    <br>
+                    <div class="message message_warning text">
+                        <h4>Заголовок уведомления</h4>
+                        <p>Это произвольный текст уведомления<br> <b>поддерживающий</b> <u>форматирование</u></p>
+                        <ul>
+                            <li>А так же</li>
+                            <li>Списки</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.message.message_success</code></p>
+                    <br>
+                    <div class="message message_success text">
+                        <h4>Заголовок уведомления</h4>
+                        <p>Текст уведомления</p>
+                    </div>
+                </div>
+                
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.message.message_error</code></p>
+                    <br>
+                    <div class="message message_error text">
+                        <h4>Заголовок уведомления</h4>
+                        <p>Текст уведомления</p>
+                    </div>
+                </div>
+                
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>.message.message_info</code></p>
+                    <br>
+                    <div class="message message_info text">
+                        <h4>Заголовок уведомления</h4>
+                        <p>Текст уведомления</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="section__header">
+                <div class="section__title-wrapper">
+                    <h2 class="section__title">Элементы форм</h2>
+                </div>
+            </div>
+
+            <div class="text" style="display: flex; flex-wrap: wrap; gap: 30px;">
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>input</code></p>
+
+                    <br>
+
+                    <div class="field">
+                        <label class="field__label" for="example1">Имя и фамилия</label>
+                        <input class="field__input" type="text" id="example1" name="example1">
+                    </div>
+
+                    <br>
+
+                    <div class="field">
+                        <label class="field__label" for="example2">E-mail</label>
+                        <input class="field__input" type="email" id="example2" name="example2">
+                    </div>
+
+                    <br>
+
+                    <div class="field">
+                        <label class="field__label" for="example3">Номер телефона</label>
+                        <input class="field__input" type="tel" id="example3" name="example3" required>
+                    </div>
+
+                    <br>
+
+                    <div class="field">
+                        <label class="field__label" for="example4">Возраст</label>
+                        <input class="field__input" type="number" id="example4" name="example4" required>
+                    </div>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px; width: 350px;">
+                    <p><code>select</code></p>
+
+                    <br>
+
+                    <div class="select js-select">
+                        <input type="hidden" id="example5" name="example5" class="select__input js-select-input">
+
+                        <button class="select__current js-select-current">Вакансия</button>
+                        <div class="select__dropdown js-select-dropdown">
+                            <div class="select__dropdown-inner">
+                                <button type="button" class="select__option js-select-option" data-value="value2">Водитель</button>
+                                <button type="button" class="select__option js-select-option" data-value="value3">Контролёр ОТК</button>
+                                <button type="button" class="select__option js-select-option" data-value="value4">Оператор станков с ЧПУ</button>
+                                <button type="button" class="select__option select__option_disabled js-select-option" data-value="value5">Эта должность не активна</button>
+                                <button type="button" class="select__option js-select-option" data-value="value6">Упаковщик, комплектовщик</button>
+                                <button type="button" class="select__option js-select-option" data-value="value8">Другое</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <p><code>file</code></p>
+
+                    <br>
+
+                    <div class="file js-file">
+                        <input class="file__input js-file-input" type="file" id="example6" name="example6">
+                        <label class="file__label js-file-label" for="example6">Прикрепить резюме</label>
+                    </div>
+                </div>
+
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
+                    <p><code>checkbox</code></p>
+
+                    <br>
+
+                    <div class="checkbox">
+                        <input class="checkbox__input" type="checkbox" id="example7" name="example7">
+                        <label class="checkbox__label" for="example7">Нажимая на кнопку вы соглашаетесь<br> на обработку персональных данных</label>
+                    </div>
+
+                    <br>
+
+                    <p><code>radio</code></p>
+
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="example8-1" name="example6">
+                        <label class="radio__label" for="example8-1">Пример выбора #1</label>
+                    </div>
+                    <br>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="example8-2" name="example6">
+                        <label class="radio__label" for="example8-2">Пример выбора #2</label>
+                    </div>
+                    <br>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="example8-3" name="example6">
+                        <label class="radio__label" for="example8-3">Пример выбора #3</label>
+                    </div>
+                    <br>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="example8-4" name="example6">
+                        <label class="radio__label" for="example8-4">Пример выбора #4</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <%= require('../templates/job.html').default %>
+
+    <%= require('../templates/team.html').default %>
+
+    <%= require('../templates/faq.html').default %>
+
+    <%= require('../templates/advantages.html').default %>
+
+    <%= require('../templates/news_preview.html').default %>
+
+    <%= require('../templates/map.html').default %>
+
+    <%= require('../templates/form_job.html').default %>
+
+    <%= require('../templates/form_dealer.html').default %>
+    
+    <%= require('../templates/help_dealer.html').default %>
+
+    <%= require('../templates/help_tags.html').default %>
+
+    <%= require('../templates/social.html').default %>
+
+    <%= require('../templates/footer.html').default %>
+</body>
+</html>

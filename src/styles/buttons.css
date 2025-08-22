@@ -41,6 +41,11 @@
     border-radius: 30px;
 }
 
+.button.button_rounded:not(:has(span)) {
+    border-radius: 50%;
+    padding: 5px;
+}
+
 .button.button_size-s {
     --icon-size: 15px;
     height: var(--size-s);
@@ -124,4 +129,24 @@
 
 .button.button_white-stroke:hover {
     --color: var(--main-color);
+}
+
+.button.button_white-fill {
+    padding: 10px 25px;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.button.button_white-fill:hover {
+    border: 1px solid var(--grey-color);
+}
+
+.button.button_grey-fill {
+    padding: 10px 25px;
+    background-color: var(--background-color-1);
+    border: 1px solid var(--background-color-1);
+}
+
+.button.button_grey-fill:hover {
+    border: 1px solid var(--grey-color);
 }

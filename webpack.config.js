@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-const pages = ['develop'];
+const pages = ['develop', 'mainpage'];
 
 module.exports = (env, argv) => {
     const isProd = argv.mode === 'production';
@@ -20,12 +20,21 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
+                    test: /\.js$/,
+                    exclude: /node_modules/,
+                    loader: "babel-loader",
+                },
+                {
                     test: /\.html$/i,
                     loader: 'html-loader',
                 },
                 {
                     test: /\.css$/i,
-                    use: [MiniCssExtractPlugin.loader, "css-loader"],
+                    use: [
+                        isDev 
+                        ? 'style-loader' 
+                        : MiniCssExtractPlugin.loader, 'css-loader'
+                    ]
                 },
                 {
                     test: /\.(woff2?|eot|ttf|otf)$/i,
@@ -47,11 +56,23 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: './src/pages/index.ejs',
                 filename: 'index.html',
+                minify: {
+                    collapseWhitespace: true,
+                    removeComments: true,
+                    removeRedundantAttributes: true,
+                    useShortDoctype: true,
+                },
             }),
             ...pages.map(page =>
                 new HtmlWebpackPlugin({
-                    template: `./src/pages/${page}.html`,
+                    template: `./src/pages/${page}.ejs`,
                     filename: `${page}.html`,
+                    minify: {
+                        collapseWhitespace: true,
+                        removeComments: true,
+                        removeRedundantAttributes: true,
+                        useShortDoctype: true,
+                    },
                 })
             ),
             new MiniCssExtractPlugin({
@@ -59,7 +80,9 @@ module.exports = (env, argv) => {
             }),
         ],
         optimization: {
+            minimize: true,
             minimizer: [
+                '...',
                 new CssMinimizerPlugin(),
             ],
         },
@@ -68,6 +91,5 @@ module.exports = (env, argv) => {
             port: 3001,
             open: true,
         },
-        devtool: 'inline-source-map',
     }
 };

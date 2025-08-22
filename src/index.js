@@ -8,6 +8,7 @@ import './styles/footer.css';
 import './styles/article.css';
 import './styles/map.css';
 import './styles/form.css';
+import './styles/catalog.css';
 
 import './scripts/map.js';
 import './scripts/form.js';
