@@ -1,0 +1,138 @@
+
+.advantages-list {
+    --col: 5;
+    display: grid;
+    grid-template-columns: repeat(var(--col), 1fr);
+    gap: 15px;
+}
+
+.advantages-list.advantages-list_col-4 {
+    --col: 4;
+    gap: 20px;
+}
+
+.advantages-list.advantages-list_col-2 {
+    --col: 2;
+    gap: 20px;
+}
+
+.advantage {
+    padding: 25px 25px 25px 40px;
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.advantage:has(.advantage__icon) {
+    padding-top: 160px;
+}
+
+.advantage:has(.advantage__icon):has(.advantage__number) {
+    padding-top: 110px;
+}
+
+.advantage__number {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--background-color-1);
+}
+
+.advantage__title {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--grey-color);
+    position: relative;
+}
+
+.advantage__title:after,
+.advantage__title:before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+}
+
+.advantage__title:before {
+    left: -26px;
+    background-color: var(--main-color);
+}
+
+.advantage__title:after {
+    left: -16px;
+    background-color: var(--grey-color);
+}
+
+.advantage__title.advantage__title_dark {
+    color: var(--dark-color);
+}
+
+.advantage__title.advantage__title_light {
+    color: white;
+}
+
+.advantage.advantage_fill-main {
+    --text-color: white;
+    background-color: var(--main-color);
+}
+
+.advantage.advantage_fill-main .advantage__title {
+    color: var(--dark-color);
+}
+
+.advantage.advantage_fill-main .advantage__title:before {
+    background-color: white;
+}
+
+.advantage.advantage_border-grey {
+    border: 1px solid var(--grey-color);
+}
+
+.advantage.advantage_border-pale {
+    border: 1px solid var(--pale-color);
+}
+
+.advantage.advantage_fill-white {
+    background-color: white;
+}
+
+.advantage.advantage_fill-dark {
+    --text-color: white;
+    background-color: var(--dark-color);
+}
+
+.advantage.advantage_border-main {
+    border: 1px solid var(--main-color);
+}
+
+.advantage__icon {
+    width: 90px;
+    height: 90px;
+    background-color: var(--main-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.advantage__icon.advantage__icon_stroke {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+}
+
+.advantage__icon svg {
+    max-width: 27px;
+    max-height: 27px;
+}

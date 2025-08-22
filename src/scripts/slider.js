@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const swiper = new Swiper('.js-swiper', {
+new Swiper('.js-swiper', {
     modules: [Navigation, Pagination, Autoplay],
     loop: true,
     navigation: {

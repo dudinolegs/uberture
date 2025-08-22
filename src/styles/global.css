@@ -226,16 +226,16 @@ a.breacrumbs__item:hover {
     color: var(--dark-color);
 }
 
+.section.section_dark .section__title {
+    color: white;
+}
+
 .section__title.section__title_like-h1 {
     font-size: 65px;
 }
 
 .section__title b {
     color: var(--main-color);
-}
-
-.section.section_dark .section__title {
-    color: white;
 }
 
 .section__subtitle {
@@ -345,6 +345,29 @@ a.breacrumbs__item:hover {
     right: var(--right);
 }
 
+.help__advantages .advantage:first-child {
+    padding-top: 25px;
+    padding-right: 120px;
+}
+
+.help__advantage-image {
+    position: absolute;
+    right: 40px;
+    top: -327px;
+}
+
+.help__advantage-text {
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    right: 505px;
+    top: -180px;
+}
+
+.help__advantage-text b {
+    color: var(--main-color);
+}
+
 .tag {
     display: flex;
     flex-direction: column;
@@ -438,14 +461,14 @@ a.breacrumbs__item:hover {
     right: var(--right);
 }
 
-.hero__scroll {
+.hero__circle {
     position: absolute;
     left: calc(50% - 78px);
     bottom: 0;
     z-index: 3;
 }
 
-.scroll {
+.circle {
     width: 156px;
     height: 156px;
     display: flex;
@@ -453,28 +476,42 @@ a.breacrumbs__item:hover {
     justify-content: center;
 }
 
-.scroll svg {
+.circle__text {
     width: 100%;
     height: 100%;
     position: absolute;
+}
+
+.circle__text.circle__text_top {
     top: -55px;
 }
 
-.scroll:after {
+.circle__text.circle__text_bottom {
+    bottom: -55px;
+}
+
+.circle__text.circle__text_left {
+    left: -55px;
+}
+
+.circle:after {
     content: "";
     position: absolute;
     width: 110px;
     height: 110px;
     border-radius: 50%;
     background-color: var(--background-color-1);
-    background-image: url('../assets/icons/scroll.svg');
-    background-position: center;
-    background-size: 24px;
-    background-repeat: no-repeat;
     transition-duration: .5s;
+    z-index: 2;
 }
 
-.scroll:hover:after {
+.circle__icon {
+    max-width: 24px;
+    position: absolute;
+    z-index: 3;
+}
+
+.circle:hover:after {
     transform: scale(1.1);
 }
 
@@ -567,6 +604,12 @@ a.breacrumbs__item:hover {
     position: relative;
 }
 
+.message.message_white {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 15px 15px 55px;
+}
+
 .message:after {
     content: "!";
     text-align: center;
@@ -584,6 +627,11 @@ a.breacrumbs__item:hover {
     color: white;
 }
 
+.message.message_white:after {
+    top: 15px;
+    left: 15px;
+}
+
 .message.message_success:after {
     background-color: rgb(1, 246, 99);
 }
@@ -598,65 +646,6 @@ a.breacrumbs__item:hover {
 
 .message.message_error:after {
     background-color: rgb(246, 34, 1);
-}
-
-.advantages-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-}
-
-.advantage {
-    padding: 25px 25px 25px 40px;
-    position: relative;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.advantage__dots {
-    position: absolute;
-    left: 15px;
-    top: 28px;
-}
-
-.advantage__title {
-    font-family: var(--second-family);
-    font-weight: 500;
-    font-size: 25px;
-    color: var(--grey-color);
-}
-
-.advantage.advantage_fill-main {
-    --text-color: white;
-    background-color: var(--main-color);
-}
-
-.advantage.advantage_fill-main .advantage__title {
-    color: var(--dark-color);
-}
-
-.advantage.advantage_fill-main .dots:before {
-    background-color: white;
-}
-
-.advantage.advantage_border-grey {
-    border: 1px solid var(--grey-color);
-}
-
-.advantage.advantage_fill-white {
-    background-color: white;
-}
-
-.advantage.advantage_fill-dark {
-    --text-color: white;
-    background-color: var(--dark-color);
-}
-
-.advantage.advantage_border-main {
-    border: 1px solid var(--main-color);
 }
 
 .dropdown-list {
@@ -752,10 +741,6 @@ a.breacrumbs__item:hover {
 .job-content__offer-title b {
     font-weight: inherit;
     color: var(--grey-color);
-}
-
-.job-content__offer-button {
-
 }
 
 .employee-list {
@@ -876,4 +861,95 @@ a.employee-card__property:hover {
 
 [data-tab-content] {
     display: none;
+}
+
+.price-list {
+    background-color: var(--dark-color);
+    background-image: url('../assets/images/price-list.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.price-list__image {
+    position: absolute;
+    bottom: 0;
+    right: var(--right);
+}
+
+.price-list__circle {
+    position: absolute;
+    left: calc(50% - 78px);
+    top: -78px;
+    z-index: 3;
+}
+
+.about {
+    --video-width: calc(var(--container) / 4 * 2);
+    display: flex;
+    gap: 60px;
+    margin: 0 0 35px 0;
+}
+
+.about__video {
+    width: var(--video-width);
+    position: relative;
+}
+
+.about__video-poster {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.about__video-poster img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about__text {
+    width: calc(100% - var(--video-width) - 40px);
+}
+
+.text.about__text p {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+}
+
+.text.about__text .message {
+    margin: 0 0 15px 0;
+}
+
+.about__circle {
+    position: absolute;
+    top: calc(50% - 78px);
+    right: -78px;
+    z-index: 3;
+}
+
+.about__circle:after {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+}
+
+.about__circle:before {
+    content: "";
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    background-color: var(--background-color-1);
+}
+
+.about__circle .circle__icon {
+    max-width: 60px;
 }
