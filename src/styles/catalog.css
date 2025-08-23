@@ -5,7 +5,7 @@
 }
 
 .collection {
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     background-color: white;
     padding: 10px;
     position: relative;
@@ -72,7 +72,7 @@
 
 .fast-nav {
     --text-color: white;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     background-color: var(--dark-color);
     position: relative;
     overflow: hidden;
@@ -124,8 +124,8 @@
 }
 
 .category {
-    min-height: 300px;
-    border-radius: 15px;
+    min-height: 280px;
+    border-radius: var(--border-radius);
     background-color: white;
     position: relative;
     overflow: hidden;

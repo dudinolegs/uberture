@@ -128,7 +128,7 @@
     right: 0;
     background-color: var(--background-color-1);
     border: 1px solid var(--background-color-2);
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition-duration: .2s;
     z-index: 50;
@@ -157,7 +157,7 @@
     text-align: left;
     font-size: 18px;
     font-weight: 400;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     border: 1px solid var(--background-color-2);
     padding: 14px 25px 14px 50px;
     transition-duration: .2s;

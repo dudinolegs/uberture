@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-const pages = ['develop', 'mainpage', 'card'];
+const pages = ['develop', 'mainpage', 'card', 'dealer'];
 
 module.exports = (env, argv) => {
     const isProd = argv.mode === 'production';

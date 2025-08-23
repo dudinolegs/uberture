@@ -78,7 +78,7 @@
     top: calc(100% + 10px);
     left: 0;
     width: 360px;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     transition-duration: .2s;
     transform: scale(.95);
     z-index: 5;

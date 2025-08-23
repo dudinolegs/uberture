@@ -38,7 +38,7 @@
 }
 
 .button.button_rounded {
-    border-radius: 30px;
+    border-radius: calc(var(--border-radius) * 2);
 }
 
 .button.button_rounded:not(:has(span)) {

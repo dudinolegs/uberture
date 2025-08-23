@@ -3,6 +3,7 @@
     --section-margin: 80px;
     --section-padding: 80px;
     --right: calc((100% - var(--container)) / 2);
+    --border-radius: 15px;
 
     --main-family: 'Mulish', sans-serif;
     --second-family: 'Unbounded', sans-serif;
