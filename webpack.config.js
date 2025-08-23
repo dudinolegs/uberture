@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-const pages = ['develop', 'mainpage'];
+const pages = ['develop', 'mainpage', 'card'];
 
 module.exports = (env, argv) => {
     const isProd = argv.mode === 'production';
@@ -19,6 +19,13 @@ module.exports = (env, argv) => {
         },
         module: {
             rules: [
+                {
+                    test: /\.(png|jpe?g|gif|svg)$/i,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'assets/images/[hash][ext][query]'
+                    }
+                },
                 {
                     test: /\.js$/,
                     exclude: /node_modules/,
@@ -41,13 +48,6 @@ module.exports = (env, argv) => {
                     type: 'asset/resource',
                     generator: {
                         filename: 'assets/fonts/[hash][ext][query]'
-                    }
-                },
-                {
-                    test: /\.(png|jpe?g|gif|svg)$/i,
-                    type: 'asset/resource',
-                    generator: {
-                        filename: 'assets/images/[hash][ext][query]'
                     }
                 },
             ],

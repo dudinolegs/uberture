@@ -9,7 +9,7 @@ import './styles/article.css';
 import './styles/map.css';
 import './styles/form.css';
 import './styles/catalog.css';
-import './styles/advantages.css';
+import './styles/cards.css';
 
 import './scripts/map.js';
 import './scripts/form.js';

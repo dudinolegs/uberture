@@ -43,12 +43,11 @@
     margin: 5px 0 10px 0;
 }
 
-.text hr,
 .text hr {
     width: 100%;
     display: block;
     border: none;
-    background-color: var(--dark-color);
+    background-color: var(--grey-color);
     margin: 15px 0;
     height: 1px;
 }
@@ -62,10 +61,14 @@
     font-weight: 700;
 }
 
-.text a:not(.btn) {
+.text a:not(.button) {
     text-decoration: underline;
     font-weight: inherit;
     color: var(--main-color);
+}
+
+.text a:not(.button):hover {
+    text-decoration: none;
 }
 
 .text u {
