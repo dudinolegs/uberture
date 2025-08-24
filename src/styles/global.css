@@ -1124,3 +1124,52 @@ a.employee-card__property:hover {
     margin: 35px 0 0 0;
     width: 600px !important;
 }
+
+.dealer-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 0 35px 0;
+}
+
+.video {
+    height: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video__poster {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    border-radius: calc(var(--border-radius) * 2);
+}
+
+.video__button {
+    position: absolute;
+    z-index: 2;
+    transition-duration: .2s;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+
+.video__button:hover {
+    background-color: var(--main-color-dark);
+}
+
+.video__button:active {
+    transform: scale(0.98);
+}
+
+.video__button svg {
+    max-width: 100%;
+    max-height: 100%;
+}

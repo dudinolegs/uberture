@@ -10,8 +10,10 @@ import './styles/map.css';
 import './styles/form.css';
 import './styles/catalog.css';
 import './styles/cards.css';
+import './styles/modal.css';
 
 import './scripts/map.js';
 import './scripts/form.js';
 import './scripts/slider.js';
 import './scripts/scripts.js';
+import './scripts/modal.js';

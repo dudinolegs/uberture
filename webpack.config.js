@@ -1,9 +1,11 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const pages = ['develop', 'mainpage', 'card', 'dealer'];
+const pages = ['ui', 'mainpage', 'dealer'];
 
 module.exports = (env, argv) => {
     const isProd = argv.mode === 'production';
@@ -78,6 +80,17 @@ module.exports = (env, argv) => {
             new MiniCssExtractPlugin({
                 filename: isProd ? 'styles.[contenthash].css' : 'assets/styles.css',
             }),
+            new webpack.DefinePlugin({
+                IS_DEV: isDev,
+            }),
+            ...(isDev ? [
+                new CopyWebpackPlugin({
+                    patterns: [
+                        { from: path.resolve(__dirname, "src/assets/modals"), to: "assets/modals", noErrorOnMissing: true },
+                        { from: path.resolve(__dirname, "src/assets/files"), to: "assets/files", noErrorOnMissing: true }
+                    ],
+                })
+            ] : [])
         ],
         optimization: {
             minimize: true,

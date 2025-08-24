@@ -2,6 +2,10 @@
     background-color: white;
 }
 
+body:has(.page-title) .header {
+    margin-bottom: 0;
+}
+
 .header.header_fixed {
     position: fixed;
     top: 0;

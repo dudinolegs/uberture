@@ -1,14 +1,55 @@
 import locationIcon from "../assets/icons/location.svg";
-import countries from "../assets/map.json";
 
-let map = null;
-const stores = countries
-    .flatMap(country => country.city)
-    .flatMap(city => city.store);
-const countryList = document.querySelector('.js-map-country-list');
-const storeList = document.querySelector('.js-map-store-list');
-const countrySelect = document.querySelector('.js-map-country-select');
-const citySelect = document.querySelector('.js-map-city-select');
+const dataUrl = IS_DEV ? '/assets/files/map.json' : '/ajax/getMap.php';
+const countries = await loadData(dataUrl);
+
+if (countries) {
+    const stores = countries
+        .flatMap(country => country.city)
+        .flatMap(city => city.store);
+    const countryList = document.querySelector('.js-map-country-list');
+    const storeList = document.querySelector('.js-map-store-list');
+    const countrySelect = document.querySelector('.js-map-country-select');
+    const citySelect = document.querySelector('.js-map-city-select');
+    let map = null;
+
+    loadYandexMaps().then(ymaps => {
+        map = new ymaps.Map(document.querySelector(".js-map"), {
+            center: [55.76, 37.64],
+            zoom: 10,
+            controls: []
+        });
+
+        stores.forEach((store) => {
+            const placemark = getPlacemark(store);
+            map.geoObjects.add(placemark);
+        });
+
+        renderCountryList(countries);
+        renderCountrySelect(countries);
+        renderCitySelect(countries);
+        renderStoreList(countries);
+
+        const activeCountry = countries.find(country => country.active);
+        setActiveCountry(activeCountry.id);
+    });
+}
+
+async function loadData(url) {
+    try {
+        const result = await fetch(url);
+        if (!result.ok) {
+            console.error("Ошибка HTTP:", result.status);
+            return false;
+        }
+        
+        const data = await result.json();
+        return data;
+    } catch (err) {
+        console.error("Ошибка загрузки данных карты:", err);
+        return false;
+    }
+}
 
 function loadYandexMaps() {
     return new Promise((resolve, reject) => {
@@ -248,24 +289,3 @@ function setMapCenter(latitude, longitude, zoom) {
         duration: 1500
     });
 }
-
-loadYandexMaps().then(ymaps => {
-    map = new ymaps.Map(document.querySelector(".js-map"), {
-        center: [55.76, 37.64],
-        zoom: 10,
-        controls: []
-    });
-
-    stores.forEach((store) => {
-        const placemark = getPlacemark(store);
-        map.geoObjects.add(placemark);
-    });
-
-    renderCountryList(countries);
-    renderCountrySelect(countries);
-    renderCitySelect(countries);
-    renderStoreList(countries);
-
-    const activeCountry = countries.find(country => country.active);
-    setActiveCountry(activeCountry.id);
-});
