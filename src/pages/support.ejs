@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breacrumbs__item" href="#">Главная</a>
+                    <span class="breacrumbs__item">Поддержка</span>
+                </div>
+            </div>
+            <h1>Поддержка</h1>
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="container">
+            <%= require('../templates/form_search.html').default %>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="cards cards_col-3">
+                <article class="card card_fill-white">
+                    <a href="#" class="card__link"></a>
+                    <div class="card__content">
+                        <div class="card__icon">
+                            <svg width="27" height="32" viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.4168 1.04663H4.75016C3.97661 1.04663 3.23475 1.35392 2.68777 1.9009C2.14079 2.44788 1.8335 3.18975 1.8335 3.9633V27.2966C1.8335 28.0702 2.14079 28.812 2.68777 29.359C3.23475 29.906 3.97661 30.2133 4.75016 30.2133H22.2502C23.0237 30.2133 23.7656 29.906 24.3126 29.359C24.8595 28.812 25.1668 28.0702 25.1668 27.2966V9.79663L16.4168 1.04663Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16.4165 1.04663V9.79663H25.1665" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M19.3332 17.0881H7.6665" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M19.3332 22.9216H7.6665" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10.5832 11.2549H9.12484H7.6665" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="card__title card__title_dark">Документация</h3>
+                        <div class="card__text text">
+                            <ul>
+                                <li>Руководство по эксплуатации</li>
+                                <li>Сертификаты</li>
+                                <li>Инструкции</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card_fill-white">
+                    <a href="#" class="card__link"></a>
+                    <div class="card__content">
+                        <div class="card__icon">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24.7083 1.50488H4.29167C2.68084 1.50488 1.375 2.81072 1.375 4.42155V24.8382C1.375 26.449 2.68084 27.7549 4.29167 27.7549H24.7083C26.3192 27.7549 27.625 26.449 27.625 24.8382V4.42155C27.625 2.81072 26.3192 1.50488 24.7083 1.50488Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.396 11.7131C10.6041 11.7131 11.5835 10.7338 11.5835 9.52563C11.5835 8.31751 10.6041 7.33813 9.396 7.33813C8.18787 7.33813 7.2085 8.31751 7.2085 9.52563C7.2085 10.7338 8.18787 11.7131 9.396 11.7131Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M27.6248 19.0048L20.3332 11.7131L4.2915 27.7548" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="card__title card__title_dark">Фирменный стиль</h3>
+                        <div class="card__text text">
+                            <ul>
+                                <li>Брендбук</li>
+                                <li>Лого</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card_fill-white">
+                    <a href="#" class="card__link"></a>
+                    <div class="card__content">
+                        <div class="card__icon">
+                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.904 1.04663H5.09567C3.33986 1.04663 1.9165 2.46999 1.9165 4.2258V27.0341C1.9165 28.7899 3.33986 30.2133 5.09567 30.2133H27.904C29.6598 30.2133 31.0832 28.7899 31.0832 27.0341V4.2258C31.0832 2.46999 29.6598 1.04663 27.904 1.04663Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.2085 1.04663V30.2133" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M23.7915 1.04663V30.2133" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M1.9165 15.6299H31.0832" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M1.9165 8.33813H9.20817" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M1.9165 22.9216H9.20817" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M23.7915 22.9216H31.0832" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M23.7915 8.33813H31.0832" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="card__title card__title_dark">Рекламные материалы</h3>
+                        <div class="card__text text">
+                            <ul>
+                                <li>3Д модели и Интерьеры</li>
+                                <li>Декоры</li>
+                                <li>Каталоги/буклеты</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    
+    <section class="section">
+        <div class="container">
+            <div class="section__header">
+                <h3 class="section__title section__title_small">3д модели и Интерьеры - Коллекции</h3>
+            </div>
+
+            <%= require('../templates/models_list.html').default %>
+        </div>
+    </section>
+
+    <%= require('../templates/faq.html').default %>
+
+    <%= require('../templates/news_preview.html').default %>
+
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

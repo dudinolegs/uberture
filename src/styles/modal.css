@@ -29,6 +29,8 @@
 }
 
 .modal__inner {
+    max-height: calc(100dvh - 40px);
+    overflow-y: auto;
     position: relative;
     border-radius: var(--border-radius);
     width: 800px;
@@ -37,6 +39,10 @@
     padding: 80px;
     transform: scale(.85);
     transition-duration: .2s;
+}
+
+.modal.modal_no-padding .modal__inner {
+    padding: 0;
 }
 
 .modal.modal_open .modal__inner {
@@ -55,10 +61,24 @@
     background-position: center;
     background-size: 15px;
     transition-duration: .2s;
+    border-radius: 50%;
+}
+
+.modal__close:hover {
+    background-color: rgba(235, 235, 235, 1);
 }
 
 .modal__close:active {
-    transform: scale(.98);
+    background-color: rgba(225, 225, 225, 1);
+}
+
+.modal__header {
+    margin: 0 0 35px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .modal__title {
@@ -66,5 +86,8 @@
     font-family: var(--second-family);
     font-weight: 500;
     font-size: 52px;
-    margin: 0 0 35px 0;
+}
+
+.modal__text {
+    text-align: center;
 }

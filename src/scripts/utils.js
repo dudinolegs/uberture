@@ -108,3 +108,22 @@ export class Tabs {
         });
     }
 }
+
+export function matches(el, selector) {
+    return el instanceof Element && el.matches(selector);
+}
+
+export function applyPhoneMask(input) {
+    if (input.dataset.masked) {
+        return;
+    }
+    
+    Inputmask({ mask: '+7 (999) 999-99-99' }).mask(input);
+    input.dataset.masked = 'true';
+}
+
+export function setHeaderHeightVariable() {
+    const header = document.querySelector('.header');
+    const headerHeight = header.offsetHeight;
+    document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+}

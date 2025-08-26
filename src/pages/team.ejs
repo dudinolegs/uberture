@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breacrumbs__item" href="#">Главная</a>
+                    <a class="breacrumbs__item" href="#">Контакты</a>
+                    <span class="breacrumbs__item">Отдел продаж</span>
+                </div>
+            </div>
+            <h1>Отдел продаж</h1>
+        </div>
+    </section>
+
+    <%= require('../templates/team.html').default %>
+
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

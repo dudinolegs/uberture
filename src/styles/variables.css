@@ -1,4 +1,5 @@
 :root {
+    --header-height: 0px;
     --container: 1440px;
     --section-margin: 80px;
     --section-padding: 80px;

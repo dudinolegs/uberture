@@ -1,0 +1,9 @@
+.personal-wrapper {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 20px;
+}
+
+.personal-search {
+    margin: 0 0 20px 0;
+}

@@ -11,6 +11,9 @@ import './styles/form.css';
 import './styles/catalog.css';
 import './styles/cards.css';
 import './styles/modal.css';
+import './styles/store.css';
+import './styles/employee.css';
+import './styles/personal.css';
 
 import './scripts/map.js';
 import './scripts/form.js';

@@ -17,7 +17,7 @@
 
             <div class="breadcrumbs">
                 <div class="container">
-                    <div class="breadcrumbs__inner">
+                    <div class="breadcrumbs__wrapper">
                         <a href="#" class="breacrumbs__item">Главная</a>
                         <span class="breacrumbs__item">UI</span>
                     </div>
@@ -453,6 +453,14 @@
                 </article>
                 <article class="card card_fill-white">
                     <div class="card__content">
+                        <h3 class="card__title">text + dots</h3>
+                        <div class="card__text card__text_dots text">
+                            <p><strong>Комплексное</strong> предложение для создания интерьера</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card_fill-white">
+                    <div class="card__content">
                         <div class="card__icon">
                             <svg width="29" height="33" viewBox="0 0 29 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.75 1.91699L1.375 7.75033V28.167C1.375 28.9405 1.68229 29.6824 2.22927 30.2294C2.77625 30.7764 3.51812 31.0837 4.29167 31.0837H24.7083C25.4819 31.0837 26.2237 30.7764 26.7707 30.2294C27.3177 29.6824 27.625 28.9405 27.625 28.167V7.75033L23.25 1.91699H5.75Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -490,8 +498,8 @@
                     </div>
                 </article>
                 <article class="card card_fill-white">
+                    <a href="#" class="card__link"></a>
                     <div class="card__content">
-                        <a href="#" class="card__link"></a>
                         <h3 class="card__title">link</h3>
                     </div>
                     <div class="card__image">
@@ -511,29 +519,38 @@
             </div>
 
             <div class="text" style="display: flex; flex-wrap: wrap; gap: 30px;">
-                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
-                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s">
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="error">
+                        <span>Ошибка</span>
+                    </button>
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="dealer">
                         <span>Стать дилером</span>
                     </button>
-                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s">
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="job">
                         <span>Откликнуться на вакансию</span>
                     </button>
-                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s">
-                        <span>Видео</span>
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="video-about">
+                        <span>Видео (о компании)</span>
+                    </button>
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="video-dealer">
+                        <span>Видео (дилерам)</span>
+                    </button>
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="success-send">
+                        <span>Успешная отправка</span>
+                    </button>
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="fail-send">
+                        <span>Не успешная отправка</span>
                     </button>
                 </div>
-                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px;">
-                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s">
+                <div style="background-color: white; padding: 20px; box-shadow: var(--box-shadow); border-radius: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="register">
                         <span>Регистрация</span>
                     </button>
-                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s">
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="login">
                         <span>Вход</span>
                     </button>
-                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s">
+                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s js-open-modal" data-modal-id="forgot-password">
                         <span>Забыли пароль</span>
-                    </button>
-                    <button class="button button_dark-fill button_with-icon button_rounded button_a-active button_size-s">
-                        <span>Смена пароля</span>
                     </button>
                 </div>
             </div>

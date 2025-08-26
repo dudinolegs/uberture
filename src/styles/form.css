@@ -277,6 +277,10 @@
     color: var(--grey-color);
 }
 
+.checkbox.checkbox_light .checkbox__label {
+    --background-color-1: white;
+}
+
 .radio {
     display: flex;
     align-items: center;
@@ -347,6 +351,8 @@
     position: relative;
     transition-duration: .2s;
     text-align: left;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .file__label:active {

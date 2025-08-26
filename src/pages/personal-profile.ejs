@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breacrumbs__item" href="#">Главная</a>
+                    <span class="breacrumbs__item">Личный кабинет</span>
+                </div>
+            </div>
+            <h1>Личный кабинет</h1>
+        </div>
+    </section>
+    
+    <div class="section">
+        <div class="container">
+            <div class="personal-wrapper">
+                <aside class="personal-sidebar">
+                    Сайдбар
+                </aside>
+                <main class="personal-main">
+                    <div class="personal-search">
+                        <%= require('../templates/form_search.html').default %>
+                    </div>
+
+                    <div class="cards cards_col-3">
+                        <article class="card card_fill-white">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.1224 32.0834C13.9278 32.0834 14.5807 31.4305 14.5807 30.6251C14.5807 29.8197 13.9278 29.1667 13.1224 29.1667C12.317 29.1667 11.6641 29.8197 11.6641 30.6251C11.6641 31.4305 12.317 32.0834 13.1224 32.0834Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M29.1693 32.0834C29.9747 32.0834 30.6276 31.4305 30.6276 30.6251C30.6276 29.8197 29.9747 29.1667 29.1693 29.1667C28.3639 29.1667 27.7109 29.8197 27.7109 30.6251C27.7109 31.4305 28.3639 32.0834 29.1693 32.0834Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.46094 1.45825H7.29427L11.2026 20.9853C11.336 21.6567 11.7012 22.2599 12.2344 22.6891C12.7677 23.1183 13.4349 23.3464 14.1193 23.3333H28.2943C28.9787 23.3464 29.6459 23.1183 30.1791 22.6891C30.7123 22.2599 31.0776 21.6567 31.2109 20.9853L33.5443 8.74992H8.7526" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title card__title_dark">Корзина</h3>
+                            </div>
+                        </article>
+                        <article class="card card_fill-white">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg width="27" height="29" viewBox="0 0 27 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M25.1693 27.625V24.7083C25.1693 23.1612 24.5547 21.6775 23.4607 20.5835C22.3668 19.4896 20.883 18.875 19.3359 18.875H7.66927C6.12217 18.875 4.63844 19.4896 3.54448 20.5835C2.45052 21.6775 1.83594 23.1612 1.83594 24.7083V27.625" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M13.4974 13.0417C16.7191 13.0417 19.3307 10.43 19.3307 7.20833C19.3307 3.98667 16.7191 1.375 13.4974 1.375C10.2757 1.375 7.66406 3.98667 7.66406 7.20833C7.66406 10.43 10.2757 13.0417 13.4974 13.0417Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title card__title_dark">Личные данные</h3>
+                            </div>
+                        </article>
+                        <article class="card card_fill-white">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg width="33" height="29" viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.91406 1.375H10.6641C12.2112 1.375 13.6949 1.98958 14.7889 3.08354C15.8828 4.17751 16.4974 5.66124 16.4974 7.20833V27.625C16.4974 26.4647 16.0365 25.3519 15.216 24.5314C14.3955 23.7109 13.2827 23.25 12.1224 23.25H1.91406V1.375Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M31.0833 1.375H22.3333C20.7862 1.375 19.3025 1.98958 18.2085 3.08354C17.1146 4.17751 16.5 5.66124 16.5 7.20833V27.625C16.5 26.4647 16.9609 25.3519 17.7814 24.5314C18.6019 23.7109 19.7147 23.25 20.875 23.25H31.0833V1.375Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title card__title_dark">Каталоги / Буклеты</h3>
+                            </div>
+                        </article>
+                        <article class="card card_fill-white">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.83594 27.4376C1.83594 26.4706 2.22005 25.5433 2.90378 24.8596C3.5875 24.1759 4.51484 23.7917 5.48177 23.7917H25.1693" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M5.48177 1.91675H25.1693V31.0834H5.48177C4.51484 31.0834 3.5875 30.6993 2.90378 30.0156C2.22005 29.3318 1.83594 28.4045 1.83594 27.4376V5.56258C1.83594 4.59565 2.22005 3.66831 2.90378 2.98459C3.5875 2.30086 4.51484 1.91675 5.48177 1.91675Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title card__title_dark">Брендбук</h3>
+                            </div>
+                        </article>
+                        <article class="card card_fill-white">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.4193 1.91675H4.7526C3.97906 1.91675 3.23719 2.22404 2.69021 2.77102C2.14323 3.318 1.83594 4.05987 1.83594 4.83341V28.1667C1.83594 28.9403 2.14323 29.6822 2.69021 30.2291C3.23719 30.7761 3.97906 31.0834 4.7526 31.0834H22.2526C23.0262 31.0834 23.768 30.7761 24.315 30.2291C24.862 29.6822 25.1693 28.9403 25.1693 28.1667V10.6667L16.4193 1.91675Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16.4141 1.91675V10.6667H25.1641" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19.3307 17.9583H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19.3307 23.7917H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10.5807 12.125H9.1224H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title card__title_dark">Техническая документация</h3>
+                            </div>
+                        </article>
+                        <article class="card card_fill-white">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M27.9016 1.91675H5.09323C3.33742 1.91675 1.91406 3.34011 1.91406 5.09591V27.9042C1.91406 29.6601 3.33742 31.0834 5.09323 31.0834H27.9016C29.6574 31.0834 31.0807 29.6601 31.0807 27.9042V5.09591C31.0807 3.34011 29.6574 1.91675 27.9016 1.91675Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9.21094 1.91675V31.0834" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M23.7891 1.91675V31.0834" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.91406 16.5H31.0807" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.91406 9.20825H9.20573" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.91406 23.7917H9.20573" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M23.7891 23.7917H31.0807" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M23.7891 9.20825H31.0807" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title card__title_dark">Рекламные материалы</h3>
+                            </div>
+                        </article>
+                        <article class="card card_fill-white">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.4974 1.91675L1.91406 9.20841L16.4974 16.5001L31.0807 9.20841L16.4974 1.91675Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.91406 23.7917L16.4974 31.0834L31.0807 23.7917" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.91406 16.5L16.4974 23.7917L31.0807 16.5" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title card__title_dark">Декоры</h3>
+                            </div>
+                        </article>
+                        <article class="card card_fill-white">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24.7083 1.375H4.29167C2.68084 1.375 1.375 2.68084 1.375 4.29167V24.7083C1.375 26.3192 2.68084 27.625 4.29167 27.625H24.7083C26.3192 27.625 27.625 26.3192 27.625 24.7083V4.29167C27.625 2.68084 26.3192 1.375 24.7083 1.375Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M9.39844 11.5833C10.6066 11.5833 11.5859 10.6039 11.5859 9.39575C11.5859 8.18763 10.6066 7.20825 9.39844 7.20825C8.19031 7.20825 7.21094 8.18763 7.21094 9.39575C7.21094 10.6039 8.19031 11.5833 9.39844 11.5833Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M27.6224 18.8749L20.3307 11.5833L4.28906 27.6249" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title card__title_dark">Интерьеры</h3>
+                            </div>
+                        </article>
+                        <article class="card card_fill-white">
+                            <a href="#" class="card__link"></a>
+                            <div class="card__content">
+                                <div class="card__icon">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.4974 1.91675L31.0807 11.3959V21.6042L16.4974 31.0834L1.91406 21.6042V11.3959L16.4974 1.91675Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16.5 31.0834V21.6042" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M31.0807 11.3958L16.4974 21.6041L1.91406 11.3958" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.91406 21.6041L16.4974 11.3958L31.0807 21.6041" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16.5 1.91675V11.3959" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title card__title_dark">Зд модели</h3>
+                            </div>
+                        </article>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

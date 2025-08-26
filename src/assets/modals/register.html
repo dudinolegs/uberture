@@ -3,8 +3,59 @@
     <div class="modal__inner">
         <button type="button" class="modal__close js-modal-close"></button>
 
-        <div class="modal__title">Регистрация</div>
+        <div class="modal__header">
+            <div class="modal__title">Регистрация</div>
+        </div>
 
+        <form class="form js-form">
+            <div class="form__field-list">
+                <div class="form__field-item form__field-item_wide">
+                    <div class="field field_light">
+                        <label class="field__label">Фамилия, имя, отчество</label>
+                        <input class="field__input" type="text" name="name" required>
+                    </div>
+                </div>
+                <div class="form__field-item form__field-item_wide">
+                    <div class="field field_light">
+                        <label class="field__label">E-mail</label>
+                        <input class="field__input" type="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form__field-item form__field-item_wide">
+                    <div class="field field_light">
+                        <label class="field__label">Телефон</label>
+                        <input class="field__input" type="tel" name="tel" required>
+                    </div>
+                </div>
+                <div class="form__field-item form__field-item_wide">
+                    <div class="field field_light">
+                        <label class="field__label">Пароль</label>
+                        <input class="field__input" type="password" name="password" required>
+                    </div>
+                </div>
+                <div class="form__field-item form__field-item_wide">
+                    <div class="field field_light">
+                        <label class="field__label">Подтверждение пароля</label>
+                        <input class="field__input" type="password_confirm" name="password_confirm" required>
+                    </div>
+                </div>
+                <div class="form__field-item form__field-item_wide form__field-item_button">
+                    <button type="submit" class="button button_main-fill button_rounded button_a-active button_size-s">
+                        <span>Зарегистрироваться</span>
+                    </button>
+                </div>
+                <div class="form__field-item form__field-item_wide">
+                    <div class="checkbox checkbox_light">
+                        <input class="checkbox__input" type="checkbox" id="confirm2" name="confirm" checked>
+                        <label class="checkbox__label" for="confirm2">Нажимая на кнопку вы соглашаетесь на <a class="link" href="#">обработку персональных данных</a></label>
+                    </div>
+                </div>
+            </div>
+        </form>
 
+        <div class="text">
+            <br>
+            <p>Уже есть аккаунт? <button class="js-open-modal" data-modal-id="login" data-modal-close-other="true"><strong>Войти</strong></button></p>
+        </div>
     </div>
 </div>

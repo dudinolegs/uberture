@@ -2,17 +2,16 @@ import locationIcon from "../assets/icons/location.svg";
 
 const dataUrl = IS_DEV ? '/assets/files/map.json' : '/ajax/getMap.php';
 const countries = await loadData(dataUrl);
-
-if (countries) {
-    const stores = countries
+const stores = countries
         .flatMap(country => country.city)
         .flatMap(city => city.store);
-    const countryList = document.querySelector('.js-map-country-list');
-    const storeList = document.querySelector('.js-map-store-list');
-    const countrySelect = document.querySelector('.js-map-country-select');
-    const citySelect = document.querySelector('.js-map-city-select');
-    let map = null;
+const countryList = document.querySelector('.js-map-country-list');
+const storeList = document.querySelector('.js-map-store-list');
+const countrySelect = document.querySelector('.js-map-country-select');
+const citySelect = document.querySelector('.js-map-city-select');
+let map = null;
 
+if (countries) {
     loadYandexMaps().then(ymaps => {
         map = new ymaps.Map(document.querySelector(".js-map"), {
             center: [55.76, 37.64],
@@ -163,15 +162,15 @@ function renderStoreList(countries) {
 
     activeCity.store.forEach((storeData) => {    
         const store = document.createElement('article');
-        store.classList.add('store');
+        store.classList.add('store-small');
     
         store.innerHTML = `
-            <svg class="store__icon" width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="store-small__icon" width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 9C18 16 9 22 9 22C9 22 0 16 0 9C3.55683e-08 6.61305 0.948211 4.32387 2.63604 2.63604C4.32387 0.948211 6.61305 0 9 0C11.3869 0 13.6761 0.948211 15.364 2.63604C17.0518 4.32387 18 6.61305 18 9Z" fill="#F66201" />
                 <path d="M9 12C10.6569 12 12 10.6569 12 9C12 7.34315 10.6569 6 9 6C7.34315 6 6 7.34315 6 9C6 10.6569 7.34315 12 9 12Z" fill="white" />
             </svg>
-            <h4 class="store__name">${storeData.name}</h4>
-            <div class="store__address">${storeData.address}</div>
+            <h4 class="store-small__name">${storeData.name}</h4>
+            <div class="store-small__address">${storeData.address}</div>
             <div class="text">${storeData.description}</div>
         `;
     

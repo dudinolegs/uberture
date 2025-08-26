@@ -1,0 +1,37 @@
+<div class="modal js-modal">
+    <div class="modal__overlay js-modal-overlay"></div>
+    <div class="modal__inner">
+        <button type="button" class="modal__close js-modal-close"></button>
+
+        <div class="modal__header">
+            <div class="modal__title">Вход</div>
+        </div>
+
+        <form class="form js-form">
+            <div class="form__field-list">
+                <div class="form__field-item form__field-item_wide">
+                    <div class="field field_light">
+                        <label class="field__label">E-mail</label>
+                        <input class="field__input" type="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form__field-item form__field-item_wide">
+                    <div class="field field_light">
+                        <label class="field__label">Пароль</label>
+                        <input class="field__input" type="password" name="password" required>
+                    </div>
+                </div>
+                <div class="form__field-item form__field-item_wide form__field-item_button">
+                    <button type="submit" class="button button_main-fill button_rounded button_a-active button_size-s">
+                        <span>Войти</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="text">
+            <br>
+            <p>Забыли пароль? <button class="js-open-modal" data-modal-id="forgot-password" data-modal-close-other="true"><strong>Восстановить</strong></button></p>
+        </div>
+    </div>
+</div>

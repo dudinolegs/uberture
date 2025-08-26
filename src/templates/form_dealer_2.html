@@ -1,9 +1,27 @@
 <section class="section">
     <div class="container">
         <div class="content content_reverse">
-            <div class="content__image">
-                <img src="../assets/images/callback-2.png" alt="Callback" loading="lazy">
+            <div class="js-swiper-gallery content__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="content__image">
+                            <img class="content__image-inner" src="../assets/images/callback-2.png" alt="Callback" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="content__image">
+                            <img class="content__image-inner" src="../assets/images/callback-1.png" alt="Callback" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-manage content__slider-manage">
+                    <button type="button" class="js-swiper-gallery-button-prev slider-button slider-button_dark slider-button_prev"></button>
+                    <button type="button" class="js-swiper-gallery-button-next slider-button slider-button_dark slider-button_next"></button>
+                    <div class="js-swiper-gallery-pagination slider-pagination slider-pagination_transfer-last"></div>
+                </div>
             </div>
+
             <div class="content__main">
                 <div class="section__header">
                     <div class="section__title-wrapper">
@@ -17,32 +35,32 @@
                     <div class="form__field-list">
                         <div class="form__field-item form__field-item_wide">
                             <div class="field field_light">
-                                <label class="field__label" for="name2">Имя и фамилия</label>
-                                <input class="field__input" type="text" id="name2" name="name" required>
+                                <label class="field__label">Имя и фамилия</label>
+                                <input class="field__input" type="text" name="name" required>
                             </div>
                         </div>
                         <div class="form__field-item">
                             <div class="field field_light">
-                                <label class="field__label" for="email2">E-mail</label>
-                                <input class="field__input" type="email" id="email2" name="email" required>
+                                <label class="field__label">E-mail</label>
+                                <input class="field__input" type="email" name="email" required>
                             </div>
                         </div>
                         <div class="form__field-item">
                             <div class="field field_light">
-                                <label class="field__label" for="tel2">Номер телефона</label>
-                                <input class="field__input" type="tel" id="tel2" name="tel" required>
+                                <label class="field__label">Номер телефона</label>
+                                <input class="field__input" type="tel" name="tel" required>
                             </div>
                         </div>
                         <div class="form__field-item form__field-item_wide">
                             <div class="field field_light">
-                                <label class="field__label" for="company">Название компании</label>
-                                <input class="field__input" type="text" id="company" name="company" required>
+                                <label class="field__label">Название компании</label>
+                                <input class="field__input" type="text" name="company" required>
                             </div>
                         </div>
                         <div class="form__field-item form__field-item_wide">
                             <div class="field field_light">
-                                <label class="field__label" for="site">Сайт</label>
-                                <input class="field__input" type="url" id="site" name="site" required>
+                                <label class="field__label">Сайт</label>
+                                <input class="field__input" type="url" name="site" required>
                             </div>
                         </div>
                         <div class="form__field-item">
@@ -65,8 +83,8 @@
                         </div>
                         <div class="form__field-item">
                             <div class="checkbox">
-                                <input class="checkbox__input" type="checkbox" id="confirm2" name="confirm" checked>
-                                <label class="checkbox__label" for="confirm2">Нажимая на кнопку вы соглашаетесь<br> на <a class="link" href="#">обработку персональных данных</a></label>
+                                <input class="checkbox__input" type="checkbox" id="confirm-dealer" name="confirm" checked required>
+                                <label class="checkbox__label" for="confirm-dealer">Нажимая на кнопку вы соглашаетесь<br> на <a class="link" href="#">обработку персональных данных</a></label>
                             </div>
                         </div>
                         <div class="form__field-item form__field-item_button">

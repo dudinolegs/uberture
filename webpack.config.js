@@ -4,8 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
-const pages = ['ui', 'mainpage', 'dealer'];
+const pages = [
+    'ui', 'mainpage', 'dealer', 'support', 'buy', 'team', 'job', 'contacts', 'error', 'about', 'history', 'search',
+    'personal-profile'
+];
 
 module.exports = (env, argv) => {
     const isProd = argv.mode === 'production';
@@ -78,7 +82,7 @@ module.exports = (env, argv) => {
                 })
             ),
             new MiniCssExtractPlugin({
-                filename: isProd ? 'styles.[contenthash].css' : 'assets/styles.css',
+                filename: isProd ? 'assets/styles.[contenthash].css' : 'assets/styles.css',
             }),
             new webpack.DefinePlugin({
                 IS_DEV: isDev,
@@ -90,7 +94,13 @@ module.exports = (env, argv) => {
                         { from: path.resolve(__dirname, "src/assets/files"), to: "assets/files", noErrorOnMissing: true }
                     ],
                 })
-            ] : [])
+            ] : []),
+            new FaviconsWebpackPlugin({
+                logo: './src/assets/images/favicon.png',
+                cache: true,
+                inject: true,
+                prefix: 'assets/favicons/'
+            }),
         ],
         optimization: {
             minimize: true,

@@ -10,7 +10,7 @@
 
 .text h2 {
     font-family: var(--second-family);
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 800;
     margin: 15px 0 40px 0;
 }
@@ -89,19 +89,19 @@
 }
 
 .text ul li {
-    padding: 0 0 0 18px;
+    padding: 0 0 0 20px;
     position: relative;
 }
 
 .text ul li:before {
     content: "";
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     position: absolute;
     border-radius: 50%;
     background-color: var(--main-color);
     left: 0;
-    top: 7px;
+    top: 8px;
 }
 
 .text ol {
