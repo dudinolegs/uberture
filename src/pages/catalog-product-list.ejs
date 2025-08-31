@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breacrumbs__item" href="#">Главная</a>
+                    <a class="breacrumbs__item" href="#">Каталог</a>
+                    <span class="breacrumbs__item">Напольный плинтус</span>
+                </div>
+            </div>
+            <h1>Напольный плинтус</h1>
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="container">
+            <div class="catalog-wrapper">
+                <%= require('../templates/catalog_sidebar.html').default %>
+
+                <main class="catalog-main">
+                    <div class="catalog-search">
+                        <%= require('../templates/form_search.html').default %>
+                    </div>
+
+                    <%= require('../templates/catalog_product_list.html').default %>
+                </main>
+            </div>
+        </div>
+    </div>
+    
+    <%= require('../templates/map.html').default %>
+
+    <%= require('../templates/news_preview.html').default %>
+
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

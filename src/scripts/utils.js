@@ -1,3 +1,6 @@
+import GLightbox from 'glightbox';
+import 'glightbox/dist/css/glightbox.min.css';
+
 export function truncateMiddle(str, maxLength = 50) {
     if (str.length <= maxLength) return str;
 
@@ -66,6 +69,104 @@ export function initDropdown() {
             } else {
                 body.style.height = body.scrollHeight + 'px';
             }
+        });
+    });
+}
+
+export function initFilter() {
+    const filters = document.querySelectorAll(".js-filter");
+
+    filters.forEach(filter => {
+        const button = filter.querySelector(".js-filter-name");
+
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            filters.forEach(f => {
+                if (f !== filter) {
+                    f.classList.remove("filter-item_active");
+                }
+            });
+
+            filter.classList.toggle('filter-item_active');
+        });
+    });
+    
+    document.addEventListener("click", (e) => {
+        filters.forEach(filter => {
+            if (!filter.contains(e.target)) {
+                filter.classList.remove("filter-item_active");
+            }
+        });
+    });
+}
+
+export function initLightbox() {
+    const lightboxProductDetail = GLightbox({
+        selector: '.js-gallery-product-detail a',
+        touchNavigation: true,
+        loop: true,
+        zoomable: true,
+    });
+    lightboxProductDetail.init();
+}
+
+export function initQuantity() {
+    const quantities = document.querySelectorAll(".js-quantity");
+
+    quantities.forEach(quantity => {
+        const input = quantity.querySelector(".js-quantity-input");
+        let inputTimeout;
+        let currentValue = +(input.value || 1);
+        const min = +(input.min || 1);
+        const max = input.max ? +input.max : Infinity;
+        const ratio = +(input.dataset.ratio || 1);
+        const minus = quantity.querySelector(".js-quantity-minus");
+        const plus = quantity.querySelector(".js-quantity-plus");
+        const setValue = (value) => {
+            currentValue = +value;
+
+            if (currentValue % ratio !== 0) {
+                currentValue = Math.min(currentValue, max);
+                currentValue = Math.floor(currentValue / ratio) * ratio;
+            }
+
+            if (currentValue > max) {
+                currentValue = max;
+            }
+
+            if (currentValue < min) {
+                currentValue = min;
+            }
+
+            input.value = currentValue;
+        }
+
+        if (currentValue < ratio) {
+            setValue(ratio);
+        }
+
+        if (currentValue < min) {
+            setValue(min);
+        }
+
+        if (max !== 0 && currentValue > max) {
+            setValue(max);
+        }
+
+        minus.addEventListener('click', function() {
+            setValue(currentValue - ratio);
+        });
+
+        plus.addEventListener('click', function() {
+            setValue(currentValue + ratio);
+        });
+
+        input.addEventListener('input', (e) => {
+            clearTimeout(inputTimeout);
+            inputTimeout = setTimeout(() => {
+                setValue(e.target.value);
+            }, 300);
         });
     });
 }

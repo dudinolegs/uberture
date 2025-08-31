@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breacrumbs__item" href="#">Главная</a>
+                    <a class="breacrumbs__item" href="#">Личный кабинет</a>
+                    <a class="breacrumbs__item" href="#">Документация</a>
+                    <span class="breacrumbs__item">Техническая документация</span>
+                </div>
+            </div>
+            <h1>Техническая документация</h1>
+        </div>
+    </section>
+    
+    <div class="section">
+        <div class="container">
+            <div class="personal-wrapper">
+                <%= require('../templates/personal_sidebar.html').default %>
+
+                <main class="personal-main">
+                    <div class="personal-search">
+                        <%= require('../templates/form_search.html').default %>
+                    </div>
+                    
+                    <section class="section">
+                        <div class="section__header">
+                            <div class="section__title-wrapper">
+                                <h3 class="section__title section__title_small">Техническая документация</h3>
+                            </div>
+
+                            <a href="#" class="button button_main-stroke button_rounded button_size-2xs button_a-active">
+                                <span>Скачать все</span>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 8V10.3333C11.5 10.6428 11.3771 10.9395 11.1583 11.1583C10.9395 11.3771 10.6428 11.5 10.3333 11.5H2.16667C1.85725 11.5 1.5605 11.3771 1.34171 11.1583C1.12292 10.9395 1 10.6428 1 10.3333V8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.32812 5.08325L6.24479 7.99992L9.16146 5.08325" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6.25 8V1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+            
+                        <div class="cards cards_col-3">
+                            <article class="card card_fill-white">
+                                <a href="#" class="card__link"></a>
+                                <div class="card__content">
+                                    <div class="card__icon">
+                                        <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.4193 1.91675H4.7526C3.97906 1.91675 3.23719 2.22404 2.69021 2.77102C2.14323 3.318 1.83594 4.05987 1.83594 4.83341V28.1667C1.83594 28.9403 2.14323 29.6822 2.69021 30.2291C3.23719 30.7761 3.97906 31.0834 4.7526 31.0834H22.2526C23.0262 31.0834 23.768 30.7761 24.315 30.2291C24.862 29.6822 25.1693 28.9403 25.1693 28.1667V10.6667L16.4193 1.91675Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M16.4141 1.91675V10.6667H25.1641" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M19.3307 17.9583H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M19.3307 23.7917H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10.5807 12.125H9.1224H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="card__title card__title_dark">Техническая документация на двери</h3>
+                                </div>
+                            </article>
+                            <article class="card card_fill-white">
+                                <a href="#" class="card__link"></a>
+                                <div class="card__content">
+                                    <div class="card__icon">
+                                        <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.4193 1.91675H4.7526C3.97906 1.91675 3.23719 2.22404 2.69021 2.77102C2.14323 3.318 1.83594 4.05987 1.83594 4.83341V28.1667C1.83594 28.9403 2.14323 29.6822 2.69021 30.2291C3.23719 30.7761 3.97906 31.0834 4.7526 31.0834H22.2526C23.0262 31.0834 23.768 30.7761 24.315 30.2291C24.862 29.6822 25.1693 28.9403 25.1693 28.1667V10.6667L16.4193 1.91675Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M16.4141 1.91675V10.6667H25.1641" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M19.3307 17.9583H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M19.3307 23.7917H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10.5807 12.125H9.1224H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="card__title card__title_dark">Техническая документация на плинтуса</h3>
+                                </div>
+                            </article>
+                            <article class="card card_fill-white">
+                                <a href="#" class="card__link"></a>
+                                <div class="card__content">
+                                    <div class="card__icon">
+                                        <svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.4193 1.91675H4.7526C3.97906 1.91675 3.23719 2.22404 2.69021 2.77102C2.14323 3.318 1.83594 4.05987 1.83594 4.83341V28.1667C1.83594 28.9403 2.14323 29.6822 2.69021 30.2291C3.23719 30.7761 3.97906 31.0834 4.7526 31.0834H22.2526C23.0262 31.0834 23.768 30.7761 24.315 30.2291C24.862 29.6822 25.1693 28.9403 25.1693 28.1667V10.6667L16.4193 1.91675Z" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M16.4141 1.91675V10.6667H25.1641" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M19.3307 17.9583H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M19.3307 23.7917H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M10.5807 12.125H9.1224H7.66406" stroke="#F66201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="card__title card__title_dark">Техническая документация на панели</h3>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <div class="document-list">
+                            <article class="document-card">
+                                <a class="document-card__link" href="#"></a>
+                                <h3 class="document-card__name">Лого Uberture png</h3>
+                            </article>
+                            <article class="document-card">
+                                <a class="document-card__link" href="#"></a>
+                                <h3 class="document-card__name">Пример документа #1</h3>
+                            </article>
+                            <article class="document-card">
+                                <a class="document-card__link" href="#"></a>
+                                <h3 class="document-card__name">Пример документа #2</h3>
+                            </article>
+                            <article class="document-card">
+                                <a class="document-card__link" href="#"></a>
+                                <h3 class="document-card__name">Пример документа #3</h3>
+                            </article>
+                            <article class="document-card">
+                                <a class="document-card__link" href="#"></a>
+                                <h3 class="document-card__name">Пример документа #4</h3>
+                            </article>
+                            <article class="document-card">
+                                <a class="document-card__link" href="#"></a>
+                                <h3 class="document-card__name">Пример какого-нибудь классного документа с очень-очень длинным классным названием для теста переполнения</h3>
+                            </article>
+                            <article class="document-card">
+                                <a class="document-card__link" href="#"></a>
+                                <h3 class="document-card__name">Пример документа #5</h3>
+                            </article>
+                            <article class="document-card">
+                                <a class="document-card__link" href="#"></a>
+                                <h3 class="document-card__name">Пример документа #6</h3>
+                            </article>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <%= require('../templates/social.html').default %>
+    
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

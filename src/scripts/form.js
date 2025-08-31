@@ -5,7 +5,7 @@ document.addEventListener('focus', (e) => {
     if (matches(e.target, '.field input')) {
         e.target.classList.add('field__input_filled');
     }
-}, true); // useCapture чтобы ловить focus
+}, true);
 
 document.addEventListener('blur', (e) => {
     if (matches(e.target, '.field input')) {
@@ -41,6 +41,12 @@ document.addEventListener('mouseleave', (e) => {
         }
     }
 }, true);
+
+document.querySelectorAll('.field input').forEach(input => {
+    if (input.value.length) {
+        input.classList.add('field__input_filled');
+    }
+});
 
 document.querySelectorAll('input[type="tel"]').forEach(applyPhoneMask);
 const observer = new MutationObserver((mutations) => {

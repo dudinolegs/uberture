@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breacrumbs__item" href="#">Главная</a>
+                    <a class="breacrumbs__item" href="#">Личный кабинет</a>
+                    <a class="breacrumbs__item" href="#">Документация</a>
+                    <span class="breacrumbs__item">3Д модели и интерьеры</span>
+                </div>
+            </div>
+            <h1>3Д модели и интерьеры</h1>
+        </div>
+    </section>
+    
+    <div class="section">
+        <div class="container">
+            <div class="personal-wrapper">
+                <%= require('../templates/personal_sidebar.html').default %>
+
+                <main class="personal-main">
+                    <div class="personal-search">
+                        <%= require('../templates/form_search.html').default %>
+                    </div>
+
+                    <section class="section">
+                        <div class="section__header">
+                            <div class="section__title-wrapper">
+                                <h3 class="section__title section__title_small">Коллекция Бия</h3>
+                            </div>
+
+                            <a href="#" class="button button_main-stroke button_rounded button_size-2xs button_a-active">
+                                <span>Скачать все</span>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 8V10.3333C11.5 10.6428 11.3771 10.9395 11.1583 11.1583C10.9395 11.3771 10.6428 11.5 10.3333 11.5H2.16667C1.85725 11.5 1.5605 11.3771 1.34171 11.1583C1.12292 10.9395 1 10.6428 1 10.3333V8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.32812 5.08325L6.24479 7.99992L9.16146 5.08325" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6.25 8V1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+            
+                        <%= require('../templates/models_list.html').default %>
+                    </section>
+
+                    <section class="section">
+                        <div class="section__header">
+                            <div class="section__title-wrapper">
+                                <h3 class="section__title section__title_small">Интерьер</h3>
+                            </div>
+
+                            <a href="#" class="button button_main-stroke button_rounded button_size-2xs button_a-active">
+                                <span>Скачать все</span>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5 8V10.3333C11.5 10.6428 11.3771 10.9395 11.1583 11.1583C10.9395 11.3771 10.6428 11.5 10.3333 11.5H2.16667C1.85725 11.5 1.5605 11.3771 1.34171 11.1583C1.12292 10.9395 1 10.6428 1 10.3333V8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M3.32812 5.08325L6.24479 7.99992L9.16146 5.08325" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M6.25 8V1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+            
+                        <%= require('../templates/interiors_list.html').default %>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <%= require('../templates/social.html').default %>
+
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

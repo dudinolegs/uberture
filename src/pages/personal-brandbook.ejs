@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breacrumbs__item" href="#">Главная</a>
+                    <a class="breacrumbs__item" href="#">Личный кабинет</a>
+                    <a class="breacrumbs__item" href="#">Документация</a>
+                    <span class="breacrumbs__item">Брендбук</span>
+                </div>
+            </div>
+            <h1>Брендбук</h1>
+        </div>
+    </section>
+    
+    <div class="section">
+        <div class="container">
+            <div class="personal-wrapper">
+                <%= require('../templates/personal_sidebar.html').default %>
+
+                <main class="personal-main">
+                    <div class="personal-search">
+                        <%= require('../templates/form_search.html').default %>
+                    </div>
+                    
+                    <%= require('../templates/personal_brandbook_page.html').default %>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <%= require('../templates/social.html').default %>
+    
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay, Thumbs } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,13 +12,11 @@ const swiperHero = new Swiper('.js-swiper-hero', {
         nextEl: '.js-swiper-hero-button-next',
         prevEl: '.js-swiper-hero-button-prev'
     },
-    /*
     autoplay: {
         delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true
     },
-    */
     pagination: {
         el: '.js-swiper-hero-pagination',
         clickable: true,
@@ -69,6 +67,23 @@ document.querySelectorAll('.js-swiper-gallery').forEach(gallery => {
     });
 });
 
+const swiperProductThumbs = new Swiper('.js-swiper-product-thumb', {
+    direction: 'vertical',
+    slidesPerView: 4,
+    spaceBetween: 10,
+    watchSlidesProgress: true,
+});
+
+new Swiper('.js-swiper-product-detail', {
+    modules: [Navigation, Thumbs],
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    thumbs: {
+        swiper: swiperProductThumbs,
+    },
+});
+
 new Swiper('.js-swiper-review', {
     modules: [Navigation, Pagination, Autoplay],
     loop: true,
@@ -83,4 +98,28 @@ new Swiper('.js-swiper-review', {
     },
     slidesPerView: 4,
     spaceBetween: 20,
+});
+
+document.querySelectorAll('.js-swiper-product-card').forEach(gallery => {
+    new Swiper(gallery, {
+        modules: [Navigation, Pagination, Autoplay],
+        loop: true,
+        navigation: {
+            nextEl: '.js-swiper-product-card-button-next',
+            prevEl: '.js-swiper-product-card-button-prev'
+        },
+        pagination: {
+            el: gallery.querySelector('.js-swiper-product-card-pagination'),
+            clickable: true,
+            bulletClass: 'slider-pagination__item',
+            bulletActiveClass: 'slider-pagination__item_active',
+            renderBullet: (index, className) => {
+                const number = String(index + 1).padStart(2, '0');
+
+                return `<span class="${className}" data-index="${index}" data-number="${number}"></span>`;
+            }
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+    });
 });

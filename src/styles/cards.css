@@ -131,7 +131,7 @@ h3.card__title.card__title_light {
 .card__icon {
     width: 90px;
     height: 90px;
-    background-color: var(--main-color-light);
+    background-color: rgb(255, 241, 231);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,6 +139,7 @@ h3.card__title.card__title_light {
     position: absolute;
     top: 15px;
     right: 15px;
+    transition-duration: .5s;
 }
 
 .card__icon.card__icon_stroke {
@@ -183,6 +184,15 @@ h3.card__title.card__title_light {
 
 .card:has(.card__link):hover .card__image img {
     transform: scale(1.05);
+}
+
+.card:has(.card__link):hover .card__icon {
+    transform: scale(1.05);
+    background-color: #fadbc8;
+}
+
+.card:has(.card__link):hover .card__icon.card__icon_stroke {
+    background-color: rgb(255, 241, 231);
 }
 
 .card__text {

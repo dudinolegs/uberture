@@ -41,16 +41,6 @@
     top: 2px;
 }
 
-.field__input[type=number]::-webkit-outer-spin-button,
-.field__input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.field__input[type=number] {
-    -moz-appearance: textfield;
-}
-
 .field.field_dark .field__input {
     --background-color-1: var(--pale-color);
     color: white;

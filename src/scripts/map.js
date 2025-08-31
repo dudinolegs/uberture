@@ -61,7 +61,7 @@ function loadYandexMaps() {
         script.onload = () => {
             window.ymaps.ready(() => resolve(window.ymaps));
         };
-        script.onerror = () => reject(new Error("Yandex Maps failed to load"));
+        script.onerror = () => reject(console.log("Yandex Maps failed to load"));
         document.head.appendChild(script);
     });
 }

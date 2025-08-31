@@ -43,3 +43,24 @@
 .article__name:hover * {
     color: var(--text-color);
 }
+
+.article-small {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.article-small__date {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.article-small__name {
+    font-size: 16px;
+}
+
+.article-small__name a:hover {
+    color: var(--main-color);
+}
