@@ -124,12 +124,16 @@ document.addEventListener('change', function(e) {
             return;
         }
 
+        if (!label.dataset.content) {
+            label.dataset.content = label.textContent;
+        } 
+
         if (file) {
             label.classList.add('file__label_selected');
             label.textContent = truncateMiddle(file.name, 35);
         } else {
             label.classList.remove('file__label_selected');
-            label.textContent = '';
+            label.textContent = label.dataset.content;
         }
     }
 });

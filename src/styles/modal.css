@@ -28,33 +28,38 @@
     background: rgba(55, 55, 55, 0.5);
 }
 
+.modal__body {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    transform: scale(.85);
+    transition-duration: .2s;
+    width: 800px;
+    max-width: calc(100% - 20px);
+}
+
+.modal.modal_open .modal__body {
+    transform: scale(1);
+}
+
 .modal__inner {
     max-height: calc(100dvh - 40px);
     overflow-y: auto;
     position: relative;
-    border-radius: var(--border-radius);
-    width: 800px;
-    position: relative;
     background-color: var(--background-color-1);
     padding: 80px;
-    transform: scale(.85);
-    transition-duration: .2s;
 }
 
 .modal.modal_no-padding .modal__inner {
     padding: 0;
 }
 
-.modal.modal_open .modal__inner {
-    transform: scale(1);
-}
-
 .modal__close {
+    z-index: 5;
     width: 30px;
     height: 30px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
     background-color: var(--background-color-1);
     background-image: url('../assets/icons/close.svg');
     background-repeat: no-repeat;
@@ -90,4 +95,23 @@
 
 .modal__text {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .modal__inner {
+        padding: 40px 20px 20px 20px;
+    }
+
+    .modal__close {
+        top: 10px;
+        right: 10px;
+    }
+
+    .modal__title {
+        font-size: 22px;
+    }
+
+    .modal__header {
+        margin: 0 0 20px 0;
+    }
 }

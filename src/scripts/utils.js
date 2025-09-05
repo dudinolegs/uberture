@@ -1,6 +1,9 @@
 import GLightbox from 'glightbox';
-import 'glightbox/dist/css/glightbox.min.css';
+import tippy from 'tippy.js';
 
+import 'glightbox/dist/css/glightbox.min.css';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light.css';
 export function truncateMiddle(str, maxLength = 50) {
     if (str.length <= maxLength) return str;
 
@@ -111,6 +114,73 @@ export function initLightbox() {
     lightboxProductDetail.init();
 }
 
+export function initTooltip() {
+    const tooltips = document.querySelectorAll('[title]');
+
+    tooltips.forEach(tooltip => {
+        const title = tooltip.getAttribute('title');
+        if (!title) {
+            return;
+        }
+
+        tippy(tooltip, {
+            theme: 'light',
+            content: title,
+        });
+    });
+}
+
+export function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/;SameSite=Lax";
+}
+
+export function getCookie(name) {
+    const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+    return match ? match[2] : null;
+}
+
+export function initCookieNotification() {
+    const COOKIE_NAME = "cookie_consent";
+    const COOKIE_DAYS = 365;
+    const notification = document.querySelector('.js-cookie-notification');
+    const button = notification.querySelector(".js-cookie-notification-button");
+
+    if (!getCookie(COOKIE_NAME)) {
+        notification.classList.add('cookie-notification_active');
+    }
+
+    button.addEventListener('click', () => {
+        setCookie(COOKIE_NAME, "1", COOKIE_DAYS);
+        notification.classList.remove('cookie-notification_active');
+    });
+}
+
+export function initMenu() {
+    const menu = document.querySelector('.js-menu');
+    const overlay = document.querySelector('.js-menu-overlay');
+    const openButtons = document.querySelectorAll('.js-menu-open');
+    const closeButtons = document.querySelectorAll('.js-menu-close');
+
+    openButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            menu.classList.add('menu_open');
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            menu.classList.remove('menu_open');
+        });
+    });
+
+    overlay.addEventListener('click', function() {
+        menu.classList.remove('menu_open');
+    });
+}
+
 export function initQuantity() {
     const quantities = document.querySelectorAll(".js-quantity");
 
@@ -201,11 +271,15 @@ export class Tabs {
     
             // Классы активных кнопок
             document.querySelectorAll(`.js-tab-button[data-tab-group="${this.group}"]`).forEach(el => {
-                el.classList.add(this.defaultClass);
+                if (this.defaultClass) {
+                    el.classList.add(this.defaultClass);
+                }
                 el.classList.remove(this.activeClass);
             });
             button.classList.add(this.activeClass);
-            button.classList.remove(this.defaultClass);
+            if (this.defaultClass) {
+                button.classList.remove(this.defaultClass);
+            }
         });
     }
 }
@@ -227,4 +301,51 @@ export function setHeaderHeightVariable() {
     const header = document.querySelector('.header');
     const headerHeight = header.offsetHeight;
     document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+}
+
+export class ToggleElements {
+    constructor(group, hiddenClass) {
+        this.group = group;
+        this.hiddenClass = hiddenClass;
+        this.buttonShow = document.querySelector(`.js-toggle-elements-show[data-toggle-elements="${this.group}"]`);
+        this.buttonHide = document.querySelector(`.js-toggle-elements-hide[data-toggle-elements="${this.group}"]`);
+        this.elements = document.querySelectorAll(`.js-toggle-elements-element[data-toggle-elements="${this.group}"]`);
+        this._init();
+    }
+
+    _show() {
+        this.elements.forEach(el => el.classList.remove(this.hiddenClass));
+
+        this.buttonShow.style.display = 'none';
+        this.buttonHide.style.display = 'flex';
+    }
+
+    _hide() {
+        this.elements.forEach(el => el.classList.add(this.hiddenClass));
+
+        this.buttonShow.style.display = 'flex';
+        this.buttonHide.style.display = 'none';
+    }
+
+    _init() {
+        if (!this.elements.length) {
+            return false;
+        }
+
+        if (window.innerWidth < 768) {
+            this._hide();
+        }
+
+        document.addEventListener('click', (e) => {
+            const buttonShow = e.target.closest(`.js-toggle-elements-show[data-toggle-elements="${this.group}"]`);
+            if (buttonShow) {
+                this._show();
+            }
+
+            const buttonHide = e.target.closest(`.js-toggle-elements-hide[data-toggle-elements="${this.group}"]`);
+            if (buttonHide) {
+                this._hide();
+            }
+        });
+    }
 }

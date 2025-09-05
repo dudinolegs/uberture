@@ -15,14 +15,14 @@
         <div class="container">
             <div class="breadcrumbs">
                 <div class="breadcrumbs__wrapper">
-                    <a class="breacrumbs__item" href="#">Главная</a>
-                    <a class="breacrumbs__item" href="#">Каталог</a>
-                    <a class="breacrumbs__item" href="#">Межкомнатные двери</a>
-                    <a class="breacrumbs__item" href="#">Классика</a>
-                    <span class="breacrumbs__item">Коллекция Флоренция</span>
+                    <a class="breadcrumbs__item" href="#">Главная</a>
+                    <a class="breadcrumbs__item" href="#">Каталог</a>
+                    <a class="breadcrumbs__item" href="#">Межкомнатные двери</a>
+                    <a class="breadcrumbs__item" href="#">Классика</a>
+                    <span class="breadcrumbs__item">Коллекция Деканто</span>
                 </div>
             </div>
-            <h1>Коллекция Флоренция</h1>
+            <h1>Коллекция Деканто</h1>
         </div>
     </section>
 
@@ -30,11 +30,17 @@
         <div class="container">
             <div class="product-detail-wrapper">
                 <div class="product-gallery">
+                    <div class="label product-detail-label">
+                        <div class="label__item label__item_hit">Хит</div>
+                        <div class="label__item label__item_new">Новинка</div>
+                        <div class="label__item label__item_sale">Фурнитура в подарок</div>
+                    </div>
+
                     <div class="product-gallery__big js-swiper-product-detail js-gallery-product-detail">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a data-gallery="product-detail" href="<%= require('../assets/images/product-detail-2.png') %>" target="_blank" class="product-gallery__big-slide">
-                                    <img src="<%= require('../assets/images/product-detail-2.png') %>" alt="Product">
+                                <a data-gallery="product-detail" href="<%= require('../assets/images/sku-1.png') %>" target="_blank" class="product-gallery__big-slide">
+                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-1.png') %>" alt="Product">
                                 </a>
                             </div>
                             <div class="swiper-slide">
@@ -68,7 +74,7 @@
                     <div class="product-gallery__thumb js-swiper-product-thumb">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <button class="product-gallery__thumb-slide"><img src="<%= require('../assets/images/product-detail-2.png') %>" alt="Product"></button>
+                                <button class="product-gallery__thumb-slide"><img src="<%= require('../assets/images/sku-1.png') %>" alt="Product"></button>
                             </div>
                             <div class="swiper-slide">
                                 <button class="product-gallery__thumb-slide"><img src="<%= require('../assets/images/product-detail-1.png') %>" alt="Product"></button>
@@ -90,7 +96,176 @@
                 </div>
 
                 <div class="product-detail-content">
-                    <h2 class="product-detail__name">ПДГ 62003 - серена керамик</h2>
+                    <h2 class="product-detail__name">Дверь межкомнатная - синий бархат</h2>
+
+                    <div class="product-detail__sku">
+                        <div class="sku-tab js-swiper-sku-tab">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <button class="sku-tab__button sku-tab__button_active js-tab-button" data-tab-group="sku" data-tab-id="model">Модель двери</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="decor">Декор</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="glass">Стекло</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="portal">Оформление портала</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="hem">Тип кромки</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="size">Размер</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-tab-group="sku" data-tab-content="model" style="display: block;">
+                            <div class="sku-select">
+                                <button class="sku-select__item sku-select__item_active" title="белый бархат">
+                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-1.png') %>" alt="Sku">
+                                </button>
+                                <button class="sku-select__item" title="зеленый бархат">
+                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-2.png') %>" alt="Sku">
+                                </button>
+                                <button class="sku-select__item" title="серый бархат">
+                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-3.png') %>" alt="Sku">
+                                </button>
+                                <button class="sku-select__item" title="синий бархат">
+                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-4.png') %>" alt="Sku">
+                                </button>
+                            </div>
+                        </div>
+                        <div data-tab-group="sku" data-tab-content="decor">
+                            <div class="sku-select">
+                                <button class="sku-select__item sku-select__item_active">
+                                    <div class="sku-select__item-name">Декор #1</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Декор #2</div>
+                                </button>
+                            </div>
+                        </div>
+                        <div data-tab-group="sku" data-tab-content="glass">
+                            <div class="sku-select">
+                                <button class="sku-select__item sku-select__item_active">
+                                    <div class="sku-select__item-name">Глухая</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Матовое стекло</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Черное стекло</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Зеркало графит</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Зеркало бронза</div>
+                                </button>
+                            </div>
+                        </div>
+                        <div data-tab-group="sku" data-tab-content="portal">
+                            <div class="sku-select">
+                                <button class="sku-select__item sku-select__item_active">
+                                    <div class="sku-select__item-name">Портал #1</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #2</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #3</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #4</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #5</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #6</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #7</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #8</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #9</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #10</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #11</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #12</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #13</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #14</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #15</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Портал #16</div>
+                                </button>
+                            </div>
+                        </div>
+                        <div data-tab-group="sku" data-tab-content="hem">
+                            <div class="sku-select">
+                                <button class="sku-select__item sku-select__item_active">
+                                    <div class="sku-select__item-name">Кромка #1</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Кромка #2</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">Кромка #3</div>
+                                </button>
+                            </div>
+                        </div>
+                        <div data-tab-group="sku" data-tab-content="size">
+                            <div class="sku-select">
+                                <button class="sku-select__item sku-select__item_active">
+                                    <div class="sku-select__item-name">600х2000</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">700х2000</div>
+                                </button>
+                                <button class="sku-select__item">
+                                    <div class="sku-select__item-name">800х2000</div>
+                                </button>
+                            </div>
+
+                            <div class="text">
+                                <br>
+
+                                <button class="js-open-modal" data-modal-id="help-size">
+                                    <img src="<%= require('../assets/icons/size.svg') %>" alt="Size">
+                                    <span>Как замерить?</span>
+                                </button>
+
+                                <br>
+                                <br>
+
+                                <div class="message message_white message_warning text">
+                                    <p>Возможно изготовление дверей нестандартных размеров</p>
+                                    <ul>
+                                        <li>По высоте от 1900-2300 мм, шаг 50 мм</li>
+                                        <li>По ширине  от 400-1000 мм, шаг 50 мм</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="product-detail__purchase">
                         <div class="product-detail__purchase-manage">
@@ -152,9 +327,111 @@
 
     <div class="section">
         <div class="container">
-            Табы
+            <div class="product-tab">
+                <div class="product-tab__slider js-swiper-product-tab">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <button class="product-tab__button product-tab__button_active js-tab-button" data-tab-group="product-detail" data-tab-id="desc">Описание</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button class="product-tab__button js-tab-button" data-tab-group="product-detail" data-tab-id="feature">Особенности коллекции</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button class="product-tab__button js-tab-button" data-tab-group="product-detail" data-tab-id="setup">Комплектация</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button class="product-tab__button js-tab-button" data-tab-group="product-detail" data-tab-id="docs">Документы</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-tab-group="product-detail" data-tab-content="desc" style="display: block;">
+                <div class="text">
+                    <p>
+                        Плинтус из МДФ высотой 100 мм идеально сочетается в комплекте с межкомнатными дверьми.<br>
+                        Особенностью плинтуса является использование специальной скобы для крепления к стене. Это позволяет с лёгкостью монтировать и демонтировать плинтус без повреждений.<br>
+                        Отличия напольных плинтусов производства «Убертюре» от пластиковых плинтусов.
+                    </p>
+                    <ul>
+                        <li>Идеально сочетаются с межкомнатными дверями в единой цветовой гамме</li>
+                        <li>В отличие от стандартных пластиковых плинтусов высотой 50-60 мм, плинтусы производства «Убертюре» имеют высоту 70 мм и 100 мм. Используя более высокий плинтус, вы сможете скрыть некоторые дефекты стен.</li>
+                        <li>Отсутствие заглушек (в пластиковых плинтусах заглушки постоянно выпадают из пазов, при небольшом усилии трескаются, ломаются)</li>
+                        <li>Большой кабель-канал (25 мм высотой в плинтусе 70мм и 40 мм в плинтусе 100 мм), в который поместится сразу несколько проводов, например, телевизионный и интернет-кабель.</li>
+                        <li>Удобный монтаж и демонтаж. При замене проводов достаточно снять плинтусы со скоб, заменить провод, и вернуть плинтусы назад на скобы. Никаких выкручиваний и вкручиваний саморезов!</li>
+                        <li>Не выгорают на солнце, сохраняя первозданный внешний вид на протяжении всего срока эксплуатации</li>
+                    </ul>
+                </div>
+            </div>
+            <div data-tab-group="product-detail" data-tab-content="feature">
+                <div class="content-list">
+                    <div class="content content_reverse">
+                        <div class="content__image">
+                            <img class="content__image-inner" src="<%= require('../assets/images/product-desc-image.png') %>" alt="Feature">
+                        </div>
+                        <div class="content__main">
+                            <div class="text">
+                                <h2>Коллекция Флоренция</h2>
+                                <p>Значимость этих проблем настолько очевидна, что современная методология разработки предполагает независимые способы реализации модели развития. Противоположная точка зрения подразумевает, что акционеры крупнейших компаний набирают популярность среди определенных слоев населения, а Значимость этих проблем настолько очевидна, что современная методология разработки предполагает независимые способы реализации модели развития. Противоположная точка зрения подразумевает, что акционеры крупнейших компаний набирают популярность среди определенных слоев населения.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-tab-group="product-detail" data-tab-content="setup">
+                <div class="product-property-table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Модель</td>
+                                <td>8300 МКЛС</td>
+                            </tr>
+                            <tr>
+                                <td>Толщина</td>
+                                <td>40 мм</td>
+                            </tr>
+                            <tr>
+                                <td>Декор</td>
+                                <td>МКЛС Матовый классический серый</td>
+                            </tr>
+                            <tr>
+                                <td>Стекло</td>
+                                <td>Прозрачное рифленое стекло</td>
+                            </tr>
+                            <tr>
+                                <td>Портал</td>
+                                <td>Гладкий классический наличник</td>
+                            </tr>
+                            <tr>
+                                <td>Размер</td>
+                                <td>900Х2000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div data-tab-group="product-detail" data-tab-content="docs">
+                <div class="document-list">
+                    <article class="document-card">
+                        <a class="document-card__link" href="#"></a>
+                        <h3 class="document-card__name">Сертификат соответствия №BY_112 02.01.031 02113. png</h3>
+                    </article>
+                    <article class="document-card">
+                        <a class="document-card__link" href="#"></a>
+                        <h3 class="document-card__name">Руководство по эксплуатации ДСВ 2024.pdf</h3>
+                    </article>
+                </div>
+            </div>
         </div>
     </div>
+
+    <%= require('../templates/product_detail_additional.html').default %>
+
+    <%= require('../templates/help_dealer.html').default %>
+
+    <%= require('../templates/map.html').default %>
+    
+    <%= require('../templates/social.html').default %>
 
     <%= require('../templates/footer.html').default %>
 

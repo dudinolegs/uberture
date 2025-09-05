@@ -1,5 +1,8 @@
 .header {
     background-color: white;
+    height: 90px;
+    display: flex;
+    align-items: center;
 }
 
 .header.header_fixed {
@@ -29,7 +32,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 27px 0;
+    padding: 15px 0;
 }
 
 .header__menu {
@@ -157,6 +160,10 @@
     height: 16px;
     background: var(--pale-color);
     border-radius: 50%;
+}
+
+.header__button-burger {
+    display: none;
 }
 
 .header.header_dark {

@@ -5,6 +5,24 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+function setEqualHeight(container) {
+    const slides = container.querySelectorAll('.swiper-slide');
+    let maxHeight = 0;
+  
+    setTimeout(function() {
+        slides.forEach(slide => {
+            slide.style.height = 'auto';
+            if (slide.offsetHeight > maxHeight) {
+                maxHeight = slide.offsetHeight;
+            }
+        });
+      
+        slides.forEach(slide => {
+            slide.style.height = maxHeight + 'px';
+        });
+    }, 500);
+}
+
 const swiperHero = new Swiper('.js-swiper-hero', {
     modules: [Navigation, Pagination, Autoplay],
     loop: false,
@@ -39,12 +57,15 @@ document.querySelectorAll('.js-swiper-hero-change-slide').forEach(button => {
 });
 
 document.querySelectorAll('.js-swiper-gallery').forEach(gallery => {
+    const buttonNext = gallery.querySelector('.js-swiper-gallery-button-next');
+    const buttonPrev = gallery.querySelector('.js-swiper-gallery-button-prev');
+
     new Swiper(gallery, {
         modules: [Navigation, Pagination, Autoplay],
         loop: true,
         navigation: {
-            nextEl: gallery.querySelector('.js-swiper-gallery-button-next'),
-            prevEl: gallery.querySelector('.js-swiper-gallery-button-prev'),
+            nextEl: buttonNext,
+            prevEl: buttonPrev
         },
         autoplay: {
             delay: 3000,
@@ -64,49 +85,94 @@ document.querySelectorAll('.js-swiper-gallery').forEach(gallery => {
         },
         slidesPerView: 1,
         spaceBetween: 20,
+        autoHeight: true,
     });
 });
 
-const swiperProductThumbs = new Swiper('.js-swiper-product-thumb', {
-    direction: 'vertical',
-    slidesPerView: 4,
-    spaceBetween: 10,
-    watchSlidesProgress: true,
-});
+const productThumbsEl = document.querySelector('.js-swiper-product-thumb');
+let swiperProductThumbs = null;
+
+if (productThumbsEl) {
+    swiperProductThumbs = new Swiper(productThumbsEl, {
+        direction: 'vertical',
+        slidesPerView: 4,
+        spaceBetween: 10,
+        watchSlidesProgress: true,
+    });
+}
 
 new Swiper('.js-swiper-product-detail', {
     modules: [Navigation, Thumbs],
     loop: true,
     slidesPerView: 1,
     spaceBetween: 10,
-    thumbs: {
-        swiper: swiperProductThumbs,
-    },
+    ...(swiperProductThumbs ? { thumbs: { swiper: swiperProductThumbs } } : {}),
 });
 
-new Swiper('.js-swiper-review', {
-    modules: [Navigation, Pagination, Autoplay],
-    loop: true,
-    navigation: {
-        nextEl: '.js-swiper-review-button-next',
-        prevEl: '.js-swiper-review-button-prev'
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-    },
-    slidesPerView: 4,
-    spaceBetween: 20,
+new Swiper('.js-swiper-product-tab', {
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+});
+
+new Swiper('.js-swiper-sku-tab', {
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+});
+
+document.querySelectorAll('.js-swiper-review').forEach(reviews => {
+    new Swiper(reviews, {
+        modules: [Navigation, Pagination, Autoplay],
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+        on: {
+            init: setEqualHeight(reviews),
+            resize: setEqualHeight(reviews),
+        },
+        navigation: {
+            nextEl: '.js-swiper-review-button-next',
+            prevEl: '.js-swiper-review-button-prev'
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            },
+            1260: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            1480: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        },
+    });
 });
 
 document.querySelectorAll('.js-swiper-product-card').forEach(gallery => {
+    const buttonNext = gallery.querySelector('.js-swiper-product-card-button-next');
+    const buttonPrev = gallery.querySelector('.js-swiper-product-card-button-prev');
+
     new Swiper(gallery, {
         modules: [Navigation, Pagination, Autoplay],
         loop: true,
         navigation: {
-            nextEl: '.js-swiper-product-card-button-next',
-            prevEl: '.js-swiper-product-card-button-prev'
+            nextEl: buttonNext,
+            prevEl: buttonPrev
         },
         pagination: {
             el: gallery.querySelector('.js-swiper-product-card-pagination'),
@@ -121,5 +187,69 @@ document.querySelectorAll('.js-swiper-product-card').forEach(gallery => {
         },
         slidesPerView: 1,
         spaceBetween: 10,
+    });
+});
+
+document.querySelectorAll('.js-swiper-cards').forEach(cards => {
+    new Swiper(cards, {
+        loop: false,
+        on: {
+            init: setEqualHeight(cards),
+            resize: setEqualHeight(cards),
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 1.4,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            },
+            1260: {
+                slidesPerView: 2.9,
+                spaceBetween: 20,
+            },
+            1480: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        },
+    });
+});
+
+document.querySelectorAll('.js-swiper-article').forEach(articles => {
+    new Swiper(articles, {
+        loop: false,
+        on: {
+            init: setEqualHeight(articles),
+            resize: setEqualHeight(articles),
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1260: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            },
+            1480: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
     });
 });

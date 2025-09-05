@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breadcrumbs__item" href="#">Главная</a>
+                    <span class="breadcrumbs__item">Корзина</span>
+                </div>
+            </div>
+            <h1>Корзина</h1>
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="container">
+            <div class="section__header">
+                <div class="cart-search">
+                    <%= require('../templates/form_search.html').default %>
+                </div>
+
+                <button class="button button_rounded button_a-active button_size-s button_main-stroke">
+                    <svg viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 7V0H17V7" fill="currentColor" />
+                        <path d="M5 16H3C2.46957 16 1.96086 15.7893 1.58579 15.4142C1.21071 15.0391 1 14.5304 1 14V9C1 8.46957 1.21071 7.96086 1.58579 7.58579C1.96086 7.21071 2.46957 7 3 7H19C19.5304 7 20.0391 7.21071 20.4142 7.58579C20.7893 7.96086 21 8.46957 21 9V14C21 14.5304 20.7893 15.0391 20.4142 15.4142C20.0391 15.7893 19.5304 16 19 16H17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17 12H5V20H17V12Z" fill="currentColor" />
+                    </svg>
+                    <span>Распечатать</span>
+                </button>
+            </div>
+
+            <div class="cart-wrapper">
+                <main class="cart-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Товары</th>
+                                <th></th>
+                                <th>Количество</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cart-product">
+                                <td>
+                                    <a href="#" class="cart-product__image">
+                                        <img src="<%= require('../assets/images/sku-1.png') %>" alt="Product">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="cart-product__name">Дверь межкомнатная Альберо Мегаполис Сеул, Глянец Белый</a>
+                                    <div class="label">
+                                        <div class="label__item label__item_new">Новинка</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity js-quantity cart-product__quantity">
+                                        <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                        <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="260" min="3" max="999" data-ratio="5">
+                                        <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="cart-product__button-delete">
+                                        <svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5H3H19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17 5V19C17 19.5304 16.7893 20.0391 16.4142 20.4142C16.0391 20.7893 15.5304 21 15 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5M6 5V3C6 2.46957 6.21071 1.96086 6.58579 1.58579C6.96086 1.21071 7.46957 1 8 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="cart-product">
+                                <td>
+                                    <a href="#" class="cart-product__image">
+                                        <img src="<%= require('../assets/images/sku-2.png') %>" alt="Product">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="cart-product__name">Дверь межкомнатная Альберо Мегаполис Сеул, Глянец Белый</a>
+                                </td>
+                                <td>
+                                    <div class="quantity js-quantity cart-product__quantity">
+                                        <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                        <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="1">
+                                        <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="cart-product__button-delete">
+                                        <svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5H3H19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17 5V19C17 19.5304 16.7893 20.0391 16.4142 20.4142C16.0391 20.7893 15.5304 21 15 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5M6 5V3C6 2.46957 6.21071 1.96086 6.58579 1.58579C6.96086 1.21071 7.46957 1 8 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="cart-product">
+                                <td>
+                                    <a href="#" class="cart-product__image">
+                                        <img src="<%= require('../assets/images/door-default.png') %>" alt="Product">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="cart-product__name">Дверь межкомнатная Альберо Мегаполис Сеул, Глянец Белый</a>
+                                </td>
+                                <td>
+                                    <div class="quantity js-quantity cart-product__quantity">
+                                        <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                        <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="260" min="3" max="999" data-ratio="5">
+                                        <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="cart-product__button-delete">
+                                        <svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5H3H19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17 5V19C17 19.5304 16.7893 20.0391 16.4142 20.4142C16.0391 20.7893 15.5304 21 15 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5M6 5V3C6 2.46957 6.21071 1.96086 6.58579 1.58579C6.96086 1.21071 7.46957 1 8 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="cart-product">
+                                <td>
+                                    <a href="#" class="cart-product__image">
+                                        <img src="<%= require('../assets/images/sku-4.png') %>" alt="Product">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="cart-product__name">Дверь межкомнатная Альберо Мегаполис Сеул, Глянец Белый</a>
+                                    <div class="label">
+                                        <div class="label__item label__item_sale">- 15%</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity js-quantity cart-product__quantity">
+                                        <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                        <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="1">
+                                        <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="cart-product__button-delete">
+                                        <svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5H3H19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17 5V19C17 19.5304 16.7893 20.0391 16.4142 20.4142C16.0391 20.7893 15.5304 21 15 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5M6 5V3C6 2.46957 6.21071 1.96086 6.58579 1.58579C6.96086 1.21071 7.46957 1 8 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="cart-product">
+                                <td>
+                                    <a href="#" class="cart-product__image">
+                                        <img src="<%= require('../assets/images/sku-3.png') %>" alt="Product">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="cart-product__name">Дверь межкомнатная Альберо Мегаполис Сеул, Глянец Белый</a>
+                                </td>
+                                <td>
+                                    <div class="quantity js-quantity cart-product__quantity">
+                                        <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                        <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="1">
+                                        <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="cart-product__button-delete">
+                                        <svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5H3H19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17 5V19C17 19.5304 16.7893 20.0391 16.4142 20.4142C16.0391 20.7893 15.5304 21 15 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5M6 5V3C6 2.46957 6.21071 1.96086 6.58579 1.58579C6.96086 1.21071 7.46957 1 8 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="cart-product">
+                                <td>
+                                    <a href="#" class="cart-product__image">
+                                        <img src="<%= require('../assets/images/collection-1.png') %>" alt="Product">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="cart-product__name">Тестовый товар</a>
+                                </td>
+                                <td>
+                                    <div class="quantity js-quantity cart-product__quantity">
+                                        <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                        <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="1">
+                                        <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="cart-product__button-delete">
+                                        <svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5H3H19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17 5V19C17 19.5304 16.7893 20.0391 16.4142 20.4142C16.0391 20.7893 15.5304 21 15 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5M6 5V3C6 2.46957 6.21071 1.96086 6.58579 1.58579C6.96086 1.21071 7.46957 1 8 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="cart-product">
+                                <td>
+                                    <a href="#" class="cart-product__image">
+                                        <img src="<%= require('../assets/images/collection-2.png') %>" alt="Product">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="cart-product__name">Тестовый товар</a>
+                                </td>
+                                <td>
+                                    <div class="quantity js-quantity cart-product__quantity">
+                                        <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                        <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="1">
+                                        <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="cart-product__button-delete">
+                                        <svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5H3H19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17 5V19C17 19.5304 16.7893 20.0391 16.4142 20.4142C16.0391 20.7893 15.5304 21 15 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5M6 5V3C6 2.46957 6.21071 1.96086 6.58579 1.58579C6.96086 1.21071 7.46957 1 8 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="cart-product">
+                                <td>
+                                    <a href="#" class="cart-product__image">
+                                        <img src="<%= require('../assets/images/collection-3.png') %>" alt="Product">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="cart-product__name">Тестовый товар</a>
+                                </td>
+                                <td>
+                                    <div class="quantity js-quantity cart-product__quantity">
+                                        <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                        <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="1">
+                                        <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="cart-product__button-delete">
+                                        <svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5H3H19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17 5V19C17 19.5304 16.7893 20.0391 16.4142 20.4142C16.0391 20.7893 15.5304 21 15 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5M6 5V3C6 2.46957 6.21071 1.96086 6.58579 1.58579C6.96086 1.21071 7.46957 1 8 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="cart-product">
+                                <td>
+                                    <a href="#" class="cart-product__image">
+                                        <img src="<%= require('../assets/images/product-1.png') %>" alt="Product">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#" class="cart-product__name">Тестовый товар в корзине с очень-очень длинным названием для теста переполнения контейнера</a>
+                                    <div class="label">
+                                        <div class="label__item label__item_new">Новинка</div>
+                                        <div class="label__item label__item_hit">Хит</div>
+                                        <div class="label__item label__item_sale">Скидка</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity js-quantity cart-product__quantity">
+                                        <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                        <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="1">
+                                        <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="cart-product__button-delete">
+                                        <svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 5H3H19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M17 5V19C17 19.5304 16.7893 20.0391 16.4142 20.4142C16.0391 20.7893 15.5304 21 15 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5M6 5V3C6 2.46957 6.21071 1.96086 6.58579 1.58579C6.96086 1.21071 7.46957 1 8 1H12C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
+
+                <aside class="cart-sidebar">
+                    <div class="cart-sidebar__inner">
+                        <div class="cart-total">
+                            <div class="cart-total__property">
+                                <div class="cart-total__property-item">
+                                    <span class="cart-total__property-name">Итого:</span>
+                                    <span class="cart-total__property-value">177 шт.</span>
+                                </div>
+                                <div class="cart-total__property-item">
+                                    <span class="cart-total__property-name">Доставка:</span>
+                                    <span class="cart-total__property-value">23.11.2025</span>
+                                </div>
+                                <div class="cart-total__property-item">
+                                    <span class="cart-total__property-name">Параметр:</span>
+                                    <span class="cart-total__property-value">Значение</span>
+                                </div>
+                            </div>
+    
+                            <button class="button button_rounded button_a-active button_size-s button_main-fill cart-total__button">
+                                <span>Оформить</span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    
+    <%= require('../templates/social.html').default %>
+
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

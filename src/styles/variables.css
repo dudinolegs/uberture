@@ -1,5 +1,6 @@
 :root {
     --header-height: 0px;
+    --sticky-top: 10px;
     --container: 1440px;
     --section-margin: 80px;
     --section-padding: 80px;
@@ -22,4 +23,8 @@
     --text-color: var(--pale-color);
 
     --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+body:has(.header.header_fixed.header_fixed-active) {
+    --sticky-top: calc(var(--header-height) + 10px);
 }

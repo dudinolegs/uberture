@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breadcrumbs__item" href="#">Главная</a>
+                    <span class="breadcrumbs__item">Корзина</span>
+                </div>
+            </div>
+            <h1>Корзина</h1>
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="container">
+            <div class="cart-empty">
+                <img class="cart-empty__icon" src="<%= require('../assets/icons/cart.svg') %>" alt="Cart">
+                <div class="cart-empty__title">Ваша корзина пуста</div>
+                <div class="cart-empty__subtitle">Здесь пока нет товаров.<br> Просмотрите каталог, чтобы добавить что-то в корзину.</div>
+                <a href="#" class="button button_rounded button_a-active button_main-fill button_size-s">
+                    <span>К покупкам</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <%= require('../templates/social.html').default %>
+
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

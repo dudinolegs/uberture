@@ -14,6 +14,7 @@ import './styles/modal.css';
 import './styles/store.css';
 import './styles/employee.css';
 import './styles/personal.css';
+import './styles/media.css';
 
 import './scripts/map.js';
 import './scripts/form.js';

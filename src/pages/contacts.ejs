@@ -15,8 +15,8 @@
         <div class="container">
             <div class="breadcrumbs">
                 <div class="breadcrumbs__wrapper">
-                    <a class="breacrumbs__item" href="#">Главная</a>
-                    <span class="breacrumbs__item">Контакты</span>
+                    <a class="breadcrumbs__item" href="#">Главная</a>
+                    <span class="breadcrumbs__item">Контакты</span>
                 </div>
             </div>
             <h1>Контакты</h1>
@@ -31,8 +31,11 @@
 
     <section class="section">
         <div class="container">
-            <div class="content">
-                <div class="content__text">
+            <div class="content content_reverse">
+                <div class="content__image">
+                    <img src="<%= require('../assets/images/contact-bg.png') %>" alt="Contact">
+                </div>
+                <div class="content__main">
                     <div class="section__header">
                         <div class="section__title-wrapper">
                             <h2 class="section__subtitle">- как доехать -</h2>
@@ -46,9 +49,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="content__image">
-                    <img src="<%= require('../assets/images/contact-bg.png') %>" alt="Contact">
                 </div>
             </div>
         </div>

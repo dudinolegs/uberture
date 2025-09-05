@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breadcrumbs__item" href="#">Главная</a>
+                    <a class="breadcrumbs__item" href="#">Каталог</a>
+                    <a class="breadcrumbs__item" href="#">Межкомнатные двери</a>
+                    <a class="breadcrumbs__item" href="#">Классика</a>
+                    <span class="breadcrumbs__item">Простой товар</span>
+                </div>
+            </div>
+            <h1>Простой товар</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="product-detail-wrapper">
+                <div class="product-gallery">
+                    <div class="product-gallery__big js-swiper-product-detail js-gallery-product-detail">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a data-gallery="product-detail" href="<%= require('../assets/images/sku-1.png') %>" target="_blank" class="product-gallery__big-slide">
+                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-1.png') %>" alt="Product">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-detail-content">
+                    <h2 class="product-detail__name">Дверь межкомнатная - синий бархат</h2>
+
+                    <div class="product-detail__purchase">
+                        <div class="product-detail__purchase-manage">
+                            <div class="quantity js-quantity">
+                                <button type="button" class="quantity__btn js-quantity-minus">−</button>
+                                <input type="number" inputmode="numeric" class="quantity__input js-quantity-input" name="quantity" value="260" min="3" max="999" data-ratio="5">
+                                <button type="button" class="quantity__btn js-quantity-plus">+</button>
+                            </div>
+
+                            <button class="button button_rounded button_main-fill button_size-s button_a-active">
+                                <svg viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.5013 18.3334C7.96154 18.3334 8.33464 17.9603 8.33464 17.5001C8.33464 17.0398 7.96154 16.6667 7.5013 16.6667C7.04106 16.6667 6.66797 17.0398 6.66797 17.5001C6.66797 17.9603 7.04106 18.3334 7.5013 18.3334Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16.6654 18.3334C17.1256 18.3334 17.4987 17.9603 17.4987 17.5001C17.4987 17.0398 17.1256 16.6667 16.6654 16.6667C16.2051 16.6667 15.832 17.0398 15.832 17.5001C15.832 17.9603 16.2051 18.3334 16.6654 18.3334Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M0.832031 0.833252H4.16536L6.3987 11.9916C6.4749 12.3752 6.68362 12.7199 6.98832 12.9652C7.29302 13.2104 7.67428 13.3407 8.06537 13.3333H16.1654C16.5565 13.3407 16.9377 13.2104 17.2424 12.9652C17.5471 12.7199 17.7558 12.3752 17.832 11.9916L19.1654 4.99992H4.9987" fill="currentColor" />
+                                </svg>
+                                <span>В корзину</span>
+                            </button>
+                        </div>
+
+                        <div class="product-detail__purchase-text text">
+                            <p><a href="#" class="js-open-modal" data-modal-id="dealer">Оставьте заявку</a> на сотрудничество и получите персональное предложение</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="container">
+            <div class="product-tab">
+                <div class="product-tab__slider js-swiper-product-tab">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <button class="product-tab__button product-tab__button_active js-tab-button" data-tab-group="product-detail" data-tab-id="desc">Описание</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button class="product-tab__button js-tab-button" data-tab-group="product-detail" data-tab-id="setup">Комплектация</button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button class="product-tab__button js-tab-button" data-tab-group="product-detail" data-tab-id="docs">Документы</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-tab-group="product-detail" data-tab-content="desc" style="display: block;">
+                <div class="text">
+                    <p>
+                        Плинтус из МДФ высотой 100 мм идеально сочетается в комплекте с межкомнатными дверьми.<br>
+                        Особенностью плинтуса является использование специальной скобы для крепления к стене. Это позволяет с лёгкостью монтировать и демонтировать плинтус без повреждений.<br>
+                        Отличия напольных плинтусов производства «Убертюре» от пластиковых плинтусов.
+                    </p>
+                    <ul>
+                        <li>Идеально сочетаются с межкомнатными дверями в единой цветовой гамме</li>
+                        <li>В отличие от стандартных пластиковых плинтусов высотой 50-60 мм, плинтусы производства «Убертюре» имеют высоту 70 мм и 100 мм. Используя более высокий плинтус, вы сможете скрыть некоторые дефекты стен.</li>
+                        <li>Отсутствие заглушек (в пластиковых плинтусах заглушки постоянно выпадают из пазов, при небольшом усилии трескаются, ломаются)</li>
+                        <li>Большой кабель-канал (25 мм высотой в плинтусе 70мм и 40 мм в плинтусе 100 мм), в который поместится сразу несколько проводов, например, телевизионный и интернет-кабель.</li>
+                        <li>Удобный монтаж и демонтаж. При замене проводов достаточно снять плинтусы со скоб, заменить провод, и вернуть плинтусы назад на скобы. Никаких выкручиваний и вкручиваний саморезов!</li>
+                        <li>Не выгорают на солнце, сохраняя первозданный внешний вид на протяжении всего срока эксплуатации</li>
+                    </ul>
+                </div>
+            </div>
+            <div data-tab-group="product-detail" data-tab-content="setup">
+                <div class="product-property-table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Модель</td>
+                                <td>8300 МКЛС</td>
+                            </tr>
+                            <tr>
+                                <td>Толщина</td>
+                                <td>40 мм</td>
+                            </tr>
+                            <tr>
+                                <td>Декор</td>
+                                <td>МКЛС Матовый классический серый</td>
+                            </tr>
+                            <tr>
+                                <td>Стекло</td>
+                                <td>Прозрачное рифленое стекло</td>
+                            </tr>
+                            <tr>
+                                <td>Портал</td>
+                                <td>Гладкий классический наличник</td>
+                            </tr>
+                            <tr>
+                                <td>Размер</td>
+                                <td>900Х2000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div data-tab-group="product-detail" data-tab-content="docs">
+                <div class="document-list">
+                    <article class="document-card">
+                        <a class="document-card__link" href="#"></a>
+                        <h3 class="document-card__name">Сертификат соответствия №BY_112 02.01.031 02113. png</h3>
+                    </article>
+                    <article class="document-card">
+                        <a class="document-card__link" href="#"></a>
+                        <h3 class="document-card__name">Руководство по эксплуатации ДСВ 2024.pdf</h3>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%= require('../templates/product_detail_additional.html').default %>
+
+    <%= require('../templates/help_dealer.html').default %>
+
+    <%= require('../templates/map.html').default %>
+    
+    <%= require('../templates/social.html').default %>
+
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

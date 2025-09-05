@@ -135,6 +135,10 @@
     border: 1px solid var(--pale-color);
 }
 
+.button.button_pale-stroke svg path {
+    color: var(--color);
+}
+
 .button.button_pale-stroke:hover {
     --color: var(--main-color);
     border: 1px solid var(--main-color);
