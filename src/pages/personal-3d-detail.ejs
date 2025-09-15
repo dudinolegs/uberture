@@ -28,10 +28,20 @@
     <div class="section">
         <div class="container">
             <div class="personal-wrapper">
-                <%= require('../templates/personal_sidebar.html').default %>
+                <aside class="personal-sidebar">
+                    <div class="personal-sidebar-search">
+                        <%= require('../templates/form_search.html').default %>
+                    </div>
+
+                    <%= require('../templates/personal_sidebar.html').default %>
+
+                    <div class="personal-sidebar-promo">
+                        <%= require('../templates/personal_promo.html').default %>
+                    </div>
+                </aside>
 
                 <main class="personal-main">
-                    <div class="personal-search">
+                    <div class="personal-main-search">
                         <%= require('../templates/form_search.html').default %>
                     </div>
 
@@ -51,7 +61,9 @@
                             </a>
                         </div>
             
-                        <%= require('../templates/models_list.html').default %>
+                        <div class="personal-decor-list">
+                            <%= require('../templates/models_list.html').default %>
+                        </div>
                     </section>
 
                     <section class="section">
@@ -70,7 +82,13 @@
                             </a>
                         </div>
             
-                        <%= require('../templates/interiors_list.html').default %>
+                        <div class="personal-interiors-list">
+                            <%= require('../templates/interiors_list.html').default %>
+                        </div>
+
+                        <div class="personal-main-promo">
+                            <%= require('../templates/personal_promo.html').default %>
+                        </div>
                     </section>
                 </main>
             </div>

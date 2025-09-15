@@ -98,28 +98,33 @@
                 <div class="product-detail-content">
                     <h2 class="product-detail__name">Дверь межкомнатная - синий бархат</h2>
 
-                    <div class="product-detail__sku">
-                        <div class="sku-tab js-swiper-sku-tab">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <button class="sku-tab__button sku-tab__button_active js-tab-button" data-tab-group="sku" data-tab-id="model">Модель двери</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="decor">Декор</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="glass">Стекло</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="portal">Оформление портала</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="hem">Тип кромки</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="size">Размер</button>
+                    <div class="product-detail__sku-desktop">
+                        <div class="sku-tab">
+                            <div class="js-swiper-sku-tab">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button class="sku-tab__button sku-tab__button_active js-tab-button" data-tab-group="sku" data-tab-id="model">Модель двери</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="decor">Декор</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="glass">Стекло</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="portal">Оформление портала</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="hem">Тип кромки</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="sku-tab__button js-tab-button" data-tab-group="sku" data-tab-id="size">Размер</button>
+                                    </div>
                                 </div>
                             </div>
+
+                            <button type="button" class="js-swiper-sku-tab-button-prev sku-tab__slider-button sku-tab__slider-button_prev"></button>
+                            <button type="button" class="js-swiper-sku-tab-button-next sku-tab__slider-button sku-tab__slider-button_next"></button>
                         </div>
 
                         <div data-tab-group="sku" data-tab-content="model" style="display: block;">
@@ -266,6 +271,202 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="product-detail__sku-mobile js-dropdown">
+                        <button type="button" class="button button_a-active button_rounded button_white-fill button_with-icon button_size-s js-dropdown-button">
+                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 14.75V9.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3 6.5V1.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9 14.75V8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9 5V1.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15 14.75V11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M15 8V1.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M0.75 9.5H5.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.75 5H11.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12.75 11H17.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Выберите модель и декор</span>
+                        </button>
+
+                        <div class="sku-dropdown js-dropdown-body">
+                            <div class="sku-dropdown__inner">
+                                <div class="sku-dropdown__item js-dropdown">
+                                    <button type="button" class="sku-dropdown__item-name js-dropdown-button">Модель двери</button>
+
+                                    <div class="sku-dropdown__item-body js-dropdown-body">
+                                        <div class="sku-dropdown__item-body__inner">
+                                            <div class="sku-select">
+                                                <button class="sku-select__item sku-select__item_active" title="белый бархат">
+                                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-1.png') %>" alt="Sku">
+                                                </button>
+                                                <button class="sku-select__item" title="зеленый бархат">
+                                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-2.png') %>" alt="Sku">
+                                                </button>
+                                                <button class="sku-select__item" title="серый бархат">
+                                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-3.png') %>" alt="Sku">
+                                                </button>
+                                                <button class="sku-select__item" title="синий бархат">
+                                                    <img class="sku-select__item-image" src="<%= require('../assets/images/sku-4.png') %>" alt="Sku">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sku-dropdown__item js-dropdown">
+                                    <button type="button" class="sku-dropdown__item-name js-dropdown-button">Декор</button>
+                                    <div class="sku-dropdown__item-body js-dropdown-body">
+                                        <div class="sku-dropdown__item-body__inner">
+                                            <div class="sku-select">
+                                                <button class="sku-select__item sku-select__item_active">
+                                                    <div class="sku-select__item-name">Декор #1</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Декор #2</div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sku-dropdown__item js-dropdown">
+                                    <button type="button" class="sku-dropdown__item-name js-dropdown-button">Стекло</button>
+                                    <div class="sku-dropdown__item-body js-dropdown-body">
+                                        <div class="sku-dropdown__item-body__inner">
+                                            <div class="sku-select">
+                                                <button class="sku-select__item sku-select__item_active">
+                                                    <div class="sku-select__item-name">Глухая</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Матовое стекло</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Черное стекло</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Зеркало графит</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Зеркало бронза</div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sku-dropdown__item js-dropdown">
+                                    <button type="button" class="sku-dropdown__item-name js-dropdown-button">Оформление портала</button>
+                                    <div class="sku-dropdown__item-body js-dropdown-body">
+                                        <div class="sku-dropdown__item-body__inner">
+                                            <div class="sku-select">
+                                                <button class="sku-select__item sku-select__item_active">
+                                                    <div class="sku-select__item-name">Портал #1</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #2</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #3</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #4</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #5</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #6</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #7</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #8</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #9</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #10</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #11</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #12</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #13</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #14</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #15</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Портал #16</div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sku-dropdown__item js-dropdown">
+                                    <button type="button" class="sku-dropdown__item-name js-dropdown-button">Тип кромки</button>
+                                    <div class="sku-dropdown__item-body js-dropdown-body">
+                                        <div class="sku-dropdown__item-body__inner">
+                                            <div class="sku-select">
+                                                <button class="sku-select__item sku-select__item_active">
+                                                    <div class="sku-select__item-name">Кромка #1</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Кромка #2</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">Кромка #3</div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sku-dropdown__item js-dropdown">
+                                    <button type="button" class="sku-dropdown__item-name js-dropdown-button">Размер</button>
+                                    <div class="sku-dropdown__item-body js-dropdown-body">
+                                        <div class="sku-dropdown__item-body__inner">
+                                            <div class="sku-select">
+                                                <button class="sku-select__item sku-select__item_active">
+                                                    <div class="sku-select__item-name">600х2000</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">700х2000</div>
+                                                </button>
+                                                <button class="sku-select__item">
+                                                    <div class="sku-select__item-name">800х2000</div>
+                                                </button>
+                                            </div>
+                
+                                            <div class="text">
+                                                <br>
+                
+                                                <button class="js-open-modal" data-modal-id="help-size">
+                                                    <img src="<%= require('../assets/icons/size.svg') %>" alt="Size">
+                                                    <span>Как замерить?</span>
+                                                </button>
+                
+                                                <br>
+                                                <br>
+                
+                                                <div class="message message_white message_warning text">
+                                                    <p>Возможно изготовление дверей нестандартных размеров</p>
+                                                    <ul>
+                                                        <li>По высоте от 1900-2300 мм, шаг 50 мм</li>
+                                                        <li>По ширине  от 400-1000 мм, шаг 50 мм</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="product-detail__purchase">
                         <div class="product-detail__purchase-manage">
@@ -343,6 +544,9 @@
                             <button class="product-tab__button js-tab-button" data-tab-group="product-detail" data-tab-id="docs">Документы</button>
                         </div>
                     </div>
+
+                    <button type="button" class="js-swiper-product-tab-button-prev product-tab__slider-button product-tab__slider-button_prev"></button>
+                    <button type="button" class="js-swiper-product-tab-button-next product-tab__slider-button product-tab__slider-button_next"></button>
                 </div>
             </div>
 

@@ -64,13 +64,33 @@ export function initDropdown() {
         const button = dropdownItem.querySelector(".js-dropdown-button");
         const body = dropdownItem.querySelector(".js-dropdown-body");
 
+        // следим за изменением содержимого body
+        const observer = new MutationObserver(() => {
+            if (dropdownItem.classList.contains('dropdown__item_active')) {
+                body.style.height = body.scrollHeight + 'px';
+            }
+        });
+
+        observer.observe(body, {
+            childList: true,
+            subtree: true,
+            characterData: true
+        });
+
         button.addEventListener('click', () => {
             dropdownItem.classList.toggle('dropdown__item_active');
 
-            if (body.style.height && body.style.height !== '0px') {
-                body.style.height = '0px';
-            } else {
+            if (dropdownItem.classList.contains('dropdown__item_active')) {
                 body.style.height = body.scrollHeight + 'px';
+            } else {
+                body.style.height = '0px';
+            }
+        });
+
+        // плавное закрытие/открытие (опционально)
+        body.addEventListener('transitionend', () => {
+            if (dropdownItem.classList.contains('dropdown__item_active')) {
+                body.style.height = 'auto'; // фиксируем auto после анимации
             }
         });
     });
@@ -81,16 +101,27 @@ export function initFilter() {
 
     filters.forEach(filter => {
         const button = filter.querySelector(".js-filter-name");
+        const container = filter.closest('.container');
+        const containerRect = container.getBoundingClientRect();
 
         button.addEventListener('click', (e) => {
             e.stopPropagation();
+
+            const dropdown = filter.querySelector(".js-filter-dropdown");
+            const dropdownRect = dropdown.getBoundingClientRect();
+            const dropdownOffsetLeft = dropdownRect.left - containerRect.left;
+            const dropdownTotalWidth = dropdown.offsetWidth + dropdownOffsetLeft;
+
+            if (container.offsetWidth < dropdownTotalWidth) {
+                dropdown.style.left = (container.offsetWidth - dropdownTotalWidth) + "px";
+            }
 
             filters.forEach(f => {
                 if (f !== filter) {
                     f.classList.remove("filter-item_active");
                 }
             });
-
+            
             filter.classList.toggle('filter-item_active');
         });
     });

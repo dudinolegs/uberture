@@ -7,9 +7,10 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const pages = [
-    'ui', 'mainpage', 'dealer', 'support', 'buy', 'team', 'job', 'contacts', 'error', 'about', 'history', 'search', 'reset-password', 'news-list', 'news-detail',
+    'ui', 'pdf',
+    'mainpage', 'dealer', 'support', 'buy', 'team', 'job', 'contacts', 'error', 'about', 'history', 'search', 'reset-password', 'news-list', 'news-detail',
     'catalog', 'catalog-collection-list', 'catalog-product-list', 'catalog-collection-detail', 'catalog-product-detail', 'catalog-cart-empty', 'catalog-cart-fill',  
-    'personal', 'personal-profile', 'personal-3d', 'personal-3d-detail', 'personal-brandbook',, 'personal-decors', 'personal-tech-docs',
+    'personal', 'personal-profile', 'personal-3d', 'personal-3d-detail', 'personal-brandbook', 'personal-decors', 'personal-tech-docs',
 ];
 
 module.exports = (env, argv) => {

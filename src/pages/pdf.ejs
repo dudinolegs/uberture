@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uberture</title>
+</head>
+<body>
+    
+    <%= require('../templates/header_default.html').default %>
+
+    <%= require('../templates/header_fixed.html').default %>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__wrapper">
+                    <a class="breadcrumbs__item" href="#">Главная</a>
+                    <span class="breadcrumbs__item">PDF</span>
+                </div>
+            </div>
+            <h1>PDF</h1>
+        </div>
+    </section>
+
+    <%= require('../templates/pdf.html').default %>
+
+    <%= require('../templates/footer.html').default %>
+
+</body>
+</html>

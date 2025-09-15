@@ -4,10 +4,6 @@
     gap: 20px;
 }
 
-.personal-search {
-    margin: 0 0 20px 0;
-}
-
 .personal-sidebar {
     display: flex;
     flex-direction: column;
@@ -158,6 +154,173 @@
     gap: 20px;
 }
 
-.profile-decors-list {
+.profile-decor-list {
     margin: 0 0 20px 0;
+}
+
+.personal-main-search {
+    margin: 0 0 20px 0;
+}
+
+.personal-sidebar-search {
+    display: none;
+}
+
+.personal-main-promo {
+    display: none;
+}
+
+.brandbook-list-buttons {
+    display: none;
+}
+
+.personal-decor-quad-list {
+    margin: 0 0 20px 0;
+}
+
+@media (max-width: 1480px) {
+    .cards.personal-cards-menu {
+        --col: 2;
+    }
+
+    .personal-form__row:has(.personal-form__field) {
+        --width: 400px;
+    }
+
+    .personal-decor-list .models {
+        --col: 6;
+    }
+
+    .personal-interiors-list .models {
+        --col: 3;
+    }
+
+    .personal-brandbook-list .models {
+        --col: 3;
+    }
+
+    .cards.personal-document-cards {
+        --col: 2;
+    }
+
+    .personal-decor-quad-list .models {
+        --col: 4;
+    }
+}
+
+@media (max-width: 1260px) {
+    .personal-decor-list .models {
+        --col: 5 !important;
+    }
+
+    .personal-interiors-list .models {
+        --col: 2;
+    }
+
+    .personal-brandbook-list .models {
+        --col: 2;
+    }
+
+    .personal-wrapper {
+        grid-template-columns: 300px 1fr;
+    }
+
+    .personal-form__field {
+        width: 100%;
+    }
+        
+    .personal-form__description {
+        display: none;
+    }
+
+    .personal-decor-quad-list .models {
+        --col: 3;
+    }
+}
+
+@media (max-width: 1024px) {
+    .personal-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .personal-sidebar-search {
+        display: block;
+    }
+
+    .personal-main-search {
+        display: none;
+    }
+
+    .personal-sidebar-promo {
+        display: none;
+    }
+
+    .personal-main-promo {
+        display: grid;
+        gap: 20px;
+        margin: 20px 0 0 0;
+    }
+
+    .cards.personal-document-cards {
+        --col: 1;
+    }
+
+    .personal-decor-list .models {
+        --col: 4 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-decors-button {
+        gap: 10px;
+    }
+
+    .brandbook-list-buttons {
+        display: flex;
+    }
+
+    .personal-decor-list .models {
+        --col: 2 !important;
+    }
+
+    .personal-decor-quad-list .models {
+        --col: 2;
+    }
+
+    .personal-interiors-list .models {
+        --col: 1;
+    }
+
+    .cards.personal-cards-menu {
+        --col: 1;
+    }
+
+    .personal-form {
+        padding: 20px;
+    }
+
+    .personal-form__button {
+        width: 100%;
+    }
+
+    .personal-form__button .button {
+        width: 100%;
+    }
+
+    .user-card {
+        padding: 20px;
+    }
+
+    .user-card__avatar {
+        width: 115px;
+        height: 115px;
+    }
+
+    .personal-menu {
+        padding: 20px;
+    }
+
+    .personal-menu__link {
+        font-size: 18px;
+    }
 }

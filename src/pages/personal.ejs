@@ -26,14 +26,24 @@
     <div class="section">
         <div class="container">
             <div class="personal-wrapper">
-                <%= require('../templates/personal_sidebar.html').default %>
-
-                <main class="personal-main">
-                    <div class="personal-search">
+                <aside class="personal-sidebar">
+                    <div class="personal-sidebar-search">
                         <%= require('../templates/form_search.html').default %>
                     </div>
 
-                    <div class="cards cards_col-3">
+                    <%= require('../templates/personal_sidebar.html').default %>
+
+                    <div class="personal-sidebar-promo">
+                        <%= require('../templates/personal_promo.html').default %>
+                    </div>
+                </aside>
+
+                <main class="personal-main">
+                    <div class="personal-main-search">
+                        <%= require('../templates/form_search.html').default %>
+                    </div>
+
+                    <div class="cards cards_col-3 personal-cards-menu">
                         <article class="card card_fill-white">
                             <a href="#" class="card__link"></a>
                             <div class="card__content">
@@ -157,6 +167,10 @@
                                 <h3 class="card__title card__title_dark">Зд модели</h3>
                             </div>
                         </article>
+                    </div>
+
+                    <div class="personal-main-promo">
+                        <%= require('../templates/personal_promo.html').default %>
                     </div>
                 </main>
             </div>

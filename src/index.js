@@ -15,9 +15,12 @@ import './styles/store.css';
 import './styles/employee.css';
 import './styles/personal.css';
 import './styles/media.css';
+import './styles/print.css';
+import './styles/pdf.css';
 
 import './scripts/map.js';
 import './scripts/form.js';
 import './scripts/slider.js';
 import './scripts/scripts.js';
 import './scripts/modal.js';
+import './scripts/pdf.js';

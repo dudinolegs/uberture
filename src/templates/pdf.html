@@ -1,25 +1,156 @@
-<section class="section section_bg-white section_no-mb section_padding">
+<section class="section section_bg-white section_no-mb section_padding pdf-section js-pdf-viewer">
     <div class="container">
         <div class="section__header">
             <div class="section__title-wrapper">
                 <h2 class="section__subtitle">- просмотр -</h2>
                 <h2 class="section__title">Полистайте каталог</h2>
             </div>
+
+            <div class="pdf-manage">
+                <button type="button" class="button button_grey-fill button_with-icon button_a-active button_rounded button_size-s js-pdf-menu-toggle" title="Открыть список страниц">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 1H1V8H8V1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M19 1H12V8H19V1Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M19 12H12V19H19V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 12H1V19H8V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button type="button" class="button button_grey-fill button_with-icon button_a-active button_rounded button_size-s js-pdf-zoom-in" title="Увеличить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M18.9999 19.0004L14.6499 14.6504" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9 6V12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6 9H12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button type="button" class="button button_grey-fill button_with-icon button_a-active button_rounded button_size-s js-pdf-zoom-out" title="Уменьшить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M18.9999 19.0004L14.6499 14.6504" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M6 9H12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                </button>
+                <button type="button" class="button button_grey-fill button_with-icon button_a-active button_rounded button_size-s pdf-manage__fullscreen js-pdf-fullscreen" title="Полноэкранный режим">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 1V4C6 4.53043 5.78929 5.03914 5.41421 5.41421C5.03914 5.78929 4.53043 6 4 6H1M19 6H16C15.4696 6 14.9609 5.78929 14.5858 5.41421C14.2107 5.03914 14 4.53043 14 4V1M14 19V16C14 15.4696 14.2107 14.9609 14.5858 14.5858C14.9609 14.2107 15.4696 14 16 14H19M1 14H4C4.53043 14 5.03914 14.2107 5.41421 14.5858C5.78929 14.9609 6 15.4696 6 16V19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <a href="#" download class="button button_grey-fill button_with-icon button_a-active button_rounded button_size-s" title="Скачать">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 11V14.3333C16 14.7754 15.8244 15.1993 15.5118 15.5118C15.1993 15.8244 14.7754 16 14.3333 16H2.66667C2.22464 16 1.80072 15.8244 1.48816 15.5118C1.17559 15.1993 1 14.7754 1 14.3333V11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 7L8.5 11L13 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M9 11V1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
         </div>
 
-        <div style="
-                height: 400px;
-                background: var(--background-color-1);
-                border-radius: 15px;
-                text-align: center;
-                font-size: 24px;
-                font-weight: 500;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-family: var(--second-family);"
-        >
-            PDF
+        <div class="pdf">
+            <nav class="pdf-menu js-pdf-menu">
+                <button type="button" class="button button_grey-fill button_with-icon button_a-active button_rounded button_size-s pdf-menu__close js-pdf-menu-close">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.375 1.625L1.625 17.375" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M1.625 1.625L17.375 17.375" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <div class="pdf-menu__inner">
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="1">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-01.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="2">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-02.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="3">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-03.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="4">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-04.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="5">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-05.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="6">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-06.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="7">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-07.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="8">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-08.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="9">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-09.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="10">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-10.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="11">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-11.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="12">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-12.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="13">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-13.png" alt="Pdf Page">
+                    </button>
+                    <button type="button" class="pdf-menu__item js-pdf-menu-item" data-page="14">
+                        <img src="../assets/pdf_example/Turgeniev_Mumu-14.png" alt="Pdf Page">
+                    </button>
+                </div>
+            </nav>
+
+            <button type="button" class="pdf-nav pdf-nav_prev js-pdf-nav-prev"></button>
+            <button type="button" class="pdf-nav pdf-nav_next js-pdf-nav-next"></button>
+
+            <div class="pdf-container">
+                <div class="pdf-zoom-wrapper js-pdf-zoom-wrapper">
+                    <div class="pdf-page-list js-pdf">
+                        <div class="pdf-page js-pdf-page" data-page="1">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-01.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="2">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-02.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="3">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-03.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="4">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-04.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="5">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-05.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="6">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-06.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="7">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-07.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="8">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-08.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="9">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-09.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="10">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-10.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="11">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-11.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="12">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-12.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="13">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-13.png" alt="Pdf Page">
+                        </div>
+                        <div class="pdf-page js-pdf-page" data-page="14">
+                            <img class="pdf-page__image" src="../assets/pdf_example/Turgeniev_Mumu-14.png" alt="Pdf Page">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

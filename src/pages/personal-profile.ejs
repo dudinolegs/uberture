@@ -27,10 +27,20 @@
     <div class="section">
         <div class="container">
             <div class="personal-wrapper">
-                <%= require('../templates/personal_sidebar.html').default %>
+                <aside class="personal-sidebar">
+                    <div class="personal-sidebar-search">
+                        <%= require('../templates/form_search.html').default %>
+                    </div>
+
+                    <%= require('../templates/personal_sidebar.html').default %>
+
+                    <div class="personal-sidebar-promo">
+                        <%= require('../templates/personal_promo.html').default %>
+                    </div>
+                </aside>
 
                 <main class="personal-main">
-                    <div class="personal-search">
+                    <div class="personal-main-search">
                         <%= require('../templates/form_search.html').default %>
                     </div>
 
@@ -99,6 +109,10 @@
                             <div class="personal-form__description"><b>*</b> Обязательные для заполнения поля</div>
                         </div>
                     </form>
+
+                    <div class="personal-main-promo">
+                        <%= require('../templates/personal_promo.html').default %>
+                    </div>
                 </main>
             </div>
         </div>

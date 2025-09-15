@@ -19,7 +19,7 @@
 
 .article__image {
     width: 100%;
-    aspect-ratio: 4/3;
+    padding-top: calc(3/4 * 100%);
     overflow: hidden;
     position: relative;
     border-radius: var(--border-radius);
@@ -29,6 +29,7 @@
 }
 
 .article__image-inner {
+    top: 0;
     position: absolute;
     object-fit: cover;
     object-position: center;

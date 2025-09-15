@@ -1,17 +1,22 @@
 .field {
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .field__label {
+    --font-size: 18px;
+    --height: calc(var(--font-size) * 1.1);
+    font-size: var(--font-size);
+    line-height: 110%;
     position: absolute;
     left: 25px;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 144%;
     color: var(--pale-color);
-    transition-duration: .15s;
-    top: 14px;
+    transition-duration: .2s;
+    height: var(--height);
+    top: calc(50% - var(--height) / 2);
 }
 
 .field:has(.field__input:required) .field__label:after {
@@ -71,6 +76,7 @@
     border-radius: 30px;
     font-size: 18px;
     font-weight: 500;
+    line-height: 110%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -334,6 +340,7 @@
     border-radius: 30px;
     font-size: 18px;
     font-weight: 500;
+    line-height: 110%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -384,4 +391,26 @@
 
 .form__field-item.form__field-item_button .button {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .field__label {
+        --font-size: 16px;
+    }
+
+    .select__current {
+        font-size: 16px;
+    }
+
+    .select__option {
+        font-size: 16px;
+    }
+
+    .file__label {
+        font-size: 16px;
+    }
+
+    .form__checkbox-policy {
+        font-size: 14px;
+    }
 }

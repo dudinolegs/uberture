@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay, Thumbs } from 'swiper/modules';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -24,16 +24,11 @@ function setEqualHeight(container) {
 }
 
 const swiperHero = new Swiper('.js-swiper-hero', {
-    modules: [Navigation, Pagination, Autoplay],
+    modules: [Navigation, Pagination],
     loop: false,
     navigation: {
         nextEl: '.js-swiper-hero-button-next',
         prevEl: '.js-swiper-hero-button-prev'
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
     },
     pagination: {
         el: '.js-swiper-hero-pagination',
@@ -61,16 +56,11 @@ document.querySelectorAll('.js-swiper-gallery').forEach(gallery => {
     const buttonPrev = gallery.querySelector('.js-swiper-gallery-button-prev');
 
     new Swiper(gallery, {
-        modules: [Navigation, Pagination, Autoplay],
+        modules: [Navigation, Pagination],
         loop: true,
         navigation: {
             nextEl: buttonNext,
             prevEl: buttonPrev
-        },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true
         },
         pagination: {
             el: gallery.querySelector('.js-swiper-gallery-pagination'),
@@ -109,27 +99,46 @@ new Swiper('.js-swiper-product-detail', {
     ...(swiperProductThumbs ? { thumbs: { swiper: swiperProductThumbs } } : {}),
 });
 
-new Swiper('.js-swiper-product-tab', {
-    loop: false,
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-});
+const productTab = document.querySelector('.js-swiper-product-tab');
+if (productTab) {
+    const productTabParentWidth = productTab.closest('div').offsetWidth;
+    productTab.style.width = productTabParentWidth + 'px';
+    new Swiper(productTab, {
+        modules: [Navigation],
+        loop: false,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        freeMode: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.js-swiper-product-tab-button-next',
+            prevEl: '.js-swiper-product-tab-button-prev',
+        },
+    });
+}
 
-new Swiper('.js-swiper-sku-tab', {
-    loop: false,
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-});
+const skuTab = document.querySelector('.js-swiper-sku-tab');
+if (skuTab) {
+    const skuTabParentWidth = skuTab.closest('div').offsetWidth;
+    skuTab.style.width = skuTabParentWidth + 'px';
+    new Swiper(skuTab, {
+        modules: [Navigation],
+        loop: false,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        freeMode: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.js-swiper-sku-tab-button-next',
+            prevEl: '.js-swiper-sku-tab-button-prev',
+        },
+    });
+}
 
 document.querySelectorAll('.js-swiper-review').forEach(reviews => {
     new Swiper(reviews, {
-        modules: [Navigation, Pagination, Autoplay],
+        modules: [Navigation, Pagination],
         loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true
-        },
         on: {
             init: setEqualHeight(reviews),
             resize: setEqualHeight(reviews),
@@ -168,7 +177,7 @@ document.querySelectorAll('.js-swiper-product-card').forEach(gallery => {
     const buttonPrev = gallery.querySelector('.js-swiper-product-card-button-prev');
 
     new Swiper(gallery, {
-        modules: [Navigation, Pagination, Autoplay],
+        modules: [Navigation, Pagination],
         loop: true,
         navigation: {
             nextEl: buttonNext,

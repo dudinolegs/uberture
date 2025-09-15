@@ -30,7 +30,7 @@
 
 .employee-card__photo {
     width: 100%;
-    aspect-ratio: 3/4;
+    padding-top: calc(4/3 * 100%);
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -48,6 +48,7 @@
     position: absolute;
     object-fit: cover;
     object-position: center;
+    top: 0;
 }
 
 .employee-card__content {
@@ -101,7 +102,7 @@
     }
 
     .employee-card.employee-card_wide .employee-card__photo {
-        aspect-ratio: 1/1;
+        padding-top: 100%;
     }
 
     .employee-card.employee-card_wide .employee-card__content {

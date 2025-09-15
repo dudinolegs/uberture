@@ -35,10 +35,6 @@
     max-height: var(--icon-size);
 }
 
-.button:not(:has(span)) {
-    aspect-ratio: 1/1;
-}
-
 .button.button_rounded {
     border-radius: calc(var(--border-radius) * 2);
 }
@@ -53,9 +49,17 @@
     height: var(--size-2xs);
 }
 
+.button.button.button_size-2xs:not(:has(span)) {
+    width: var(--size-2xs);
+}
+
 .button.button_size-xs {
     --icon-size: 15px;
     height: var(--size-xs);
+}
+
+.button.button.button_size-xs:not(:has(span)) {
+    width: var(--size-xs);
 }
 
 .button.button_size-s {
@@ -63,14 +67,26 @@
     height: var(--size-s);
 }
 
+.button.button.button_size-s:not(:has(span)) {
+    width: var(--size-s);
+}
+
 .button.button_size-m {
     --icon-size: 20px;
     height: var(--size-m);
 }
 
+.button.button.button_size-m:not(:has(span)) {
+    width: var(--size-m);
+}
+
 .button.button_size-l {
     --icon-size: 25px;
     height: var(--size-l);
+}
+
+.button.button.button_size-l:not(:has(span)) {
+    width: var(--size-l);
 }
 
 .button.button_a-active:active {

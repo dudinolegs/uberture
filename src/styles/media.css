@@ -304,8 +304,7 @@
     .photo-card__image {
         border-radius: var(--border-radius);
         position: relative;
-        height: auto;
-        aspect-ratio: 1/1.5;
+        height: 400px;
     }
 
     .photo-card:has(.photo-card__content):hover .photo-card__image {
@@ -365,7 +364,11 @@
     }
 
     .content__image {
-        aspect-ratio: 1/1;
+        padding-top: 100%;
+    }
+
+    .content__image-inner {
+        top: 0;
     }
 
     .about-content .circle {
@@ -557,9 +560,33 @@
 }
 
 @media (max-width: 768px) {
+    .pdf-manage__fullscreen {
+        display: none;
+    }
+
+    .photo-card__image {
+        height: 300px;
+    }
+
     :root {
         --container: 440px;
         --section-padding: 80px;
+    }
+
+    .sidebar-article__title {
+        font-size: 18px;
+    }
+
+    .banner {
+        min-height: 460px;
+    }
+
+    .banner__content {
+        padding: 20px;
+    }
+
+    .banner__title {
+        font-size: 20px;
     }
 
     .panel__text {
@@ -729,10 +756,6 @@
         flex-wrap: wrap;
     }
 
-    .checkbox__label {
-        font-size: 14px;
-    }
-
     .photo-list-buttons {
         display: flex;
         gap: 10px;
@@ -879,7 +902,7 @@
     
     .fast-nav.fast-nav_wide {
         order: unset;
-        min-height: 500px;
+        min-height: 400px;
         grid-column: span 1;
     }
 
@@ -1014,6 +1037,7 @@
     .video__button {
         width: 80px;
         height: 80px;
+        top: calc(50% - 40px);
     }
 
     .video__poster {
@@ -1035,7 +1059,7 @@
     }
 
     .history-hero-slide {
-        padding: 40px 0;
+        padding: 80px 0 40px 0;
         gap: 200px;
     }
 
@@ -1065,9 +1089,23 @@
     .search-card__title {
         font-size: 16px;
     }
+
+    .pagination {
+        gap: 5px;
+    }
+
+    .pagination__item {
+        font-size: 16px;
+        height: 25px;
+        min-width: 25px;
+    }
 }
 
 @media (max-width: 480px) {
+    .photo-card__image {
+        height: 250px;
+    }
+
     :root {
         --container: 340px;
     }

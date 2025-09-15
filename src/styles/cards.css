@@ -268,6 +268,10 @@ h3.card__title.card__title_light {
 }
 
 @media (max-width: 768px) {
+    .cards {
+        gap: 10px;
+    }
+
     .cards.cards_col-5 {
         --col: 1;
     }
@@ -297,5 +301,10 @@ h3.card__title.card__title_light {
 
     h3.card__title {
         font-size: 20px;
+    }
+
+    .card__title:after, 
+    .card__title:before {
+        top: 10px;
     }
 }
