@@ -1,4 +1,4 @@
-@media (max-width: 1480px) {
+@media (max-width: 1580px) {
     :root {
         --container: 1200px;
     }
@@ -88,7 +88,7 @@
     }
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1360px) {
     :root {
         --container: 980px;
     }
