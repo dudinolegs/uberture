@@ -66,14 +66,6 @@
     background-color: white;
 }
 
-.card.card_fill-main .card__title {
-    color: var(--dark-color);
-}
-
-.card.card_fill-main .card__text, .card_fill-dark .card__text {
-        --text-color: white;
-}
-
 .card.card_border-grey {
     border: 1px solid var(--grey-color);
 }
@@ -252,7 +244,6 @@ h3.card__title.card__title_light {
     background-color: var(--grey-color);
 }
 
-
 @media (max-width: 1480px) {
     .cards.cards_col-5 {
         --col: 3;
@@ -295,11 +286,7 @@ h3.card__title.card__title_light {
     }
 
     .card:has(.card__icon) .card__content {
-        padding-top: 90px;
-    }
-
-    .card:has(.card__icon):has(.card__number) .card__content {
-        padding-top: 90px;
+        padding-top: 110px;
     }
 
     .card__icon {

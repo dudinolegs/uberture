@@ -1,0 +1,69 @@
+@media print {
+    :root {
+        --container: calc(100% - 40px);
+    
+        --main-family: 'Arial', sans-serif;
+        --second-family: 'Arial', sans-serif;
+    
+        --main-color: #F66201;
+        --main-color-dark: #da5700;
+        --background-color-1: #fff;
+        --background-color-2: #fff;
+        --background-color-3: #fff;
+        --dark-color: #000;
+        --dark-color-dark: #000;
+        --pale-color: #000;
+        --pale-color-dark: #000;
+        --grey-color: #000;
+        --text-color: #000;
+    
+        --box-shadow: unset;
+    }
+
+    body, html {
+        font-size: 14px;
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .header {
+        margin: 0 0 20px 0;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    .header__button-personal {
+        display: none;
+    }
+
+    .header__button-cart {
+        display: none;
+    }
+
+    .header__button-burger {
+        display: none;
+    }
+
+    .breadcrumbs {
+        display: none;
+    }
+
+    .cart-header {
+        display: none;
+    }
+
+    .cart-total .button {
+        display: none;
+    }
+
+    .social {
+        display: none;
+    }
+}

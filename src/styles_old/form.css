@@ -13,7 +13,7 @@
     position: absolute;
     left: 25px;
     font-weight: 500;
-    color: var(--grey-color);
+    color: var(--pale-color);
     transition-duration: .2s;
     height: var(--height);
     top: calc(50% - var(--height) / 2);

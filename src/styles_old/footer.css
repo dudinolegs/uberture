@@ -1,0 +1,106 @@
+.footer {
+    background: var(--dark-color);
+}
+
+.footer__inner {
+    padding: 50px 0 120px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px 60px;
+}
+
+.footer__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__col.footer__col_copyright {
+    grid-column: span 3;
+}
+
+.footer__col.footer__col_develop {
+    grid-column: span 3;
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.footer__menu a {
+    transition-duration: .2s;
+    line-height: 160%;
+    color: var(--grey-color);
+}
+
+.footer__menu a:first-of-type {
+    font-size: 18px;
+    line-height: 140%;
+    color: #fff;
+    margin: 0 0 15px 0;
+}
+
+.footer__menu a:hover {
+    color: var(--main-color);
+}
+
+.footer__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    position: relative;
+    padding: 0 0 0 30px;
+    margin: 0 0 20px 0;
+}
+
+.footer__phone:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url('../assets/icons/phone.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer__phone-value {
+    font-size: 18px;
+    color: #fff;
+    transition-duration: .2s;
+}
+
+.footer__phone-value:hover {
+    color: var(--main-color);
+}
+
+.footer__phone-name {
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer__phone-description {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.footer__text {
+    font-size: 18px;
+    color: var(--grey-color);
+}
+
+.footer__text a {
+    color: var(--main-color);
+    font-weight: 700;
+    transition-duration: .2s;
+}
+
+.footer__text a:hover {
+    color: var(--main-color-dark);
+}

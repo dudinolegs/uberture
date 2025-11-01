@@ -96,6 +96,8 @@
     flex-direction: column;
     gap: 30px;
     align-items: flex-start;
+    overflow-y: auto;
+    max-height: 300px;
 }
 
 .header__submenu-item {

@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uberture</title>
 </head>
+
 <body>
-    
+
     <%= require('../templates/header_default.html').default %>
 
-    <%= require('../templates/header_fixed.html').default %>
+        <%= require('../templates/header_fixed.html').default %>
 
-    <section class="page-title">
-        <div class="container">
-            <div class="breadcrumbs">
-                <div class="breadcrumbs__wrapper">
-                    <a class="breadcrumbs__item" href="#">Главная</a>
-                    <span class="breadcrumbs__item">Контакты</span>
-                </div>
-            </div>
-            <h1>Контакты</h1>
-        </div>
-    </section>
-
-    <%= require('../templates/contacts.html').default %>
-
-    <%= require('../templates/find_dealer.html').default %>
-
-    <%= require('../templates/scheme.html').default %>
-
-    <section class="section">
-        <div class="container">
-            <div class="content content_reverse">
-                <div class="content__image">
-                    <img class="content__image-inner" src="<%= require('../assets/images/contact-bg.png') %>" alt="Contact">
-                </div>
-                <div class="content__main">
-                    <div class="section__header">
-                        <div class="section__title-wrapper">
-                            <h2 class="section__subtitle">- как доехать -</h2>
-                            <h2 class="section__title"><b>Uberture</b> - ваш <b>надежный партнер</b> и производитель межкомнатных дверей</h2>
-                            <div class="section__text text">
-                                <p><strong>За 30 лет деятельности компании, мы собрали и приумножили опыт наших специалистов, создали высокотехнологичное производство, вышли на международный рынок.</strong></p>
-                                <p>Мы постоянно отслеживаем тенденции развития дизайна и внедряем современные разработки в ассортиментную матрицу, расширяя и выпуская новые продукты.</p>
-                            </div>
-                            <a href="#" class="button button_rounded button_size-s button_main-fill button_a-active section__button">
-                                <span>В каталог</span>
-                            </a>
+            <section class="page-title">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <div class="breadcrumbs__wrapper">
+                            <a class="breadcrumbs__item" href="#">Главная</a>
+                            <span class="breadcrumbs__item">Контакты</span>
                         </div>
                     </div>
+                    <h1>Контакты</h1>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <%= require('../templates/social.html').default %>
+            <%= require('../templates/contacts.html').default %>
 
-    <%= require('../templates/footer.html').default %>
+                <%= require('../templates/find_dealer.html').default %>
+
+                    <%= require('../templates/scheme.html').default %>
+
+                        <section class="section section-contact-route">
+                            <div class="container">
+                                <div class="content content_reverse">
+                                    <div class="content__image content__image_contain">
+                                        <img class="content__image-inner"
+                                            src="<%= require('../assets/images/contact-bg.png') %>" alt="Contact">
+
+                                        <a href="#"
+                                            class="button button_rounded button_size-s button_main-fill button_a-active">
+                                            <span>В каталог</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="content__main">
+                                        <div class="section__header section__header_no-mb">
+                                            <div class="section__title-wrapper">
+                                                <h2 class="section__subtitle">- как доехать -</h2>
+                                                <h2 class="section__title"><b>Uberture</b> - ваш <b>надежный партнер</b>
+                                                    и производитель межкомнатных дверей</h2>
+                                                <div class="section__text text">
+                                                    <p><strong>За 30 лет деятельности компании, мы собрали и приумножили
+                                                            опыт наших специалистов, создали высокотехнологичное
+                                                            производство, вышли на международный рынок.</strong></p>
+                                                    <p>Мы постоянно отслеживаем тенденции развития дизайна и внедряем
+                                                        современные разработки в ассортиментную матрицу, расширяя и
+                                                        выпуская новые продукты.</p>
+                                                </div>
+                                                <a href="#"
+                                                    class="button button_rounded button_size-s button_main-fill button_a-active section__button">
+                                                    <span>В каталог</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <%= require('../templates/social.html').default %>
+
+                            <%= require('../templates/footer.html').default %>
 
 </body>
+
 </html>

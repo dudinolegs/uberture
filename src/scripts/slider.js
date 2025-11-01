@@ -9,7 +9,7 @@ function setEqualHeight(container) {
     const slides = container.querySelectorAll('.swiper-slide');
     let maxHeight = 0;
   
-    setTimeout(function() {
+    requestAnimationFrame(() => {
         slides.forEach(slide => {
             slide.style.height = 'auto';
             if (slide.offsetHeight > maxHeight) {
@@ -23,47 +23,16 @@ function setEqualHeight(container) {
     }, 500);
 }
 
-const swiperHero = new Swiper('.js-swiper-hero', {
-    modules: [Navigation, Pagination],
-    loop: false,
-    navigation: {
-        nextEl: '.js-swiper-hero-button-next',
-        prevEl: '.js-swiper-hero-button-prev'
-    },
-    pagination: {
-        el: '.js-swiper-hero-pagination',
-        clickable: true,
-        bulletClass: 'slider-pagination__item',
-        bulletActiveClass: 'slider-pagination__item_active',
-        renderBullet: (index, className) => {
-            const number = String(index + 1).padStart(2, '0');
-
-            return `<span class="${className}" data-index="${index}" data-number="${number}"></span>`;
-        }
-    },
-    slidesPerView: 1,
-});
-
-document.querySelectorAll('.js-swiper-hero-change-slide').forEach(button => {
-    button.addEventListener('click', function() {
-        const index = +button.dataset.slide;
-        swiperHero.slideTo(index);
-    });
-});
-
-document.querySelectorAll('.js-swiper-gallery').forEach(gallery => {
-    const buttonNext = gallery.querySelector('.js-swiper-gallery-button-next');
-    const buttonPrev = gallery.querySelector('.js-swiper-gallery-button-prev');
-
-    new Swiper(gallery, {
+window.addEventListener('load', function() {
+    const swiperHero = new Swiper('.js-swiper-hero', {
         modules: [Navigation, Pagination],
-        loop: true,
+        loop: false,
         navigation: {
-            nextEl: buttonNext,
-            prevEl: buttonPrev
+            nextEl: '.js-swiper-hero-button-next',
+            prevEl: '.js-swiper-hero-button-prev'
         },
         pagination: {
-            el: gallery.querySelector('.js-swiper-gallery-pagination'),
+            el: '.js-swiper-hero-pagination',
             clickable: true,
             bulletClass: 'slider-pagination__item',
             bulletActiveClass: 'slider-pagination__item_active',
@@ -74,191 +43,228 @@ document.querySelectorAll('.js-swiper-gallery').forEach(gallery => {
             }
         },
         slidesPerView: 1,
-        spaceBetween: 20,
-        autoHeight: true,
     });
-});
 
-const productThumbsEl = document.querySelector('.js-swiper-product-thumb');
-let swiperProductThumbs = null;
-
-if (productThumbsEl) {
-    swiperProductThumbs = new Swiper(productThumbsEl, {
-        direction: 'vertical',
-        slidesPerView: 4,
-        spaceBetween: 10,
-        watchSlidesProgress: true,
+    document.querySelectorAll('.js-swiper-hero-change-slide').forEach(button => {
+        button.addEventListener('click', function() {
+            const index = +button.dataset.slide;
+            swiperHero.slideTo(index);
+        });
     });
-}
 
-new Swiper('.js-swiper-product-detail', {
-    modules: [Navigation, Thumbs],
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 10,
-    ...(swiperProductThumbs ? { thumbs: { swiper: swiperProductThumbs } } : {}),
-});
+    document.querySelectorAll('.js-swiper-gallery').forEach(gallery => {
+        const buttonNext = gallery.querySelector('.js-swiper-gallery-button-next');
+        const buttonPrev = gallery.querySelector('.js-swiper-gallery-button-prev');
 
-const productTab = document.querySelector('.js-swiper-product-tab');
-if (productTab) {
-    const productTabParentWidth = productTab.closest('div').offsetWidth;
-    productTab.style.width = productTabParentWidth + 'px';
-    new Swiper(productTab, {
-        modules: [Navigation],
-        loop: false,
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-        freeMode: true,
-        grabCursor: true,
-        navigation: {
-            nextEl: '.js-swiper-product-tab-button-next',
-            prevEl: '.js-swiper-product-tab-button-prev',
-        },
+        new Swiper(gallery, {
+            modules: [Navigation, Pagination],
+            loop: true,
+            navigation: {
+                nextEl: buttonNext,
+                prevEl: buttonPrev
+            },
+            pagination: {
+                el: gallery.querySelector('.js-swiper-gallery-pagination'),
+                clickable: true,
+                bulletClass: 'slider-pagination__item',
+                bulletActiveClass: 'slider-pagination__item_active',
+                renderBullet: (index, className) => {
+                    const number = String(index + 1).padStart(2, '0');
+
+                    return `<span class="${className}" data-index="${index}" data-number="${number}"></span>`;
+                }
+            },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoHeight: true,
+        });
     });
-}
 
-const skuTab = document.querySelector('.js-swiper-sku-tab');
-if (skuTab) {
-    const skuTabParentWidth = skuTab.closest('div').offsetWidth;
-    skuTab.style.width = skuTabParentWidth + 'px';
-    new Swiper(skuTab, {
-        modules: [Navigation],
-        loop: false,
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-        freeMode: true,
-        grabCursor: true,
-        navigation: {
-            nextEl: '.js-swiper-sku-tab-button-next',
-            prevEl: '.js-swiper-sku-tab-button-prev',
-        },
-    });
-}
+    const productThumbsEl = document.querySelector('.js-swiper-product-thumb');
+    let swiperProductThumbs = null;
 
-document.querySelectorAll('.js-swiper-review').forEach(reviews => {
-    new Swiper(reviews, {
-        modules: [Navigation, Pagination],
+    if (productThumbsEl) {
+        swiperProductThumbs = new Swiper(productThumbsEl, {
+            direction: 'vertical',
+            slidesPerView: 4,
+            spaceBetween: 10,
+            watchSlidesProgress: true,
+        });
+    }
+
+    new Swiper('.js-swiper-product-detail', {
+        modules: [Navigation, Thumbs],
         loop: true,
-        on: {
-            init: setEqualHeight(reviews),
-            resize: setEqualHeight(reviews),
-        },
-        navigation: {
-            nextEl: '.js-swiper-review-button-next',
-            prevEl: '.js-swiper-review-button-prev'
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1.1,
-                spaceBetween: 10,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            1024: {
-                slidesPerView: 2.5,
-                spaceBetween: 20,
-            },
-            1260: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-            },
-            1480: {
-                slidesPerView: 4,
-                spaceBetween: 20,
-            },
-        },
-    });
-});
-
-document.querySelectorAll('.js-swiper-product-card').forEach(gallery => {
-    const buttonNext = gallery.querySelector('.js-swiper-product-card-button-next');
-    const buttonPrev = gallery.querySelector('.js-swiper-product-card-button-prev');
-
-    new Swiper(gallery, {
-        modules: [Navigation, Pagination],
-        loop: true,
-        navigation: {
-            nextEl: buttonNext,
-            prevEl: buttonPrev
-        },
-        pagination: {
-            el: gallery.querySelector('.js-swiper-product-card-pagination'),
-            clickable: true,
-            bulletClass: 'slider-pagination__item',
-            bulletActiveClass: 'slider-pagination__item_active',
-            renderBullet: (index, className) => {
-                const number = String(index + 1).padStart(2, '0');
-
-                return `<span class="${className}" data-index="${index}" data-number="${number}"></span>`;
-            }
-        },
         slidesPerView: 1,
         spaceBetween: 10,
+        ...(swiperProductThumbs ? { thumbs: { swiper: swiperProductThumbs } } : {}),
     });
-});
 
-document.querySelectorAll('.js-swiper-cards').forEach(cards => {
-    new Swiper(cards, {
-        loop: false,
-        on: {
-            init: setEqualHeight(cards),
-            resize: setEqualHeight(cards),
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1.1,
-                spaceBetween: 10,
+    const productTab = document.querySelector('.js-swiper-product-tab');
+    if (productTab) {
+        const productTabParentWidth = productTab.closest('div').offsetWidth;
+        productTab.style.width = productTabParentWidth + 'px';
+        new Swiper(productTab, {
+            modules: [Navigation],
+            loop: false,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            freeMode: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.js-swiper-product-tab-button-next',
+                prevEl: '.js-swiper-product-tab-button-prev',
             },
-            768: {
-                slidesPerView: 1.4,
-                spaceBetween: 10,
+        });
+    }
+
+    const skuTab = document.querySelector('.js-swiper-sku-tab');
+    if (skuTab) {
+        const skuTabParentWidth = skuTab.closest('div').offsetWidth;
+        skuTab.style.width = skuTabParentWidth + 'px';
+        new Swiper(skuTab, {
+            modules: [Navigation],
+            loop: false,
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            freeMode: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: '.js-swiper-sku-tab-button-next',
+                prevEl: '.js-swiper-sku-tab-button-prev',
             },
-            1024: {
-                slidesPerView: 2.5,
-                spaceBetween: 20,
+        });
+    }
+
+    document.querySelectorAll('.js-swiper-review').forEach(reviews => {
+        new Swiper(reviews, {
+            modules: [Navigation, Pagination],
+            loop: true,
+            on: {
+                init: setEqualHeight(reviews),
+                resize: setEqualHeight(reviews),
             },
-            1260: {
-                slidesPerView: 2.9,
-                spaceBetween: 20,
+            navigation: {
+                nextEl: '.js-swiper-review-button-next',
+                prevEl: '.js-swiper-review-button-prev'
             },
-            1480: {
-                slidesPerView: 4,
-                spaceBetween: 20,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 20,
+                },
+                1260: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                1480: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
             },
-        },
+        });
     });
-});
 
-document.querySelectorAll('.js-swiper-article').forEach(articles => {
-    new Swiper(articles, {
-        loop: false,
-        on: {
-            init: setEqualHeight(articles),
-            resize: setEqualHeight(articles),
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1.1,
-                spaceBetween: 10,
+    document.querySelectorAll('.js-swiper-product-card').forEach(gallery => {
+        const buttonNext = gallery.querySelector('.js-swiper-product-card-button-next');
+        const buttonPrev = gallery.querySelector('.js-swiper-product-card-button-prev');
+
+        new Swiper(gallery, {
+            modules: [Navigation, Pagination],
+            loop: true,
+            navigation: {
+                nextEl: buttonNext,
+                prevEl: buttonPrev
             },
-            768: {
-                slidesPerView: 1.5,
-                spaceBetween: 10,
+            pagination: {
+                el: gallery.querySelector('.js-swiper-product-card-pagination'),
+                clickable: true,
+                bulletClass: 'slider-pagination__item',
+                bulletActiveClass: 'slider-pagination__item_active',
+                renderBullet: (index, className) => {
+                    const number = String(index + 1).padStart(2, '0');
+
+                    return `<span class="${className}" data-index="${index}" data-number="${number}"></span>`;
+                }
             },
-            1024: {
-                slidesPerView: 2,
-                spaceBetween: 20,
+            slidesPerView: 1,
+            spaceBetween: 10,
+        });
+    });
+
+    document.querySelectorAll('.js-swiper-cards').forEach(cards => {
+        new Swiper(cards, {
+            loop: false,
+            on: {
+                init() {
+                    setEqualHeight(cards);
+                },
+                resize() {
+                    setEqualHeight(cards);
+                },
             },
-            1260: {
-                slidesPerView: 2.5,
-                spaceBetween: 20,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 20,
+                },
+                1260: {
+                    slidesPerView: 2.9,
+                    spaceBetween: 20,
+                },
+                1480: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
             },
-            1480: {
-                slidesPerView: 3,
-                spaceBetween: 20,
+        });
+    });
+
+    document.querySelectorAll('.js-swiper-article').forEach(articles => {
+        new Swiper(articles, {
+            loop: false,
+            on: {
+                init: setEqualHeight(articles),
+                resize: setEqualHeight(articles),
             },
-        },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1260: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 20,
+                },
+                1480: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+        });
     });
 });

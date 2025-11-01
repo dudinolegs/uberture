@@ -347,15 +347,19 @@ export class ToggleElements {
     _show() {
         this.elements.forEach(el => el.classList.remove(this.hiddenClass));
 
-        this.buttonShow.style.display = 'none';
-        this.buttonHide.style.display = 'flex';
+        if (this.buttonShow) this.buttonShow.style.display = 'none';
+        if (this.buttonHide) this.buttonHide.style.display = 'flex';
+        
+        if (this.buttonShow && !this.buttonHide) {
+            this.buttonShow.remove();
+        }
     }
 
     _hide() {
         this.elements.forEach(el => el.classList.add(this.hiddenClass));
 
-        this.buttonShow.style.display = 'flex';
-        this.buttonHide.style.display = 'none';
+        if (this.buttonShow) this.buttonShow.style.display = 'flex';
+        if (this.buttonHide) this.buttonHide.style.display = 'none';
     }
 
     _init() {
@@ -377,6 +381,77 @@ export class ToggleElements {
             if (buttonHide) {
                 this._hide();
             }
+        });
+    }
+}
+
+export function initGoUp() {
+    const button = document.querySelector('.js-go-up');
+    button.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+export function initFixedButtonList() {
+    const list = document.querySelector(".js-fixed-button-list");
+    const height = window.innerHeight;
+    list.classList.remove("fixed-button-list_active");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > height) {
+            list.classList.add("fixed-button-list_active");
+        } else {
+            list.classList.remove("fixed-button-list_active");
+        }
+    });
+}
+
+export class Spoiler {
+    constructor(selector, options = {}) {
+        this.blocks = document.querySelectorAll(selector);
+        this.maxHeight = options.maxHeight || 150;
+        this.moreText = options.moreText || 'Показать ещё';
+        this.lessText = options.lessText || 'Скрыть';
+
+        this.init();
+    }
+
+    init() {
+        this.blocks.forEach(block => {
+            const fullHeight = block.scrollHeight;
+
+            // если контент короче maxHeight — ничего не делаем
+            if (fullHeight <= this.maxHeight) return;
+
+            // ограничиваем высоту
+            block.style.maxHeight = this.maxHeight + 'px';
+            block.style.overflow = 'hidden';
+            block.dataset.spoiler = 'collapsed';
+
+            // создаем кнопку
+            const button = document.createElement('button');
+            button.className = 'spoiler-toggle';
+            button.textContent = this.moreText;
+
+            // добавляем кнопку после блока
+            block.insertAdjacentElement('afterend', button);
+
+            // обработчик клика
+            button.addEventListener('click', () => {
+                const isCollapsed = block.dataset.spoiler === 'collapsed';
+                if (isCollapsed) {
+                    block.style.maxHeight = fullHeight + 'px';
+                    block.dataset.spoiler = 'expanded';
+                    button.textContent = this.lessText;
+                } else {
+                    block.style.maxHeight = this.maxHeight + 'px';
+                    block.dataset.spoiler = 'collapsed';
+                    button.textContent = this.moreText;
+                }
+            });
         });
     }
 }

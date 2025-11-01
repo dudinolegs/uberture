@@ -1,0 +1,84 @@
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.article {
+    position: relative;
+}
+
+.article__link {
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    right: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.article__image {
+    width: 100%;
+    padding-top: calc(3/4 * 100%);
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--border-radius);
+    margin: 0 0 20px 0;
+    display: block;
+    transition-duration: .5s;
+}
+
+.article__image-inner {
+    top: 0;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    transition-duration: 1s;
+    width: 100%;
+    height: 100%;
+}
+
+.article:hover .article__image-inner {
+    transform: scale(1.05);
+}
+
+.article__date {
+    font-size: 14px;
+    color: var(--grey-color);
+    margin: 0 0 7px 0;
+}
+
+.article__name {
+    font-size: 18px;
+    color: var(--pale-color);
+    transition-duration: .2s;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.article:hover .article__name {
+    color: var(--main-color);
+}
+
+.article-small {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.article-small__date {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.article-small__name {
+    font-size: 16px;
+}
+
+.article-small__name a:hover {
+    color: var(--main-color);
+}
