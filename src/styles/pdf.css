@@ -1,9 +1,31 @@
+.pdf-section {
+    overflow: hidden;
+}
+
+.pdf-section_fullscreen {
+    --section-padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 300;
+}
+
+.pdf-section.pdf-section_fullscreen .container {
+    height: 100%;
+    width: calc(100% - var(--section-padding) * 2);
+    display: flex;
+    flex-direction: column;
+}
+
 .pdf {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     padding: 0 80px;
+    flex-grow: 1;
 }
 
 .pdf-nav {
@@ -36,19 +58,6 @@
     right: 0;
 }
 
-.pdf-section {
-    overflow: hidden;
-}
-
-.pdf-section_fullscreen {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 300;
-}
-
 .pdf-page:nth-child(odd) {
     text-align: right;
 }
@@ -73,6 +82,7 @@
 
 .pdf-manage .button {
     border-radius: var(--border-radius) !important;
+    display: inline-flex !important;
 }
 
 .pdf-menu {
@@ -163,6 +173,58 @@
     width: 100%;
 }
 
+.pdf-navigation {
+    border-radius: var(--border-radius);
+    padding: 5px 2px;
+    height: var(--size-s);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    background-color: var(--background-color-1);
+}
+
+.pdf-navigation.pdf-navigation_mobile {
+    display: none;
+}
+
+.pdf-navigation__input {
+    height: 36px;
+    width: 60px;
+    border-radius: 5px;
+    background: #fff;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: var(--grey-color);
+}
+
+.pdf-navigation__button {
+    --color: var(--grey-color);
+    color: var(--color);
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+}
+
+.pdf-navigation__button:hover {
+    --color: var(--dark-color);
+}
+
+.pdf-navigation__button svg {
+    color: inherit;
+    width: 7px;
+    height: 12px;
+}
+
+.pdf-navigation__button svg path {
+    color: inherit;
+}
+
 @media (max-width: 1024px) {
     .pdf {
         padding: 0 35px;
@@ -203,5 +265,25 @@
 @media (max-width: 768px) {
     .pdf-manage {
         gap: 10px;
+    }
+
+    .pdf-navigation.pdf-navigation_desktop {
+        display: none;
+    }
+
+    .pdf-navigation.pdf-navigation_mobile {
+        display: inline-flex;
+    }
+
+    .pdf-navigation-container {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto 0 auto;
+    }
+
+    .pdf-manage {
+        background-color: var(--background-color-1);
+        border-radius: 10px;
+        gap: 0;
     }
 }

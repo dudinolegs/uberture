@@ -6,11 +6,12 @@ export default class PdfViewer {
         this.root = root;
         this.pdf = root.querySelector(".js-pdf");
         this.pdfPages = this.pdf.querySelectorAll(".js-pdf-page");
+        this.pdfInput = root.querySelectorAll(".js-pdf-input");
         this.pdfZoom = root.querySelector(".js-pdf-zoom-wrapper");
         this.pdfZoomIn = root.querySelector(".js-pdf-zoom-in");
         this.pdfZoomOut = root.querySelector(".js-pdf-zoom-out");
-        this.navPrev = root.querySelector(".js-pdf-nav-prev");
-        this.navNext = root.querySelector(".js-pdf-nav-next");
+        this.navPrev = root.querySelectorAll(".js-pdf-nav-prev");
+        this.navNext = root.querySelectorAll(".js-pdf-nav-next");
         this.fullscreen = root.querySelector(".js-pdf-fullscreen");
 
         this.menu = root.querySelector(".js-pdf-menu");
@@ -18,7 +19,7 @@ export default class PdfViewer {
         this.menuClose = root.querySelector(".js-pdf-menu-close");
         this.menuItems = root.querySelectorAll(".js-pdf-menu-item");
 
-        this.container = this.pdf.closest(".container");
+        this.container = this.pdf.closest(".pdf-container");
         this.pageWidth = this.container.clientWidth;
 
         this.scale = 1;
@@ -34,28 +35,59 @@ export default class PdfViewer {
     }
 
     _initPageFlip() {
-        this.pageFlip = new PageFlip(this.pdf, {
+        console.log(this.pageWidth);
+
+        const pageFlipArgs = {
             width: this.pageWidth,
             height: this.pageWidth,
-            maxShadowOpacity: 0.2,
-            showCover: false,
-            useMouseEvents: false,
-            size: "stretch",
             mode: "single",
-        });
+        };
+
+        if (window.innerWidth > 768) {
+            pageFlipArgs.maxShadowOpacity = 0.2;
+            pageFlipArgs.showCover = false;
+            pageFlipArgs.useMouseEvents = false;
+            pageFlipArgs.size = "stretch";
+        }
+        
+        this.pageFlip = new PageFlip(this.pdf, pageFlipArgs);
         this.pageFlip.loadFromHTML(this.pdfPages);
 
-        this.navPrev?.addEventListener("click", () =>
-            this.pageFlip.flipPrev()
-        );
-        this.navNext?.addEventListener("click", () =>
-            this.pageFlip.flipNext()
-        );
+        this.navPrev?.forEach(button => {
+            button.addEventListener("click", () =>
+                this.pageFlip.flipPrev()
+            );
+        });
+
+        this.navNext?.forEach(button => {
+            button.addEventListener("click", () =>
+                this.pageFlip.flipNext()
+            );
+        });
 
         this.menuItems.forEach((menuItem) => {
             menuItem.addEventListener("click", () => {
                 const page = +menuItem.dataset.page;
                 this.pageFlip.flip(page - 1);
+            });
+        });
+
+        this.pageFlip.on("flip", (e) => {
+            this.pdfInput.forEach(input => {
+                input.value = +e.data + 1;
+            });
+        });
+
+        this.pdfInput.forEach(input => {
+            input.addEventListener("change", () => {
+                const page = parseInt(input.value, 10) - 1;
+                const totalPages = this.pageFlip.getPageCount();
+            
+                if (!isNaN(page) && page >= 0 && page < totalPages) {
+                    this.pageFlip.flip(page);
+                } else {
+                    input.value = this.pageFlip.getCurrentPageIndex() + 1;
+                }
             });
         });
     }
@@ -71,17 +103,17 @@ export default class PdfViewer {
 
     _initFullscreen() {
         this.fullscreen?.addEventListener("click", () => {
-        if (!document.fullscreenElement) {
-            if (this.root.requestFullscreen) {
-                this.root.requestFullscreen();
-            } else if (this.root.webkitRequestFullscreen) {
-                this.root.webkitRequestFullscreen();
+            if (!document.fullscreenElement) {
+                if (this.root.requestFullscreen) {
+                    this.root.requestFullscreen();
+                } else if (this.root.webkitRequestFullscreen) {
+                    this.root.webkitRequestFullscreen();
+                }
+                this.root.classList.add("pdf-section_fullscreen");
+            } else {
+                document.exitFullscreen?.();
+                this.root.classList.remove("pdf-section_fullscreen");
             }
-            this.root.classList.add("pdf-section_fullscreen");
-        } else {
-            document.exitFullscreen?.();
-            this.root.classList.remove("pdf-section_fullscreen");
-        }
         });
     }
 
