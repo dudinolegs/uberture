@@ -1,3 +1,21 @@
+@media (max-width: 1940px) {
+    :root {
+        --container: 1640px;
+    }
+}
+
+@media (max-width: 1840px) {
+    :root {
+        --container: 1540px;
+    }
+}
+
+@media (max-width: 1740px) {
+    :root {
+        --container: 1440px;
+    }
+}
+
 @media (max-width: 1580px) {
     :root {
         --container: 1200px;

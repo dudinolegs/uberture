@@ -1,7 +1,7 @@
 :root {
     --header-height: 0px;
     --sticky-top: 10px;
-    --container: 1440px;
+    --container: 1740px;
     --section-margin: 80px;
     --section-padding: 80px;
     --right: calc((100% - var(--container)) / 2);
